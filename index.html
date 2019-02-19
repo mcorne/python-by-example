@@ -1,0 +1,46 @@
+
+<html>
+    <head>
+        <title>Python By Example</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="w3css/4/w3.css" />
+        <link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.css">
+        <script type="text/javascript" src="Brython-3.7.0/brython.js"></script>
+        <script type="text/javascript" src="Brython-3.7.0/brython_stdlib.js"></script>
+    </head>
+    <body onload="brython({debug: 0, indexedDB: false})">
+        <script type="text/python">
+        from browser import document
+        import sys
+        from io import StringIO
+        import contextlib
+
+        @contextlib.contextmanager
+        def stdoutIO(stdout=None):
+            old = sys.stdout
+            if stdout is None:
+                stdout = StringIO()
+            sys.stdout = stdout
+            yield stdout
+            sys.stdout = old
+
+        def eval_code(event):
+            with stdoutIO() as s:
+                try:
+                    exec(document["code"].value)
+                except BaseException as e:
+                    print(e)
+            document["result"].innerHTML = s.getvalue()
+
+        document["execute"].bind("click", eval_code)
+        </script>
+
+        code<br>
+        <textarea id="code" onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'    '+v.substring(e);this.selectionStart=this.selectionEnd=s+4;return false;}"></textarea>
+        <br>
+        result <div id="result">...</div>
+        <br>
+        <button id="execute">Run</button>
+    </body>
+</html>
