@@ -1,24 +1,40 @@
 
 <html>
     <head>
-        <title>Python By Example</title>
+        <title>Python by Example</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="w3css/4/w3.css" />
         <link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.css">
+        <link rel="stylesheet" type="text/css" href="application.css" />
         <script type="text/javascript" src="Brython-3.7.0/brython.js"></script>
         <script type="text/javascript" src="Brython-3.7.0/brython_stdlib.js"></script>
         <script type="text/javascript" src="application.js"></script>
     </head>
 
-    <body onload="brython({debug: 0, indexedDB: false})">
+    <body  class="w3-content" onload="brython({debug: 0, indexedDB: false})">
+        
+        <header class="w3-display-container w3-blue w3-xlarge w3-padding w3-margin-bottom">
+
+            <a href="/" class="w3-text-white">
+                Python by Example
+            </a>
+
+        </header>
+
+        <div class="w3-container">
+            <label>Code</label>
+            <textarea class="w3-input w3-border w3-margin-bottom" id="code" onkeydown="handle_tab_character(event)"></textarea>
+
+            <br>
+            result <div id="result">...</div>
+            <br>
+            <button id="execute">Run</button>
+
+        </div>
+
         <script type="text/python" src="execute_python.py"></script>
-        code<br>
-        <textarea id="code" onkeydown="handle_tab_character(event)"></textarea>
-        <br>
-        result <div id="result">...</div>
-        <br>
-        <button id="execute">Run</button>
+
     </body>
 
 </html>

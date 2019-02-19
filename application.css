@@ -1,0 +1,20 @@
+@media only screen and (max-width: 600px) { /* mobile */
+   body {
+       font-size: 19px;
+   }
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 601px) { /* tablet */
+   body {
+       font-size: 17px;
+   }
+}
+
+a {
+    color: #2196F3;
+    text-decoration: none;
+}
+
+a:hover {
+    color: black; /* TODO: not working when hovering over title in top bar */
+}
