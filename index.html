@@ -8,39 +8,17 @@
         <link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.css">
         <script type="text/javascript" src="Brython-3.7.0/brython.js"></script>
         <script type="text/javascript" src="Brython-3.7.0/brython_stdlib.js"></script>
+        <script type="text/javascript" src="application.js"></script>
     </head>
+
     <body onload="brython({debug: 0, indexedDB: false})">
-        <script type="text/python">
-        from browser import document
-        import sys
-        from io import StringIO
-        import contextlib
-
-        @contextlib.contextmanager
-        def stdoutIO(stdout=None):
-            old = sys.stdout
-            if stdout is None:
-                stdout = StringIO()
-            sys.stdout = stdout
-            yield stdout
-            sys.stdout = old
-
-        def eval_code(event):
-            with stdoutIO() as s:
-                try:
-                    exec(document["code"].value)
-                except BaseException as e:
-                    print(e)
-            document["result"].innerHTML = s.getvalue()
-
-        document["execute"].bind("click", eval_code)
-        </script>
-
+        <script type="text/python" src="execute_python.py"></script>
         code<br>
-        <textarea id="code" onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'    '+v.substring(e);this.selectionStart=this.selectionEnd=s+4;return false;}"></textarea>
+        <textarea id="code" onkeydown="handle_tab_character(event)"></textarea>
         <br>
         result <div id="result">...</div>
         <br>
         <button id="execute">Run</button>
     </body>
+
 </html>
