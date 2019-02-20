@@ -23,6 +23,6 @@ def eval_code(event):
         except BaseException as e:
             print(e)
 
-    document["result"].innerHTML = s.getvalue()
+    document["result"].innerHTML = s.getvalue().replace('&','&amp;').replace('<','&lt;').replace('>','&gt;').replace('"','&quot;')
 
 document["execute"].bind("click", eval_code)
