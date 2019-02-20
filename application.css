@@ -11,10 +11,18 @@
 }
 
 a {
-    color: #2196F3;
+    color: #3776ab;
     text-decoration: none;
 }
 
 a:hover {
     color: black; /* TODO: not working when hovering over title in top bar */
+}
+
+.w3-blue {
+    background-color: #3776ab !important;
+}
+
+.w3-code {
+    border-left-color: #3776ab;
 }

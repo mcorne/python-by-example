@@ -1,18 +1,20 @@
-
+<!DOCTYPE html>
 <html>
     <head>
         <title>Python by Example</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <link rel="stylesheet" type="text/css" href="w3css/4/w3.css" />
         <link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.css">
         <link rel="stylesheet" type="text/css" href="application.css" />
+
+        <script type="text/javascript" src="application.js"></script>
         <script type="text/javascript" src="Brython-3.7.0/brython.js"></script>
         <script type="text/javascript" src="Brython-3.7.0/brython_stdlib.js"></script>
-        <script type="text/javascript" src="application.js"></script>
     </head>
 
-    <body  class="w3-content" onload="brython({debug: 0, indexedDB: false})">
+    <body  class="w3-content" onload="autofit_textarea_height(); brython({debug: 0, indexedDB: false})">
         
         <header class="w3-display-container w3-blue w3-xlarge w3-padding w3-margin-bottom">
 
@@ -22,16 +24,26 @@
 
         </header>
 
-        <div class="w3-container">
-            <label>Code</label>
-            <textarea class="w3-input w3-border w3-margin-bottom" id="code" onkeydown="handle_tab_character(event)"></textarea>
+        <div class="w3-card-4">
 
-            <br>
-            result <div id="result">...</div>
-            <br>
-            <button id="execute">Run</button>
+            <div class="w3-container w3-blue">
+                <h3>Code</h3>
+            </div>
 
-        </div>
+            <div class="w3-container">
+
+                <p><textarea class="w3-input w3-border" id="code" onkeydown="handle_tab_character(event)">print("Welcome to Python by Example")</textarea></p>
+
+                <p><button class="w3-btn w3-blue" id="execute">Execute</button></p>
+
+            </div>
+
+        </div> 
+
+        <div class="w3-panel w3-card w3-light-grey">
+            <h3>Result</h3>
+            <pre class="w3-code notranslate" id="result">Welcome to Python by Example</pre>
+        </div>              
 
         <script type="text/python" src="execute_python.py"></script>
 
