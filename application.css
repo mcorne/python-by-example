@@ -19,6 +19,10 @@ a:hover {
     color: black; /* TODO: not working when hovering over title in top bar */
 }
 
+pre {
+    white-space: pre-wrap;
+}
+
 .w3-blue {
     background-color: #3776ab !important;
 }

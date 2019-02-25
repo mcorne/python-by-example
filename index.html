@@ -12,6 +12,7 @@
         <script type="text/javascript" src="Brython-3.7.0/brython.js"></script>
         <script type="text/javascript" src="Brython-3.7.0/brython_stdlib.js"></script>
         <script type="text/javascript" src="application.js"></script>
+        <script type="text/javascript" src="examples.js"></script>
     </head>
 
     <body  class="w3-content" onload="autofit_textarea_height(); brython({debug: 0, indexedDB: false})">
@@ -32,9 +33,19 @@
 
             <div class="w3-container">
 
-                <p><textarea class="w3-input w3-border" id="code" onkeydown="handle_tab_character(event)">print("Welcome to Python by Example")</textarea></p>
+                <p>
+                    <select class="w3-select w3-border" id="example" onchange="display_example(this.value)">
+                        <option value="" disabled selected>Choose an example</option>
+                        <option value="abs">abs</option>
+                        <option value="print">print</option>
+                    </select>
+                </p>
+
+                <p><textarea class="w3-input w3-border" id="code" onkeydown="handle_tab_character(event)">Loading...</textarea></p>
 
                 <p><button class="w3-btn w3-blue" id="execute">Execute</button></p>
+
+                <p id="links"></p>
 
             </div>
 
@@ -42,7 +53,7 @@
 
         <div class="w3-panel w3-card w3-light-grey">
             <h3>Result</h3>
-            <pre class="w3-code notranslate" id="result">Welcome to Python by Example</pre>
+            <pre class="w3-code notranslate" id="result">Please wait!</pre>
         </div>              
 
         <script type="text/python" src="execute_python.py"></script>

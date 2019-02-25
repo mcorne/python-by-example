@@ -26,3 +26,5 @@ def eval_code(event):
     document["result"].innerHTML = s.getvalue().replace('&','&amp;').replace('<','&lt;').replace('>','&gt;').replace('"','&quot;')
 
 document["execute"].bind("click", eval_code)
+document["code"].value       = 'print("Welcome to Python by Example")'
+document["result"].innerHTML = 'Welcome to Python by Example'
