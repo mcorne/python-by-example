@@ -7,17 +7,19 @@
 
         <link rel="stylesheet" type="text/css" href="w3css/4/w3.css" />
         <link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.css">
+        <link rel="stylesheet" type="text/css" href="w3css-theme.css" />
         <link rel="stylesheet" type="text/css" href="application.css" />
 
         <script type="text/javascript" src="Brython-3.7.0/brython.js"></script>
         <script type="text/javascript" src="Brython-3.7.0/brython_stdlib.js"></script>
         <script type="text/javascript" src="application.js"></script>
         <script type="text/javascript" src="examples.js"></script>
+        <script type="text/javascript" src="docstrings.js"></script>
     </head>
 
     <body  class="w3-content" onload="autofit_textarea_height(); brython({debug: 0, indexedDB: false})">
-        
-        <header class="w3-display-container w3-blue w3-xlarge w3-padding w3-margin-bottom">
+
+        <header class="w3-display-container w3-theme w3-xlarge w3-padding w3-margin-bottom">
 
             <span class="w3-large">
                 <a href="/python-by-example" class="w3-text-white"><i class="fab fa-python fa-lg" aria-hidden="true"></i></a>
@@ -31,8 +33,8 @@
 
         <div class="w3-card-4">
 
-            <div class="w3-container w3-blue">
-                <h3>Code</h3>
+            <div class="w3-container w3-theme-l1">
+                <h4>Code</h4>
             </div>
 
             <div class="w3-container">
@@ -47,20 +49,21 @@
 
                 <p><textarea class="w3-input w3-border" id="code" onkeydown="handle_tab_character(event)">Loading...</textarea></p>
 
-                <p><button class="w3-btn w3-blue" id="execute">Execute</button></p>
+                <p><button class="w3-btn w3-theme-l1" id="execute">Execute</button></p>
+            <p id="links"></p>
 
             </div>
 
-        </div> 
+        </div>
 
-        <div class="w3-panel w3-card w3-light-grey">
-            <h3>Result</h3>
+        <div class="w3-panel w3-theme-l4">
+            <h4>Result</h4>
             <pre class="w3-code notranslate" id="result">Please wait!</pre>
-        </div>              
+        </div>
 
-        
-        <div class="w3-container">            
-            <p id="links"></p>
+        <div class="w3-panel w3-theme-l5">
+            <h4>Docstring</h4>
+            <p class="w3-code" id="docstring">...</p>
         </div>
 
         <script type="text/python" src="execute_python.py"></script>

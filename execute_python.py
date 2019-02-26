@@ -28,3 +28,4 @@ def eval_code(event):
 document["execute"].bind("click", eval_code)
 document["code"].value       = 'print("Welcome to Python by Example")'
 document["result"].innerHTML = 'Welcome to Python by Example'
+document["docstring"].innerHTML = "print(value, ..., sep=' ', end='\\n', file=sys.stdout, flush=False) ..."

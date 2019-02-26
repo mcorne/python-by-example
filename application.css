@@ -11,7 +11,7 @@
 }
 
 a {
-    color: #3776ab;
+    color: #3776ab; /* same as .w3-theme */
     text-decoration: none;
 }
 
@@ -23,10 +23,10 @@ pre {
     white-space: pre-wrap;
 }
 
-.w3-blue {
-    background-color: #3776ab !important;
+.w3-code {
+    border-left-color: #3776ab; /* same as .w3-theme */
 }
 
-.w3-code {
-    border-left-color: #3776ab;
+#docstring {
+    color: darkslategray;
 }

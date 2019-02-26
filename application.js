@@ -1,6 +1,6 @@
 /**
- * 
- * @param {String} name 
+ *
+ * @param {String} name
  */
 function add_links(name)
 {
@@ -28,30 +28,35 @@ function autofit_textarea_height()
 
     if (code.clientHeight < code.scrollHeight) {
         code.style.height = code.scrollHeight + 2 + "px";
-    } 
+    }
 }
 
 /**
- * 
- * @param {String} name 
+ *
+ * @param {String} name
+ * @param {Integer} number
  */
 function display_example(name, number = 0)
 {
     var code = document.getElementById('code');
+    var docstring = document.getElementById('docstring');
+
 
     if (examples[name]) {
         code.value = examples[name][number].value;
         autofit_textarea_height();
         add_links(name);
+        docstring.innerHTML = docstrings[name].replace(/\n/g, '<br>');
         document.getElementById('execute').click();
     } else {
         code.value = null;
+        docstring.innerHTML = null;
     }
 }
 
 /**
- * 
- * @param {String} string 
+ *
+ * @param {String} string
  * @return {String}
  */
 function escape(string)
@@ -60,11 +65,11 @@ function escape(string)
 }
 
 /**
- * 
- * @param {Event} e 
+ *
+ * @param {Event} e
  * @see https://twinnation.org/articles/10/replace-tab-by-4-spaces-in-textarea-or-text-input
  */
-function handle_tab_character(e) 
+function handle_tab_character(e)
 {
     if (e.key === "Tab") {
         e.preventDefault();
