@@ -2,7 +2,7 @@
  *
  * @param {String} name
  */
-function add_links(name)
+function add_example_links(name)
 {
     var links = document.getElementById('links');
 
@@ -13,7 +13,7 @@ function add_links(name)
             links.innerHTML += '<br>';
         }
 
-        links.innerHTML += '<a href="javascript:display_example(\'' + name + '\', ' + i + ')">' + escape(examples[name][i].key) + '</a>';
+        links.innerHTML += '<a href="javascript:display_example(\'' + name + '\', ' + i + ')">' + escape(examples[name][i].short) + '</a>';
     }
 }
 
@@ -40,18 +40,20 @@ function display_example(name, number = 0)
 {
     var code = document.getElementById('code');
     var docstring = document.getElementById('docstring');
-
+    var doclink = document.getElementById('doclink');
 
     if (examples[name]) {
-        code.value = examples[name][number].value;
+        code.value = examples[name][number].full;
         autofit_textarea_height();
-        add_links(name);
+        add_example_links(name);
         docstring.innerHTML = docstrings[name].replace(/\n/g, '<br>');
         document.getElementById('execute').click();
     } else {
         code.value = null;
         docstring.innerHTML = null;
     }
+
+    doclink.href = doclink.innerHTML = get_python_doc_link(name);
 }
 
 /**
@@ -62,6 +64,24 @@ function display_example(name, number = 0)
 function escape(string)
 {
     return string = string.replace('&','&amp;').replace('<','&lt;').replace('>','&gt;').replace('"','&quot;')
+}
+
+/**
+ *
+ * @param {String} name
+ * @return {String}
+ */
+function get_python_doc_link(name)
+{
+    var link = 'https://docs.python.org/3/library/';
+
+    if (name.search('[.]') == -1) {
+        link += 'functions.html#' + name;
+    } else if (name.search('str[.]') == 0) {
+        link += 'stdtypes.html#' + name;
+    }
+
+    return link;
 }
 
 /**
