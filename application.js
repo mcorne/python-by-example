@@ -53,7 +53,7 @@ function display_example(name, number = 0)
         docstring.innerHTML = null;
     }
 
-    doclink.href = doclink.innerHTML = get_python_doc_link(name);
+    doclink.href = get_python_doc_link(name);
 }
 
 /**
