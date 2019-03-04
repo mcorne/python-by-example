@@ -3,7 +3,7 @@ var docstrings = {
 "Return the absolute value of the argument.",
 
     "dir":
-"dir([object]) -> list of strings<br>\
+"dir([object]) -&gt; list of strings<br>\
 <br>\
 If called without an argument, return the names in the current scope.<br>\
 Else, return an alphabetized list of names comprising (some of) the attributes of the given object, and of attributes reachable from it.<br>\
@@ -13,7 +13,7 @@ If the object supplies a method named __dir__, it will be used; otherwise the de
 &#8226; for any other object: its attributes, its class's attributes, and recursively the attributes of its class's base classes.",
 
     "print":
-"print(value, ..., sep=' ', end='\\n', file=sys.stdout, flush=False)<br>\
+"print(value, ..., sep=' ', end='&#92;n', file=sys.stdout, flush=False)<br>\
 <br>\
 Prints the values to a stream, or to sys.stdout by default.<br>\
 Optional keyword arguments:<br>\

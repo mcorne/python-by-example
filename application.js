@@ -13,7 +13,7 @@ function add_example_links(name)
             links.innerHTML += '<br>';
         }
 
-        links.innerHTML += '<a href="javascript:display_example(\'' + name + '\', ' + i + ')">' + escape(examples[name][i].short) + '</a>';
+        links.innerHTML += '<a href="javascript:display_example(\'' + name + '\', ' + i + ')">' + examples[name][i].short + '</a>';
     }
 }
 
@@ -54,16 +54,6 @@ function display_example(name, number = 0)
     }
 
     doclink.href = get_python_doc_link(name);
-}
-
-/**
- *
- * @param {String} string
- * @return {String}
- */
-function escape(string)
-{
-    return string = string.replace('&','&amp;').replace('<','&lt;').replace('>','&gt;').replace('"','&quot;')
 }
 
 /**

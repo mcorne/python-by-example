@@ -42,8 +42,7 @@ class Files():
 
     def get_docstring(self, function):
         docstring = eval(function + '.__doc__')
-        docstring = docstring.replace('"', "'")                            # replace double quotes with single quotes
-        docstring = docstring.replace('\\', '\\\\')                        # escape "escape" character, ex print.__doc__
+        docstring = self.htlm_escape(docstring)
         docstring = re.sub('([^.:\n])\n(.)', r'\1 \2', docstring)          # join string pieces, ex dir.__doc__
         docstring = docstring.replace('\n', '<br>\\\n')                    # fix linefeed
         docstring = re.sub('^  ([^ ])', '&#8226; \\1', docstring, 0, re.M) # prefix indented list item with bullet
@@ -53,6 +52,9 @@ class Files():
     def get_functions(self):
         functions = os.listdir(self.examples_dirname)
         return sorted(functions)
+
+    def htlm_escape(self, string):
+        return string.replace('&','&amp;').replace('<','&lt;').replace('>','&gt;').replace('"','&quot;').replace('\\', '&#92;')
 
     def write_file(self, filename, text):
         path = os.path.join(self.current_dirname, filename)
