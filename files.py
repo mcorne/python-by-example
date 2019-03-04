@@ -42,12 +42,12 @@ class Files():
 
     def get_docstring(self, function):
         docstring = eval(function + '.__doc__')
-        docstring = docstring.replace('"', "'")                      # replace double quotes with single quotes
-        docstring = docstring.replace('\\', '\\\\')                  # escape "escape" character, ex print.__doc__
-        docstring = re.sub('([^.:\n])\n(.)', r'\1 \2', docstring)    # join string pieces, ex dir.__doc__
-        docstring = docstring.replace('\n', '\\n\\\n')               # fix linefeed
-        docstring = re.sub('^  ([^ ])', '- \\1', docstring, 0, re.M) # prefix indented list item with dash
-        docstring = re.sub(' +', ' ', docstring)                     # replace multiple spaces in list items
+        docstring = docstring.replace('"', "'")                            # replace double quotes with single quotes
+        docstring = docstring.replace('\\', '\\\\')                        # escape "escape" character, ex print.__doc__
+        docstring = re.sub('([^.:\n])\n(.)', r'\1 \2', docstring)          # join string pieces, ex dir.__doc__
+        docstring = docstring.replace('\n', '<br>\\\n')                    # fix linefeed
+        docstring = re.sub('^  ([^ ])', '&#8226; \\1', docstring, 0, re.M) # prefix indented list item with bullet
+        docstring = re.sub(' +', ' ', docstring)                           # replace multiple spaces in list items
         return docstring
 
     def get_functions(self):

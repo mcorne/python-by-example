@@ -46,7 +46,7 @@ function display_example(name, number = 0)
         code.value = examples[name][number].full;
         autofit_textarea_height();
         add_example_links(name);
-        docstring.innerHTML = docstrings[name].replace(/\n/g, '<br>');
+        docstring.innerHTML = docstrings[name];
         document.getElementById('execute').click();
     } else {
         code.value = null;
