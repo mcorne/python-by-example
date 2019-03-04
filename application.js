@@ -99,3 +99,10 @@ function handle_tab_character(e)
         e.target.selectionStart = e.target.selectionEnd = start + 4;
     }
 }
+
+function set_options()
+{
+    var example = document.getElementById('example');
+
+    example.innerHTML += options;
+}
