@@ -1,2 +1,1 @@
-# dir()
 print(dir())

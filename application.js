@@ -55,8 +55,8 @@ function display_example(name, number = 0)
     var docstring = document.getElementById('docstring');
     var doclink = document.getElementById('doclink');
 
-    if (examples[name]) {
-        code.value = examples[name][number].full;
+    if (example_contents[name]) {
+        code.value = example_contents[name][number];
         autofit_textarea_height();
         add_example_links(name);
         docstring.innerHTML = docstrings[name];

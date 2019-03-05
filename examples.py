@@ -1,8 +1,9 @@
 import json, os, re
 
 class Examples():
-    DOCSTRINGS    = "docstrings.js"
-    EXAMPLE_NAMES = "example_names.js"
+    DOCSTRINGS       = "docstrings.js"
+    EXAMPLE_CONTENTS = "example_contents.js"
+    EXAMPLE_NAMES    = "example_names.js"
 
     def __init__(self):
         self.current_dirname    = os.path.dirname(__file__)
@@ -20,6 +21,17 @@ class Examples():
         content = 'var docstrings = {\n' + docstrings + '\n};'
         return content
 
+    def create_example_contents(self):
+        contents = {}
+        for function, filenames in self.examples_filenames.items():
+            contents[function] = []
+            for filename in filenames:
+                example = self.read_example(function, filename)
+                content = self.extract_example_content(example)
+                contents[function].append(content)
+        content = 'var example_contents = \n' + json.dumps(contents, indent=4, sort_keys=True) + '\n;'
+        return content
+
     def create_example_names(self):
         names = {}
         for function, filenames in self.examples_filenames.items():
@@ -31,22 +43,37 @@ class Examples():
         content = 'var example_names = \n' + json.dumps(names, indent=4, sort_keys=True) + '\n;'
         return content
 
+    def extract_example_content(self, example):
+        if example[0] == '#':
+            # ignore the first line that contains the example name as a comment, ex # abs(123)
+            pieces  = example.split('\n', 1)
+            example = pieces[1]
+        return example
+
     def extract_example_name(self, example):
-        if example[0] == '#': # the first line contains the example short name as a comment, ex # abs(123)
-            pieces = example.split('\n')
+        if example[0] == '#':
+            # extract the example name from the first line that is a comment, ex # abs(123)
+            pieces = example.split('\n', 1)
             name   = pieces[0].strip('# ')
-        else:              # this is a one line example that begins with print, ex print(abs(123))
-            name = example[6:-1]
+        else:
+            # extract the example name inside the print() function, ex print(abs(123))
+            name = example[6:-2]
         return name
 
     def generate(self):
         self.generate_docstrings()
+        self.generate_example_contents()
         self.generate_example_names()
 
     def generate_docstrings(self):
         docstrings = self.create_docstrings()
         self.write_file(Examples.DOCSTRINGS, docstrings)
         print(Examples.DOCSTRINGS, 'updated')
+
+    def generate_example_contents(self):
+        contents = self.create_example_contents()
+        self.write_file(Examples.EXAMPLE_CONTENTS, contents)
+        print(Examples.EXAMPLE_CONTENTS, 'updated')
 
     def generate_example_names(self):
         names = self.create_example_names()
@@ -80,17 +107,6 @@ class Examples():
     def htlm_escape(self, string):
         return string.replace('&','&amp;').replace('<','&lt;').replace('>','&gt;').replace('"','&quot;').replace('\\', '&#92;')
 
-    def parse_example(self, example): # TODO: remove !!!
-        example = {}
-        if example[0] == '#': # the first line contains the example short name as a comment, ex # abs(123)
-            example["short"] = example[0].strip('# ')
-            pieces           = example.split('\n')
-            example["full"]  = pieces[1]
-        else:              # this is a one line example that begins with print, ex print(abs(123))
-            example["short"] = example[6:-1]
-            example["full"]  = example
-        return example
-
     def read_example(self, function, example_filename):
         path = os.path.join(self.examples_dirname, function + '/' + example_filename)
         with open(path, 'r') as file:
@@ -103,6 +119,4 @@ class Examples():
             file.write(content)
 
 examples = Examples()
-# examples.generate()
-# examples.generate_docstrings()
-examples.generate_example_names()
+examples.generate()
