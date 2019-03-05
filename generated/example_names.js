@@ -1,5 +1,4 @@
-var example_names = 
-{
+var example_names = {
     "abs": [
         "abs(123)",
         "abs(-456)",
@@ -19,5 +18,4 @@ var example_names =
     "str.capitalize": [
         "'hello world!'.capitalize()"
     ]
-}
-;
+};

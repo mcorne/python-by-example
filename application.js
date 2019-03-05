@@ -1,26 +1,7 @@
-/**
- *
- * @param {String} funcname
- */
-function add_example_links(funcname)
-{
-    var links = document.getElementById('links');
-
-    links.innerHTML = null;
-
-    for (var i = 0; i < example_names[funcname].length; i++) {
-        if (i) {
-            links.innerHTML += '<br>';
-        }
-
-        links.innerHTML += '<a href="javascript:display_example(\'' + funcname + '\', ' + i + ')">' + example_names[funcname][i] + '</a>';
-    }
-}
-
 function add_select_options()
 {
     var example = document.getElementById('example');
-    var options;
+    var options = '';
 
     for (var funcname in example_names) {
         options += '<option>' + funcname + '</option>';
@@ -46,42 +27,64 @@ function autofit_textarea_height()
 
 /**
  *
- * @param {String} name
+ * @param {String} funcname
  * @param {Integer} number
  */
-function display_example(name, number = 0)
+function display_example(funcname, number = 0)
 {
-    var code = document.getElementById('code');
+    var code      = document.getElementById('code');
+    var doclink   = document.getElementById('doclink');
     var docstring = document.getElementById('docstring');
-    var doclink = document.getElementById('doclink');
+    var links     = document.getElementById('links');
 
-    if (example_contents[name]) {
-        code.value = example_contents[name][number];
+    if (example_contents[funcname]) {
+        code.value          = example_contents[funcname][number];
+        docstring.innerHTML = docstrings[funcname];
+        links.innerHTML     = get_example_links(funcname);
         autofit_textarea_height();
-        add_example_links(name);
-        docstring.innerHTML = docstrings[name];
         document.getElementById('execute').click();
     } else {
-        code.value = null;
+        code.value          = null;
         docstring.innerHTML = null;
+        links.innerHTML     = null;
     }
 
-    doclink.href = get_python_doc_link(name);
+    doclink.href = get_python_doc_link(funcname);
 }
 
 /**
  *
- * @param {String} name
- * @return {String}
+ * @param {String} funcname
+ * @returns {String}
  */
-function get_python_doc_link(name)
+function get_example_links(funcname)
+{
+    var links = '';
+
+    for (var i = 0; i < example_names[funcname].length; i++) {
+        if (i) {
+            links += '<br>';
+        }
+
+        links += '<a href="javascript:display_example(\'' + funcname + '\', ' + i + ')">' + example_names[funcname][i] + '</a>';
+    }
+
+    return links
+}
+
+/**
+ *
+ * @param {String} funcname
+ * @returns {String}
+ */
+function get_python_doc_link(funcname)
 {
     var link = 'https://docs.python.org/3/library/';
 
-    if (name.search('[.]') == -1) {
-        link += 'functions.html#' + name;
-    } else if (name.search('str[.]') == 0) {
-        link += 'stdtypes.html#' + name;
+    if (funcname.search('[.]') == -1) {
+        link += 'functions.html#' + funcname;
+    } else if (funcname.search('str[.]') == 0) {
+        link += 'stdtypes.html#' + funcname;
     }
 
     return link;
@@ -89,17 +92,17 @@ function get_python_doc_link(name)
 
 /**
  *
- * @param {Event} e
+ * @param {Event} event
  * @see https://twinnation.org/articles/10/replace-tab-by-4-spaces-in-textarea-or-text-input
  */
-function handle_tab_character(e)
+function handle_tab_character(event)
 {
-    if (e.key === "Tab") {
-        e.preventDefault();
-        let start = e.target.selectionStart;
-        let val = e.target.value;
-        e.target.value = val.substr(0, start) + "    " + val.substr(e.target.selectionEnd);
-        e.target.selectionStart = e.target.selectionEnd = start + 4;
+    if (event.key === "Tab") {
+        event.preventDefault();
+        let start = event.target.selectionStart;
+        let val = event.target.value;
+        event.target.value = val.substr(0, start) + "    " + val.substr(event.target.selectionEnd);
+        event.target.selectionStart = event.target.selectionEnd = start + 4;
     }
 }
 

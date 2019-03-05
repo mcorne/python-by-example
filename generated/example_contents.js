@@ -1,5 +1,4 @@
-var example_contents = 
-{
+var example_contents = {
     "abs": [
         "print(abs(123))\n",
         "print(abs(-456))\n",
@@ -19,5 +18,4 @@ var example_contents =
     "str.capitalize": [
         "print('hello world!'.capitalize())\n"
     ]
-}
-;
+};
