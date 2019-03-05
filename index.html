@@ -14,11 +14,11 @@
         <script type="text/javascript" src="Brython-3.7.0/brython_stdlib.js"></script>
         <script type="text/javascript" src="application.js"></script>
         <script type="text/javascript" src="examples.js"></script>
-        <script type="text/javascript" src="options.js"></script>
         <script type="text/javascript" src="docstrings.js"></script>
+        <script type="text/javascript" src="example_names.js"></script>
     </head>
 
-    <body  class="w3-content" onload="autofit_textarea_height(); set_options(); brython({debug: 0, indexedDB: false})">
+    <body  class="w3-content" onload="on_load()">
 
         <header class="w3-display-container w3-theme w3-xlarge w3-padding w3-margin-bottom">
 
@@ -61,7 +61,7 @@
         <div class="w3-panel w3-theme-l5">
             <h4>Docstring</h4>
             <p class="w3-code" id="docstring">...</p>
-            <p><a href="https://docs.python.org/3/library/" class="w3-small" id="doclink" target="python-doc">Python documentation</a></p>
+            <p><a href="https://docs.python.org/3/library/" id="doclink" target="python-doc">Python documentation</a></p>
         </div>
 
         <script type="text/python" src="execute_python.py"></script>

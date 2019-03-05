@@ -1,21 +1,34 @@
 /**
  *
- * @param {String} name
+ * @param {String} funcname
  */
-function add_example_links(name)
+function add_example_links(funcname)
 {
     var links = document.getElementById('links');
 
     links.innerHTML = null;
 
-    for (var i = 0; i < examples[name].length; i++) {
+    for (var i = 0; i < example_names[funcname].length; i++) {
         if (i) {
             links.innerHTML += '<br>';
         }
 
-        links.innerHTML += '<a href="javascript:display_example(\'' + name + '\', ' + i + ')">' + examples[name][i].short + '</a>';
+        links.innerHTML += '<a href="javascript:display_example(\'' + funcname + '\', ' + i + ')">' + example_names[funcname][i] + '</a>';
     }
 }
+
+function add_select_options()
+{
+    var example = document.getElementById('example');
+    var options;
+
+    for (var funcname in example_names) {
+        options += '<option>' + funcname + '</option>';
+    }
+
+    example.innerHTML += options;
+}
+
 
 /**
  * @see https://stackoverflow.com/questions/23451611/is-there-anyway-to-have-a-textarea-autofit-height-based-on-the-content-at-page
@@ -90,9 +103,9 @@ function handle_tab_character(e)
     }
 }
 
-function set_options()
+function on_load()
 {
-    var example = document.getElementById('example');
-
-    example.innerHTML += options;
+    autofit_textarea_height();
+    add_select_options();
+    brython({debug: 0, indexedDB: false});
 }
