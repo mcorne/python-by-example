@@ -96,7 +96,7 @@ class Examples():
         filename = 'generated/' + basename + '.js'
         path     = os.path.join(self.current_dirname, filename)
         with open(path, 'w') as file:
-            content  = 'var ' + basename + ' = ' + json.dumps(data, indent=4, sort_keys=True) + ';'
+            content  = 'var ' + basename + ' = ' + json.dumps(data, ensure_ascii=False, indent=4, sort_keys=True) + ';'
             file.write(content)
         print(filename, 'updated')
 
