@@ -1,6 +1,6 @@
 # delattr(foo, 'bar')
 class Foo:
-    bar = 1
+    bar = 123
 
 foo = Foo()
 delattr(foo, 'bar')

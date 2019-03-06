@@ -108,6 +108,57 @@ var example_names = {
         "Replacing %x and %o and converting the value to different bases",
         "Using the comma as a thousands separator"
     ],
+    "frozenset": [
+        "list(frozenset([1, 2, 3]))"
+    ],
+    "getattr": [
+        "getattr(foo, 'bar')"
+    ],
+    "globals": [
+        "globals()"
+    ],
+    "hasattr": [
+        "hasattr(foo, 'bar')"
+    ],
+    "hash": [
+        "hash('hello')"
+    ],
+    "hex": [
+        "hex(255)",
+        "hex(-42)",
+        "'%#x' % 255, '%x' % 255, '%X' % 255"
+    ],
+    "id": [
+        "id('foo')"
+    ],
+    "int": [
+        "int(5.5)",
+        "int('123')",
+        "int('ffff', 16)"
+    ],
+    "isinstance": [
+        "isinstance(foo, 'Foo')",
+        "isinstance('abc', (str, int))"
+    ],
+    "issubclass": [
+        "issubclass(Bar, Foo)",
+        "issubclass(Mystring, (str, int))"
+    ],
+    "len": [
+        "len('python')",
+        "len([1, 2, 3])",
+        "len({&quot;one&quot;: 1, &quot;two&quot;: 2})",
+        "len(range(10))"
+    ],
+    "list": [
+        "['a', 'b', 'c']",
+        "list('abc')",
+        "list((1, 2, 3))",
+        "[x for x in range(5)]"
+    ],
+    "locals": [
+        "locals()"
+    ],
     "print": [
         "print('Hello!')",
         "print('2000', '1', '1', sep='-')",
