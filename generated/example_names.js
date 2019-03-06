@@ -94,6 +94,20 @@ var example_names = {
         "float('+1E6')",
         "float('-Infinity')"
     ],
+    "format": [
+        "Accessing arguments by position",
+        "Expressing a percentage",
+        "Using type-specific formatting",
+        "Nesting arguments",
+        "Accessing arguments by name",
+        "Accessing arguments’ attributes",
+        "Accessing arguments’ items",
+        "Replacing %s and %r",
+        "Aligning the text and specifying a width",
+        "Replacing %+f, %-f, and % f and specifying a sign",
+        "Replacing %x and %o and converting the value to different bases",
+        "Using the comma as a thousands separator"
+    ],
     "print": [
         "print('Hello!')",
         "print('2000', '1', '1', sep='-')",

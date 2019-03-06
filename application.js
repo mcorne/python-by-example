@@ -40,7 +40,7 @@ function display_example(funcname, number = 0)
     if (example_contents[funcname]) {
         code.value          = example_contents[funcname][number];
         docstring.innerHTML = docstrings[funcname];
-        links.innerHTML     = get_example_links(funcname);
+        links.innerHTML     = get_example_links(funcname, number);
         autofit_textarea_height();
         document.getElementById('execute').click();
     } else {
@@ -55,10 +55,12 @@ function display_example(funcname, number = 0)
 /**
  *
  * @param {String} funcname
+ * @param {Integer} number
  * @returns {String}
  */
-function get_example_links(funcname)
+function get_example_links(funcname, number)
 {
+    var link;
     var links = '';
 
     for (var i = 0; i < example_names[funcname].length; i++) {
@@ -66,7 +68,13 @@ function get_example_links(funcname)
             links += '<br>';
         }
 
-        links += '<a href="javascript:display_example(\'' + funcname + '\', ' + i + ')">' + example_names[funcname][i] + '</a>';
+        link = '<a href="javascript:display_example(\'' + funcname + '\', ' + i + ')">' + example_names[funcname][i] + '</a>';
+
+        if (i == number) {
+            link = '<b>' + link + '</b>';
+        }
+
+         links += link;
     }
 
     return links
