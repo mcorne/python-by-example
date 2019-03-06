@@ -31,6 +31,34 @@ var example_names = {
         "bytearray(range(20))",
         "bytearray(b'Hi!')"
     ],
+    "bytes": [
+        "bytes(10)",
+        "bytes(range(20))",
+        "bytes(b'Hi!')"
+    ],
+    "callable": [
+        "callable(abs)",
+        "callable(123)",
+        "callable(class)",
+        "callable(object)"
+    ],
+    "chr": [
+        "chr(97)",
+        "chr(8364)"
+    ],
+    "classmethod": [
+        "class Foo: @classmethod"
+    ],
+    "complex": [
+        "complex()",
+        "complex('1+2j')",
+        "complex('1 + 2j')",
+        "complex(1)",
+        "complex(1, 2)"
+    ],
+    "delattr": [
+        "delattr(foo, 'bar')"
+    ],
     "dir": [
         "dir()",
         "dir(math)",

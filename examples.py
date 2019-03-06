@@ -37,20 +37,20 @@ class Examples():
         if example[0] == '#':
             # This is the first line containing the example name as a comment, ex # abs(123).
             # Skip the line.
-            pieces  = example.split('\n', 1)
-            example = pieces[1]
+            lines  = example.split('\n', 1)
+            example = lines[1]
         return example
 
     def extract_example_name(self, example):
+        lines = example.split('\n', 1)
         if example[0] == '#':
             # This is the first line containing the example name as a comment, ex # abs(123).
             # Extract the example name.
-            pieces = example.split('\n', 1)
-            name   = pieces[0].strip('# ')
+            name = lines[0].strip('# ')
         else:
             # This is a one line example, always beiginning with print, ex print(abs(123)).
             # Extract the example name inside the print function.
-            name = example[6:-2]
+            name = lines[0][6:-1]
         name = self.htlm_escape(name)
         return name
 
@@ -65,15 +65,8 @@ class Examples():
     def get_docstring(self, function):
         docstring = eval(function + '.__doc__')
         docstring = self.htlm_escape(docstring)
-        # Join string pieces on several line, ex dir.__doc__,
-        # except lines beginning with the function itself, ex bytearray.__doc__
-        docstring = re.sub('([^.:\n])\n(?!(\n|' + function + '))', r'\1 ', docstring)
-        # Replace linefeeds with HTML line breaks
         docstring = docstring.replace('\n', '<br>\n')
-        # Prefix with a dash indented list items without a dash
-        docstring = re.sub('^  ([^ -])', '- \\1', docstring, 0, re.M)
-        # Replace multiple spaces in list items with a single space
-        docstring = re.sub(' +', ' ', docstring)
+        docstring = docstring.replace(' ', '&nbsp;')
         return docstring
 
     def get_example_filenames(self, function):
