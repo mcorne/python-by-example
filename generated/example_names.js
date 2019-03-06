@@ -80,6 +80,20 @@ var example_names = {
         "list(enumerate(['Spring', 'Summer', 'Fall', 'Winter']))",
         "list(enumerate(['Spring', 'Summer', 'Fall', 'Winter'], 1))"
     ],
+    "eval": [
+        "eval('1 + 1')"
+    ],
+    "filter": [
+        "list(filter(None, [0, 1, False, True]))",
+        "list(filter(even, [0, 1, 2, 3, 4, 5]))"
+    ],
+    "float": [
+        "float('+1.23')",
+        "float('   -12345&#92;n')",
+        "float('1e-003')",
+        "float('+1E6')",
+        "float('-Infinity')"
+    ],
     "print": [
         "print('Hello!')",
         "print('2000', '1', '1', sep='-')",

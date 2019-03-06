@@ -80,6 +80,20 @@ var example_contents = {
         "print(list(enumerate(['Spring', 'Summer', 'Fall', 'Winter'])))\n",
         "print(list(enumerate(['Spring', 'Summer', 'Fall', 'Winter'], 1)))\n"
     ],
+    "eval": [
+        "print(eval('1 + 1'))\n"
+    ],
+    "filter": [
+        "print(list(filter(None, [0, 1, False, True])))\n",
+        "def even(number):\n  return not number % 2\n\nprint(list(filter(even, [0, 1, 2, 3, 4, 5])))\n"
+    ],
+    "float": [
+        "print(float('+1.23'))\n",
+        "print(float('   -12345\\n'))\n",
+        "print(float('1e-003'))\n",
+        "print(float('+1E6'))\n",
+        "print(float('-Infinity'))\n"
+    ],
     "print": [
         "print('Hello!')\n",
         "print('2000', '1', '1', sep='-')\n",
