@@ -59,11 +59,26 @@ var example_contents = {
     "delattr": [
         "class Foo:\n    bar = 1\n\nfoo = Foo()\ndelattr(foo, 'bar')\nprint(foo.bar)\n# see https://github.com/brython-dev/brython/issues/1048\n"
     ],
+    "dict": [
+        "print(dict(one=1, two=2, three=3))\n",
+        "print({'one': 1, 'two': 2, 'three': 3})\n",
+        "print(dict(zip(['one', 'two', 'three'], [1, 2, 3])))\n",
+        "print(dict([('two', 2), ('one', 1), ('three', 3)]))\n",
+        "print(dict({'three': 3, 'one': 1, 'two': 2}))\n"
+    ],
     "dir": [
         "print(dir())\n",
         "import math\nprint(dir(math))\n",
         "print(dir(str))\n",
         "class Shape:\n    def __dir__(self):\n        return ['area', 'perimeter', 'location']\ns = Shape()\nprint(dir(s))\n"
+    ],
+    "divmod": [
+        "print(divmod(5, 2))\n",
+        "print(divmod(5.5, 2))\n"
+    ],
+    "enumerate": [
+        "print(list(enumerate(['Spring', 'Summer', 'Fall', 'Winter'])))\n",
+        "print(list(enumerate(['Spring', 'Summer', 'Fall', 'Winter'], 1)))\n"
     ],
     "print": [
         "print('Hello!')\n",

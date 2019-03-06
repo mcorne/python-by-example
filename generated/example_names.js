@@ -59,11 +59,26 @@ var example_names = {
     "delattr": [
         "delattr(foo, 'bar')"
     ],
+    "dict": [
+        "dict(one=1, two=2, three=3)",
+        "{'one': 1, 'two': 2, 'three': 3}",
+        "dict(zip(['one', 'two', 'three'], [1, 2, 3]))",
+        "dict([('two', 2), ('one', 1), ('three', 3)])",
+        "dict({'three': 3, 'one': 1, 'two': 2})"
+    ],
     "dir": [
         "dir()",
         "dir(math)",
         "dir(str)",
         "dir(object)"
+    ],
+    "divmod": [
+        "divmod(5, 2)",
+        "divmod(5.5, 2)"
+    ],
+    "enumerate": [
+        "list(enumerate(['Spring', 'Summer', 'Fall', 'Winter']))",
+        "list(enumerate(['Spring', 'Summer', 'Fall', 'Winter'], 1))"
     ],
     "print": [
         "print('Hello!')",
