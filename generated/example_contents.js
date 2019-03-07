@@ -159,6 +159,10 @@ var example_contents = {
     "locals": [
         "print(locals())\n"
     ],
+    "map": [
+        "def sqr(x):\n    return x ** 2\n\nprint(list(map(sqr, [1, 2, 3, 4, 5])))\n",
+        "print(list(map((lambda x,y: x * y), [1, 2, 3, 4, 5], [1, 2, 3, 4, 5])))\n"
+    ],
     "print": [
         "print('Hello!')\n",
         "print('2000', '1', '1', sep='-')\n",
