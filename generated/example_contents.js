@@ -163,6 +163,29 @@ var example_contents = {
         "def sqr(x):\n    return x ** 2\n\nprint(list(map(sqr, [1, 2, 3, 4, 5])))\n",
         "print(list(map((lambda x,y: x * y), [1, 2, 3, 4, 5], [1, 2, 3, 4, 5])))\n"
     ],
+    "max": [
+        "print(max(1, 3, 2, 0))\n",
+        "print(max([1, 3, 2, 0]))\n",
+        "print(max([10, '1', '100', 90, '111', '2'], key=lambda x:int(x)))\n",
+        "print(max([], default='Empty!'))\n"
+    ],
+    "min": [
+        "print(min(1, 3, 2, 0))\n",
+        "print(min([1, 3, 2, 0]))\n",
+        "print(min([10, '1', '100', 90, '111', '2'], key=lambda x:int(x)))\n",
+        "print(min([], default='Empty!'))\n"
+    ],
+    "next": [
+        "letters = iter(['a', 'b', 'c'])\nprint(next(letters))\nprint(next(letters))\nprint(next(letters))\nprint(next(letters, 'The End!'))\n# see https://github.com/brython-dev/brython/issues/1051\n"
+    ],
+    "oct": [
+        "print(oct(8))\n",
+        "print(oct(-56))\n"
+    ],
+    "open": [
+        "with open(__file__, 'r') as file:\n    content = file.read()\nprint(content)\n# note that files cannot be read or writen with brython that is a javascript implementation\n",
+        "import os, tempfile\nfilename = os.path.join(tempfile.gettempdir(), 'test.txt')\nwith open(filename, 'w') as file:\n    file.write('This was a write test')\nwith open(filename, 'r') as file:\n    content = file.read()\nos.remove(filename)\nprint(content)\n# note that files cannot be read or writen with brython that is a javascript implementation\n"
+    ],
     "print": [
         "print('Hello!')\n",
         "print('2000', '1', '1', sep='-')\n",

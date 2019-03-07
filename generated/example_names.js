@@ -163,6 +163,29 @@ var example_names = {
         "map(sqr, [1, 2, 3, 4, 5])",
         "list(map((lambda x,y: x * y), [1, 2, 3, 4, 5], [1, 2, 3, 4, 5]))"
     ],
+    "max": [
+        "max(1, 3, 2, 0)",
+        "max([1, 3, 2, 0])",
+        "max([10, '1', '100', 90, '111', '2'], key=lambda x:int(x))",
+        "max([], default='Empty!')"
+    ],
+    "min": [
+        "min(1, 3, 2, 0)",
+        "min([1, 3, 2, 0])",
+        "min([10, '1', '100', 90, '111', '2'], key=lambda x:int(x))",
+        "min([], default='Empty!')"
+    ],
+    "next": [
+        "next(letters)"
+    ],
+    "oct": [
+        "oct(8)",
+        "oct(-56)"
+    ],
+    "open": [
+        "open(__file__, 'r')",
+        "open(filename, 'w')"
+    ],
     "print": [
         "print('Hello!')",
         "print('2000', '1', '1', sep='-')",
