@@ -186,10 +186,30 @@ var example_names = {
         "open(__file__, 'r')",
         "open(filename, 'w')"
     ],
+    "ord": [
+        "ord('a')",
+        "ord('€')"
+    ],
+    "pow": [
+        "pow(10, 2)",
+        "pow(10, -2)",
+        "pow(9, 2, 10)"
+    ],
     "print": [
         "print('Hello!')",
         "print('2000', '1', '1', sep='-')",
         "print(1, end='-')..."
+    ],
+    "property": [
+        "property(getx, setx, delx)",
+        "@property"
+    ],
+    "range": [
+        "list(range(10))",
+        "list(range(1, 11))",
+        "list(range(0, 30, 5))",
+        "list(range(0, 10, 3))",
+        "list(range(0, -10, -1))"
     ],
     "str.capitalize": [
         "'hello world!'.capitalize()"

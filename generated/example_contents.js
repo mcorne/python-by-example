@@ -186,10 +186,30 @@ var example_contents = {
         "with open(__file__, 'r') as file:\n    content = file.read()\nprint(content)\n# note that files cannot be read or writen with brython that is a javascript implementation\n",
         "import os, tempfile\nfilename = os.path.join(tempfile.gettempdir(), 'test.txt')\nwith open(filename, 'w') as file:\n    file.write('This was a write test')\nwith open(filename, 'r') as file:\n    content = file.read()\nos.remove(filename)\nprint(content)\n# note that files cannot be read or writen with brython that is a javascript implementation\n"
     ],
+    "ord": [
+        "print(ord('a'))\n",
+        "print(ord('€'))\n"
+    ],
+    "pow": [
+        "print(pow(10, 2))\n",
+        "print(pow(10, -2))\n",
+        "print(pow(9, 2, 10))\n"
+    ],
     "print": [
         "print('Hello!')\n",
         "print('2000', '1', '1', sep='-')\n",
         "print(1, end='-')\nprint(2, end='-')\nprint(3)\n"
+    ],
+    "property": [
+        "class C:\n    def __init__(self):\n        self._x = None\n\n    def getx(self):\n        return self._x\n\n    def setx(self, value):\n        self._x = value\n\n    def delx(self):\n        del self._x\n\n    x = property(getx, setx, delx, \"I'm the 'x' property.\")\n\nc = C()\nc.x = 123\nprint(c.x)\n",
+        "class C:\n    def __init__(self):\n        self._x = None\n\n    @property\n    def x(self):\n        \"\"\"I'm the 'x' property.\"\"\"\n        return self._x\n\n    @x.setter\n    def x(self, value):\n        self._x = value\n\n    @x.deleter\n    def x(self):\n        del self._x\n\nc = C()\nc.x = 123\nprint(c.x)\n"
+    ],
+    "range": [
+        "print(list(range(10)))\n",
+        "print(list(range(1, 11)))\n",
+        "print(list(range(0, 30, 5)))\n",
+        "print(list(range(0, 10, 3)))\n",
+        "print(list(range(0, -10, -1)))\n"
     ],
     "str.capitalize": [
         "print('hello world!'.capitalize())\n"
