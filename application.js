@@ -88,8 +88,12 @@ function get_example_links(funcname, number)
 function get_python_doc_link(funcname)
 {
     var link = 'https://docs.python.org/3/library/';
+    var nofuncnames = {bytearray: true, bytes: true, dict: true, frozenset: true, list: true, range: true, set: true, str: true, tuple: true};
 
     if (funcname.search('[.]') == -1) {
+        if (nofuncnames[funcname]) {
+            funcname = 'func-' + funcname;
+        }
         link += 'functions.html#' + funcname;
     } else if (funcname.search('str[.]') == 0) {
         link += 'stdtypes.html#' + funcname;

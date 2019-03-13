@@ -211,6 +211,18 @@ var example_contents = {
         "print(list(range(0, 10, 3)))\n",
         "print(list(range(0, -10, -1)))\n"
     ],
+    "repr": [
+        "print(repr('foo'))\n",
+        "import datetime\nprint(repr(datetime.datetime.now()))\n",
+        "class Class:\n    pass\n\nprint(repr(Class()))\n",
+        "class Color:\n    color = 'orange'\n    def __repr__(self):\n        return repr(Color.color)\n\nprint(repr(Color()))\n"
+    ],
+    "reversed": [
+        "print(list(reversed('Python')))\n",
+        "print(list(reversed(('P', 'y', 't', 'h', 'o', 'n'))))\n",
+        "print(list(reversed(range(1, 6))))\n",
+        "print(list(reversed([1, 2, 4, 3, 5])))\n"
+    ],
     "str.capitalize": [
         "print('hello world!'.capitalize())\n"
     ]

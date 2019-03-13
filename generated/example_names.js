@@ -211,6 +211,18 @@ var example_names = {
         "list(range(0, 10, 3))",
         "list(range(0, -10, -1))"
     ],
+    "repr": [
+        "repr('foo')",
+        "repr(datetime.datetime.now())",
+        "repr(Class())",
+        "repr(Color())"
+    ],
+    "reversed": [
+        "list(reversed('Python'))",
+        "list(reversed(('P', 'y', 't', 'h', 'o', 'n')))",
+        "list(reversed(range(1, 6)))",
+        "list(reversed([1, 2, 4, 3, 5]))"
+    ],
     "str.capitalize": [
         "'hello world!'.capitalize()"
     ]
