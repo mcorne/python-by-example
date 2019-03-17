@@ -4,3 +4,4 @@ class Foo:
 
 foo = Foo()
 print(getattr(foo, 'bar'))
+print(foo.bar)

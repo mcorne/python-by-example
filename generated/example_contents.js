@@ -112,7 +112,7 @@ var example_contents = {
         "print(list(frozenset([1, 2, 3])))\n"
     ],
     "getattr": [
-        "class Foo:\n    bar = 123\n\nfoo = Foo()\nprint(getattr(foo, 'bar'))\n"
+        "class Foo:\n    bar = 123\n\nfoo = Foo()\nprint(getattr(foo, 'bar'))\nprint(foo.bar)\n"
     ],
     "globals": [
         "print(globals())\n"
@@ -222,6 +222,32 @@ var example_contents = {
         "print(list(reversed(('P', 'y', 't', 'h', 'o', 'n'))))\n",
         "print(list(reversed(range(1, 6))))\n",
         "print(list(reversed([1, 2, 4, 3, 5])))\n"
+    ],
+    "round": [
+        "print(round(0.5))\n",
+        "print(round(-0.5))\n",
+        "print(round(1.5))\n",
+        "print(round(1.2345, 3))\n",
+        "print(round(1.2355, 3))\n"
+    ],
+    "set": [
+        "print(set([1, 2, 3]))\n",
+        "print({1, 2, 3})\n",
+        "print({123, 'foo', (1, 2, 3)})\n"
+    ],
+    "setattr": [
+        "class Foo:\n    bar = 0\n\nfoo = Foo()\nsetattr(foo, 'bar', 123)\nprint(foo.bar)\nfoo.bar = 456\nprint(foo.bar)\n"
+    ],
+    "slice": [
+        "s = slice(1, 5, 2)\nprint(s)\nstring = 'abcdef'\nprint(string[s])\nprint(string[1:5:2])\n",
+        "s = slice(2, -1)\nprint(s)\nlist = ['a', 'b', 'c', 'd', 'e', 'f']\nprint(list[s])\nprint(list[2:-1])\n"
+    ],
+    "sorted": [
+        "print(sorted([5, 2, 3, 1, 4]))\n",
+        "print(sorted({1: 'P', 2: 'y', 3: 't', 4: 'h', 5: 'o', 6: 'n'}, reverse=True))\n",
+        "print(sorted(('Z', 'a', 'P', 'u', 'B'), key=str.lower))\n",
+        "students = [\n    ('john', 'A', 15),\n    ('jane', 'B', 12),\n    ('dave', 'B', 10),\n]\n\nprint(sorted(students, key=lambda student: student[2])) # sort by age\n\nfrom operator import itemgetter\nprint(sorted(students, key=itemgetter(2))) # sort by age\nprint(sorted(students, key=itemgetter(1,2))) # sort by grade then by age\n",
+        "class Student:\n    def __init__(self, name, grade, age):\n        self.name = name\n        self.grade = grade\n        self.age = age\n    def __repr__(self):\n        return repr((self.name, self.grade, self.age))\n\nstudents = [\n    Student('john', 'A', 15),\n    Student('jane', 'B', 12),\n    Student('dave', 'B', 10),\n]\n\nprint(sorted(students, key=lambda student: student.age)) # sort by age\n\nfrom operator import attrgetter\nprint(sorted(students, key=attrgetter('age'))) # sort by age\nprint(sorted(students, key=attrgetter('grade', 'age'))) # sort by grade then by age\n"
     ],
     "str.capitalize": [
         "print('hello world!'.capitalize())\n"

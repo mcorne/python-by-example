@@ -223,6 +223,32 @@ var example_names = {
         "list(reversed(range(1, 6)))",
         "list(reversed([1, 2, 4, 3, 5]))"
     ],
+    "round": [
+        "round(0.5)",
+        "round(-0.5)",
+        "round(1.5)",
+        "round(1.2345, 3)",
+        "round(1.2355, 3)"
+    ],
+    "set": [
+        "set([1, 2, 3])",
+        "{1, 2, 3}",
+        "{123, 'foo', (1, 2, 3)}"
+    ],
+    "setattr": [
+        "setattr(foo, 'bar', 123)"
+    ],
+    "slice": [
+        "slice(1, 5, 2)",
+        "slice(2, -1)"
+    ],
+    "sorted": [
+        "sorted([5, 2, 3, 1, 4])",
+        "sorted({1: 'P', 2: 'y', 3: 't', 4: 'h', 5: 'o', 6: 'n'}, reverse=True)",
+        "sorted(('Z', 'a', 'P', 'u', 'B'), key=str.lower)",
+        "sorted(student, key=lambda student: student[2])",
+        "sorted(students, key=lambda student: student.age)"
+    ],
     "str.capitalize": [
         "'hello world!'.capitalize()"
     ]
