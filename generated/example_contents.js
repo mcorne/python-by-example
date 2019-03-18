@@ -249,6 +249,11 @@ var example_contents = {
         "students = [\n    ('john', 'A', 15),\n    ('jane', 'B', 12),\n    ('dave', 'B', 10),\n]\n\nprint(sorted(students, key=lambda student: student[2])) # sort by age\n\nfrom operator import itemgetter\nprint(sorted(students, key=itemgetter(2))) # sort by age\nprint(sorted(students, key=itemgetter(1,2))) # sort by grade then by age\n",
         "class Student:\n    def __init__(self, name, grade, age):\n        self.name = name\n        self.grade = grade\n        self.age = age\n    def __repr__(self):\n        return repr((self.name, self.grade, self.age))\n\nstudents = [\n    Student('john', 'A', 15),\n    Student('jane', 'B', 12),\n    Student('dave', 'B', 10),\n]\n\nprint(sorted(students, key=lambda student: student.age)) # sort by age\n\nfrom operator import attrgetter\nprint(sorted(students, key=attrgetter('age'))) # sort by age\nprint(sorted(students, key=attrgetter('grade', 'age'))) # sort by grade then by age\n"
     ],
+    "str": [
+        "print(str(123))\n",
+        "class Color:\n    color = 'orange'\n    def __str__(self):\n        return Color.color\n\nprint(str(Color()))\n",
+        "bytes = bytes('pythôn', encoding='utf-8')\nprint(str(bytes, encoding='ascii', errors='ignore'))\n# see https://github.com/brython-dev/brython/issues/1060\n"
+    ],
     "str.capitalize": [
         "print('hello world!'.capitalize())\n"
     ]

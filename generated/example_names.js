@@ -249,6 +249,11 @@ var example_names = {
         "sorted(student, key=lambda student: student[2])",
         "sorted(students, key=lambda student: student.age)"
     ],
+    "str": [
+        "str(123)",
+        "str(Color())",
+        "str(bytes, encoding='ascii', errors='ignore')"
+    ],
     "str.capitalize": [
         "'hello world!'.capitalize()"
     ]
