@@ -256,5 +256,13 @@ var example_names = {
     ],
     "str.capitalize": [
         "'hello world!'.capitalize()"
+    ],
+    "sum": [
+        "sum([1.5, 2, 3, -4])",
+        "sum([1, 2, 3], 10)"
+    ],
+    "super": [
+        "super() single inheritance",
+        "super() multiple inheritance"
     ]
 };

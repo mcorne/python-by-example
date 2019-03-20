@@ -256,5 +256,13 @@ var example_contents = {
     ],
     "str.capitalize": [
         "print('hello world!'.capitalize())\n"
+    ],
+    "sum": [
+        "print(sum([1.5, 2, 3, -4]))\n",
+        "print(sum([1, 2, 3], 10))\n"
+    ],
+    "super": [
+        "class Animal:\n  def __init__(self, name):\n    print(name, 'is an animal.')\n\nclass Cat(Animal):\n  def __init__(self, name):\n    super().__init__(name)\n    # Animal.__init__(self, name)\n    print(name, 'is a cat.')\n\nfelix = Cat('Felix')\n",
+        "class Animal:\n  def __init__(self, name):\n    print(name, 'is an animal.')\n\nclass Cat(Animal):\n  def __init__(self, name):\n    super().__init__(name)\n    print(name, 'is a cat.')\n\nclass Fish(Animal):\n  def __init__(self, name):\n    super().__init__(name)\n    print(name, 'likes fish.')\n\nclass BlackCat(Cat, Fish):\n  def __init__(self, name):\n    super().__init__(name)\n\nfelix = BlackCat('Felix')\n"
     ]
 };
