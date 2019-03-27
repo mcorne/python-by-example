@@ -263,6 +263,24 @@ var example_contents = {
     ],
     "super": [
         "class Animal:\n  def __init__(self, name):\n    print(name, 'is an animal.')\n\nclass Cat(Animal):\n  def __init__(self, name):\n    super().__init__(name)\n    # Animal.__init__(self, name)\n    print(name, 'is a cat.')\n\nfelix = Cat('Felix')\n",
-        "class Animal:\n  def __init__(self, name):\n    print(name, 'is an animal.')\n\nclass Cat(Animal):\n  def __init__(self, name):\n    super().__init__(name)\n    print(name, 'is a cat.')\n\nclass Fish(Animal):\n  def __init__(self, name):\n    super().__init__(name)\n    print(name, 'likes fish.')\n\nclass BlackCat(Cat, Fish):\n  def __init__(self, name):\n    super().__init__(name)\n\nfelix = BlackCat('Felix')\n"
+        "class Animal:\n  def __init__(self, name):\n    print(name, 'is an animal.')\n\nclass Cat(Animal):\n  def __init__(self, name):\n    super().__init__(name)\n    print(name, 'is a cat.')\n\nclass Fish(Animal):\n  def __init__(self, name):\n    super().__init__(name)\n    print(name, 'likes fish.')\n\nclass BlackCat(Cat, Fish):\n  def __init__(self, name):\n    super().__init__(name)\n\nfelix = BlackCat('Felix')\n",
+        "class Top():\n    def get_name(self):\n      return 'Top'\n\nclass Left(Top):\n    def get_name(self):\n      return 'Left'\n\nclass Right(Top):\n    def get_name(self):\n      return 'Right'\n\nclass Bottom(Left, Right):\n    def get_name(self):\n      return 'Bottom'\n\nprint(super(Left, Bottom()).get_name())\n"
+    ],
+    "tuple": [
+        "print(tuple('abc'))\n",
+        "print(tuple([1, 2, 3]))\n"
+    ],
+    "type": [
+        "print(type('abc'))\n",
+        "class Class():\n    pass\n\nprint(type(Class()))\n",
+        "Class = type('Car', (object,), dict(color='red', size='big'))\ncar = Class()\nprint(car.color)\nprint(car.size)\n"
+    ],
+    "vars": [
+        "class Car():\n    color = 'black'\n    size = 'big'\n\nprint(vars(Car))\n",
+        "class Car():\n    def __init__(self, color='red', size = 'small'):\n        self.color = color\n        self.size = size\n\nprint(vars(Car()))\n"
+    ],
+    "zip": [
+        "print(list(zip('ABCDEF', '123', ['a', 'b', 'c', 'd'])))\n",
+        "colors, sizes = zip(*(('white', 'small'), ('red', 'big')))\nprint(colors)\nprint(sizes)\n"
     ]
 };

@@ -74,7 +74,7 @@ function get_example_links(funcname, number)
             link = '<b>' + link + '</b>';
         }
 
-         links += link;
+         links += '&#8226;&nbsp;' + link;
     }
 
     return links

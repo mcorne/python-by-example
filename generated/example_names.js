@@ -263,6 +263,24 @@ var example_names = {
     ],
     "super": [
         "super() single inheritance",
-        "super() multiple inheritance"
+        "super() multiple inheritance",
+        "super(Left, Bottom())"
+    ],
+    "tuple": [
+        "tuple('abc')",
+        "tuple([1, 2, 3])"
+    ],
+    "type": [
+        "type('abc')",
+        "type(Class())",
+        "type('Car', (object,), dict(color='red', size='big'))"
+    ],
+    "vars": [
+        "vars(Car)",
+        "vars(Car())"
+    ],
+    "zip": [
+        "list(zip('ABCDEF', '123', ['a', 'b', 'c', 'd']))",
+        "zip(*(('white', 'small'), ('red', 'big')))"
     ]
 };
