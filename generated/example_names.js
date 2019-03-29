@@ -317,6 +317,46 @@ var example_names = {
         "'Bientôt'.isdigit()",
         "'123'.isdigit()"
     ],
+    "str.isidentifier": [
+        "'Lu'.isidentifier()"
+    ],
+    "str.islower": [
+        "'bientôt'.islower()"
+    ],
+    "str.isnumeric": [
+        "'123'.isnumeric()"
+    ],
+    "str.isprintable": [
+        "'Some text...'.isprintable()"
+    ],
+    "str.isspace": [
+        "' &#92;n'.isspace()"
+    ],
+    "str.istitle": [
+        "'Good Morning'.istitle()",
+        "'good morning'.istitle()"
+    ],
+    "str.isupper": [
+        "'BIENTÔT'.isupper()"
+    ],
+    "str.join": [
+        "'-'.join(['2019', '03', '29'])"
+    ],
+    "str.ljust": [
+        "'foo'.ljust(10, '*')"
+    ],
+    "str.lower": [
+        "'BIENTÔT'.lower()"
+    ],
+    "str.lstrip": [
+        "'   spacious   '.lstrip()",
+        "'www.example.com'.lstrip('cmowz.')"
+    ],
+    "str.maketrans": [
+        "'xyz'.maketrans({'a': 'A', 'b': 'B', 'c': 'C'})",
+        "'xyz'.maketrans('abc', 'ABC')",
+        "'xyz'.maketrans('abc', 'ABC', 'abd')"
+    ],
     "sum": [
         "sum([1.5, 2, 3, -4])",
         "sum([1, 2, 3], 10)"

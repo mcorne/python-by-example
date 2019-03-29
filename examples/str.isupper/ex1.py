@@ -1,0 +1,1 @@
+print('BIENTÔT'.isupper())

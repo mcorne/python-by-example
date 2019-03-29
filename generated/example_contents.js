@@ -317,6 +317,46 @@ var example_contents = {
         "print('Bientôt'.isdigit())\n",
         "print('123'.isdigit())\n"
     ],
+    "str.isidentifier": [
+        "print('Lu'.isidentifier())\n"
+    ],
+    "str.islower": [
+        "print('bientôt'.islower())\n"
+    ],
+    "str.isnumeric": [
+        "print('123'.isnumeric())\n"
+    ],
+    "str.isprintable": [
+        "print('Some text...'.isprintable())\n"
+    ],
+    "str.isspace": [
+        "print(' \\n'.isspace())\n"
+    ],
+    "str.istitle": [
+        "print('Good Morning'.istitle())\n",
+        "print('good morning'.istitle())\n"
+    ],
+    "str.isupper": [
+        "print('BIENTÔT'.isupper())\n"
+    ],
+    "str.join": [
+        "print('-'.join(['2019', '03', '29']))\n"
+    ],
+    "str.ljust": [
+        "print('foo'.ljust(10, '*'))\n"
+    ],
+    "str.lower": [
+        "print('BIENTÔT'.lower())\n"
+    ],
+    "str.lstrip": [
+        "print('   spacious   '.lstrip())\n",
+        "print('www.example.com'.lstrip('cmowz.'))\n"
+    ],
+    "str.maketrans": [
+        "print('xyz'.maketrans({'a': 'A', 'b': 'B', 'c': 'C'}))\n# see issue https://github.com/brython-dev/brython/issues/1077\n",
+        "print('xyz'.maketrans('abc', 'ABC'))\n",
+        "print('xyz'.maketrans('abc', 'ABC', 'abd'))\n# see issue https://github.com/brython-dev/brython/issues/1078\n"
+    ],
     "sum": [
         "print(sum([1.5, 2, 3, -4]))\n",
         "print(sum([1, 2, 3], 10))\n"
