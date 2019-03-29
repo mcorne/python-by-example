@@ -1,2 +1,2 @@
-# Replacing %s and %r
-print("repr() shows quotes: {!r}; str() doesn't: {!s}".format('test1', 'test2'))
+print(format(123.456, "^-09.3f"))
+# see issue https://github.com/brython-dev/brython/issues/1075

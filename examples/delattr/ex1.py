@@ -5,4 +5,4 @@ class Foo:
 foo = Foo()
 delattr(foo, 'bar')
 print(foo.bar)
-# see https://github.com/brython-dev/brython/issues/1048
+# see issue https://github.com/brython-dev/brython/issues/1048

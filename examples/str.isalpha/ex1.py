@@ -1,0 +1,1 @@
+print('Bientôt'.isalpha())

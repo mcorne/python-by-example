@@ -4,4 +4,4 @@ print(next(letters))
 print(next(letters))
 print(next(letters))
 print(next(letters, 'The End!'))
-# see https://github.com/brython-dev/brython/issues/1051
+# see issue https://github.com/brython-dev/brython/issues/1051

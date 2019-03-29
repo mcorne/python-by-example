@@ -1,4 +1,4 @@
-# see https://stackoverflow.com/questions/3906232/python-get-the-print-output-in-an-exec-statement
+# see issue https://stackoverflow.com/questions/3906232/python-get-the-print-output-in-an-exec-statement
 
 from browser import document
 import sys

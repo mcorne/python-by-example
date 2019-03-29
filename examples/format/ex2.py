@@ -1,5 +1,1 @@
-# Accessing arguments by name
-print('Coordinates: {latitude}, {longitude}'.format(latitude='37.24N', longitude='-115.81W'))
-
-coord = {'latitude': '37.24N', 'longitude': '-115.81W'}
-print('Coordinates: {latitude}, {longitude}'.format(**coord))
+print(format(123.456, "f"))

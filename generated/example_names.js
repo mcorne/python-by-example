@@ -95,18 +95,11 @@ var example_names = {
         "float('-Infinity')"
     ],
     "format": [
-        "Accessing arguments by position",
-        "Expressing a percentage",
-        "Using type-specific formatting",
-        "Nesting arguments",
-        "Accessing arguments by name",
-        "Accessing arguments’ attributes",
-        "Accessing arguments’ items",
-        "Replacing %s and %r",
-        "Aligning the text and specifying a width",
-        "Replacing %+f, %-f, and % f and specifying a sign",
-        "Replacing %x and %o and converting the value to different bases",
-        "Using the comma as a thousands separator"
+        "format(123, &quot;d&quot;)",
+        "format(123.456, &quot;f&quot;)",
+        "format(16, &quot;b&quot;)",
+        "format(123456789, &quot;*&gt;+15,d&quot;)",
+        "format(123.456, &quot;^-09.3f&quot;)"
     ],
     "frozenset": [
         "list(frozenset([1, 2, 3]))"
@@ -256,6 +249,73 @@ var example_names = {
     ],
     "str.capitalize": [
         "'hello world!'.capitalize()"
+    ],
+    "str.casefold": [
+        "'À Bientôt Meßingenieur'.casefold()"
+    ],
+    "str.center": [
+        "'Hello'.center(10, '*')"
+    ],
+    "str.count": [
+        "&quot;Counting o's&quot;.count('o')",
+        "&quot;Counting o's&quot;.count('o', 1, -3)"
+    ],
+    "str.encode": [
+        "'À Bientôt Meßingenieur'.encode()",
+        "'ß'.encode('ascii', 'ignore')"
+    ],
+    "str.endswith": [
+        "'domain.com'.endswith('com')",
+        "'domain.net'.endswith(('com', 'org'))"
+    ],
+    "str.expandtabs": [
+        "'01&#92;t012&#92;t0123&#92;t01234'.expandtabs()",
+        "'01&#92;t012&#92;t0123&#92;t01234'.expandtabs(4)"
+    ],
+    "str.find": [
+        "'Looking for o'.find('o')",
+        "'Looking for o'.find('o', 5, -1)"
+    ],
+    "str.format": [
+        "Accessing arguments by position",
+        "Expressing a percentage",
+        "Using type-specific formatting",
+        "Nesting arguments",
+        "Accessing arguments by name",
+        "Accessing arguments’ attributes",
+        "Accessing arguments’ items",
+        "Replacing %s and %r",
+        "Aligning the text and specifying a width",
+        "Replacing %+f, %-f, and % f and specifying a sign",
+        "Replacing %x and %o and converting the value to different bases",
+        "Using the comma as a thousands separator"
+    ],
+    "str.format_map": [
+        "'{name} was born in {country}'.format_map(Default(name='Guido'))"
+    ],
+    "str.index": [
+        "'Looking for o'.index('o')",
+        "'Looking for o'.index('o', 5, -1)"
+    ],
+    "str.isalnum": [
+        "'May 1st'.isalnum()",
+        "'catch22'.isalnum()"
+    ],
+    "str.isalpha": [
+        "'Bientôt'.isalpha()",
+        "'123'.isalpha()"
+    ],
+    "str.isascii": [
+        "'abc'.isascii()",
+        "'Bientôt'.isascii()"
+    ],
+    "str.isdecimal": [
+        "'123'.isdecimal()",
+        "'abc'.isdecimal()"
+    ],
+    "str.isdigit": [
+        "'Bientôt'.isdigit()",
+        "'123'.isdigit()"
     ],
     "sum": [
         "sum([1.5, 2, 3, -4])",
