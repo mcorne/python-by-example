@@ -357,6 +357,38 @@ var example_contents = {
         "print('xyz'.maketrans('abc', 'ABC'))\n",
         "print('xyz'.maketrans('abc', 'ABC', 'abd'))\n# see issue https://github.com/brython-dev/brython/issues/1078\n"
     ],
+    "str.partition": [
+        "print('The world is small'.partition(' '))\n"
+    ],
+    "str.replace": [
+        "print('the apple'.replace('e', 'E'))\n"
+    ],
+    "str.rfind": [
+        "print('Looking for o'.rfind('o'))\n",
+        "print('Looking for o'.rfind('o', 5, -1))\n"
+    ],
+    "str.rindex": [
+        "print('Looking for o'.rindex('o'))\n",
+        "print('Looking for o'.rindex('o', 5, -1))\n"
+    ],
+    "str.rjust": [
+        "print('foo'.rjust(10, '*'))\n"
+    ],
+    "str.rpartition": [
+        "print('The world is small'.rpartition(' '))\n"
+    ],
+    "str.rsplit": [
+        "print('Ten year old'.rsplit())\n",
+        "print('Ten-year-old'.rsplit('-', 1))\n"
+    ],
+    "str.rstrip": [
+        "print('   spacious   '.rstrip())\n",
+        "print('www.example.com'.rstrip('cmowz.'))\n"
+    ],
+    "str.split": [
+        "print('Ten year old'.split())\n",
+        "print('Ten-year-old'.split('-', 1))\n"
+    ],
     "sum": [
         "print(sum([1.5, 2, 3, -4]))\n",
         "print(sum([1, 2, 3], 10))\n"

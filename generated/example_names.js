@@ -357,6 +357,38 @@ var example_names = {
         "'xyz'.maketrans('abc', 'ABC')",
         "'xyz'.maketrans('abc', 'ABC', 'abd')"
     ],
+    "str.partition": [
+        "'The world is small'.partition(' ')"
+    ],
+    "str.replace": [
+        "'the apple'.replace('e', 'E')"
+    ],
+    "str.rfind": [
+        "'Looking for o'.rfind('o')",
+        "'Looking for o'.rfind('o', 5, -1)"
+    ],
+    "str.rindex": [
+        "'Looking for o'.rindex('o')",
+        "'Looking for o'.rindex('o', 5, -1)"
+    ],
+    "str.rjust": [
+        "'foo'.rjust(10, '*')"
+    ],
+    "str.rpartition": [
+        "'The world is small'.rpartition(' ')"
+    ],
+    "str.rsplit": [
+        "'Ten year old'.rsplit()",
+        "'Ten-year-old'.rsplit('-', 1)"
+    ],
+    "str.rstrip": [
+        "'   spacious   '.rstrip()",
+        "'www.example.com'.rstrip('cmowz.')"
+    ],
+    "str.split": [
+        "'Ten year old'.split()",
+        "'Ten-year-old'.split('-', 1)"
+    ],
     "sum": [
         "sum([1.5, 2, 3, -4])",
         "sum([1, 2, 3], 10)"

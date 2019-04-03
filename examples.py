@@ -63,7 +63,10 @@ class Examples():
         self.write_file('example_names', names)
 
     def get_docstring(self, function):
-        docstring = eval(function + '.__doc__')
+        docstring  = eval(function + '.__doc__')
+        signature = self.get_signature(function)
+        if signature != None:
+            docstring = function + '(' + signature + ')' + '\n\n' + docstring
         docstring = self.htlm_escape(docstring)
         docstring = docstring.replace('\n', '<br>\n')
         docstring = docstring.replace(' ', '&nbsp;')
@@ -83,6 +86,15 @@ class Examples():
     def get_functions(self):
         functions = os.listdir(self.examples_dirname)
         return sorted(functions)
+
+    def get_signature(self, function):
+        signature = eval(function + '.__text_signature__')
+        if signature != None:
+            signature = signature[1:-1]
+            signature = signature.replace('$self', '')
+            signature = signature.replace('$module', '')
+            signature = signature.strip(',/ ')
+        return signature
 
     def htlm_escape(self, string):
         return string.replace('&','&amp;').replace('<','&lt;').replace('>','&gt;').replace('"','&quot;').replace('\\', '&#92;')
