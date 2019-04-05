@@ -353,9 +353,9 @@ var example_names = {
         "'www.example.com'.lstrip('cmowz.')"
     ],
     "str.maketrans": [
-        "'xyz'.maketrans({'a': 'A', 'b': 'B', 'c': 'C'})",
-        "'xyz'.maketrans('abc', 'ABC')",
-        "'xyz'.maketrans('abc', 'ABC', 'abd')"
+        "str.maketrans({'a': 'A', 'b': 'B', 'c': 'C'})",
+        "str.maketrans('abc', 'ABC')",
+        "str.maketrans('abc', 'ABC', 'abd')"
     ],
     "str.partition": [
         "'The world is small'.partition(' ')"
@@ -387,7 +387,38 @@ var example_names = {
     ],
     "str.split": [
         "'Ten year old'.split()",
-        "'Ten-year-old'.split('-', 1)"
+        "'Ten-year-old'.split('-', 1)",
+        "'   Ten    year   old   '.split()"
+    ],
+    "str.splitlines": [
+        "'ab c&#92;n&#92;nde fg&#92;rkl&#92;r&#92;n'.splitlines()",
+        "'ab c&#92;n&#92;nde fg&#92;rkl&#92;r&#92;n'.splitlines(keepends=True)"
+    ],
+    "str.startswith": [
+        "'fr.domain.com'.startswith('fr')",
+        "'uk.domain.net'.startswith(('fr', 'uk'))"
+    ],
+    "str.strip": [
+        "'   spacious   '.strip()",
+        "'www.example.com'.strip('cmowz.')"
+    ],
+    "str.swapcase": [
+        "'aBcDàẞ'.swapcase()"
+    ],
+    "str.title": [
+        "'Mr smith'.title()"
+    ],
+    "str.translate": [
+        "'car'.translate(str.maketrans({'a': 'A', 'b': 'B', 'c': 'C'}))",
+        "'car'.translate(str.maketrans('abc', 'ABC'))",
+        "'car'.translate(str.maketrans('abc', 'ABC', 'abd'))"
+    ],
+    "str.upper": [
+        "'bientôt'.upper()"
+    ],
+    "str.zfill": [
+        "'42'.zfill(5)",
+        "'-42'.zfill(5)"
     ],
     "sum": [
         "sum([1.5, 2, 3, -4])",

@@ -353,9 +353,9 @@ var example_contents = {
         "print('www.example.com'.lstrip('cmowz.'))\n"
     ],
     "str.maketrans": [
-        "print('xyz'.maketrans({'a': 'A', 'b': 'B', 'c': 'C'}))\n# see issue https://github.com/brython-dev/brython/issues/1077\n",
-        "print('xyz'.maketrans('abc', 'ABC'))\n",
-        "print('xyz'.maketrans('abc', 'ABC', 'abd'))\n# see issue https://github.com/brython-dev/brython/issues/1078\n"
+        "print(str.maketrans({'a': 'A', 'b': 'B', 'c': 'C'}))\n# see issue https://github.com/brython-dev/brython/issues/1077\n",
+        "print(str.maketrans('abc', 'ABC'))\n",
+        "print(str.maketrans('abc', 'ABC', 'abd'))\n# see issue https://github.com/brython-dev/brython/issues/1078\n"
     ],
     "str.partition": [
         "print('The world is small'.partition(' '))\n"
@@ -387,7 +387,38 @@ var example_contents = {
     ],
     "str.split": [
         "print('Ten year old'.split())\n",
-        "print('Ten-year-old'.split('-', 1))\n"
+        "print('Ten-year-old'.split('-', 1))\n",
+        "print('   Ten    year   old   '.split())\n"
+    ],
+    "str.splitlines": [
+        "print('ab c\\n\\nde fg\\rkl\\r\\n'.splitlines())\n",
+        "print('ab c\\n\\nde fg\\rkl\\r\\n'.splitlines(keepends=True))\n"
+    ],
+    "str.startswith": [
+        "print('fr.domain.com'.startswith('fr'))\n",
+        "print('uk.domain.net'.startswith(('fr', 'uk')))\n"
+    ],
+    "str.strip": [
+        "print('   spacious   '.strip())\n",
+        "print('www.example.com'.strip('cmowz.'))\n"
+    ],
+    "str.swapcase": [
+        "print('aBcDàẞ'.swapcase())\n"
+    ],
+    "str.title": [
+        "print('Mr smith'.title())\n"
+    ],
+    "str.translate": [
+        "print('car'.translate(str.maketrans({'a': 'A', 'b': 'B', 'c': 'C'})))\n",
+        "print('car'.translate(str.maketrans('abc', 'ABC')))\n",
+        "print('car'.translate(str.maketrans('abc', 'ABC', 'abd')))\n"
+    ],
+    "str.upper": [
+        "print('bientôt'.upper())\n"
+    ],
+    "str.zfill": [
+        "print('42'.zfill(5))\n",
+        "print('-42'.zfill(5))\n"
     ],
     "sum": [
         "print(sum([1.5, 2, 3, -4]))\n",

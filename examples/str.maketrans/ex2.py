@@ -1,1 +1,1 @@
-print('xyz'.maketrans('abc', 'ABC'))
+print(str.maketrans('abc', 'ABC'))

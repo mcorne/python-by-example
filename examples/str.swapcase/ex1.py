@@ -1,0 +1,1 @@
+print('aBcDàẞ'.swapcase())
