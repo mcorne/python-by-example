@@ -31,6 +31,12 @@ var example_contents = {
         "print(bytearray(range(20)))\n",
         "print(bytearray(b'Hi!'))\n"
     ],
+    "bytearray.fromhex": [
+        "print(bytearray.fromhex('2Ef0 F1f2  '))\n# see issue https://github.com/brython-dev/brython/issues/1090\n"
+    ],
+    "bytearray.hex": [
+        "print(bytearray(b'\\xf0\\xf1\\xf2').hex())\n# see issue https://github.com/brython-dev/brython/issues/1091\n"
+    ],
     "bytes": [
         "print(bytes(10))\n",
         "print(bytes(range(20)))\n",
@@ -94,6 +100,20 @@ var example_contents = {
         "print(float('+1E6'))\n",
         "print(float('-Infinity'))\n"
     ],
+    "float.as_integer_ratio": [
+        "print(float.as_integer_ratio(10.1))\n",
+        "print(float.as_integer_ratio(-0.25))\n"
+    ],
+    "float.fromhex": [
+        "print(float.fromhex('0x3.a7p10'))\n"
+    ],
+    "float.hex": [
+        "print(float.hex(3740.0))\n"
+    ],
+    "float.is_integer": [
+        "print(float.is_integer(123.0))\n",
+        "print(float.is_integer(123.5))\n"
+    ],
     "format": [
         "print(format(123, \"d\"))\n",
         "print(format(123.456, \"f\"))\n",
@@ -128,6 +148,21 @@ var example_contents = {
         "print(int(5.5))\n",
         "print(int('123'))\n",
         "print(int('ffff', 16))\n"
+    ],
+    "int.bit_length": [
+        "print((-37).bit_length())\n"
+    ],
+    "int.from_bytes": [
+        "print(int.from_bytes(b'\\x00\\x10', byteorder='big'))\n",
+        "print(int.from_bytes(b'\\x00\\x10', byteorder='little'))\n",
+        "print(int.from_bytes(b'\\xfc\\x00', byteorder='big', signed=True))\n",
+        "print(int.from_bytes(b'\\xfc\\x00', byteorder='big', signed=False))\n",
+        "print(int.from_bytes([255, 0, 0], byteorder='big'))\n"
+    ],
+    "int.to_bytes": [
+        "print((1024).to_bytes(2, byteorder='big'))\n",
+        "print((1024).to_bytes(4, byteorder='big'))\n# see issue https://github.com/brython-dev/brython/issues/1092\n",
+        "print((-1024).to_bytes(4, byteorder='big', signed=True))\n"
     ],
     "isinstance": [
         "class Foo:\n    pass\n\nfoo = Foo()\nprint(isinstance(foo, Foo))\n",

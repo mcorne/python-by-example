@@ -31,6 +31,12 @@ var example_names = {
         "bytearray(range(20))",
         "bytearray(b'Hi!')"
     ],
+    "bytearray.fromhex": [
+        "bytearray.fromhex('2Ef0 F1f2  ')"
+    ],
+    "bytearray.hex": [
+        "bytearray(b'&#92;xf0&#92;xf1&#92;xf2').hex()"
+    ],
     "bytes": [
         "bytes(10)",
         "bytes(range(20))",
@@ -94,6 +100,20 @@ var example_names = {
         "float('+1E6')",
         "float('-Infinity')"
     ],
+    "float.as_integer_ratio": [
+        "float.as_integer_ratio(10.1)",
+        "float.as_integer_ratio(-0.25)"
+    ],
+    "float.fromhex": [
+        "float.fromhex('0x3.a7p10')"
+    ],
+    "float.hex": [
+        "float.hex(3740.0)"
+    ],
+    "float.is_integer": [
+        "float.is_integer(123.0)",
+        "float.is_integer(123.5)"
+    ],
     "format": [
         "format(123, &quot;d&quot;)",
         "format(123.456, &quot;f&quot;)",
@@ -128,6 +148,21 @@ var example_names = {
         "int(5.5)",
         "int('123')",
         "int('ffff', 16)"
+    ],
+    "int.bit_length": [
+        "(-37).bit_length()"
+    ],
+    "int.from_bytes": [
+        "int.from_bytes(b'&#92;x00&#92;x10', byteorder='big')",
+        "int.from_bytes(b'&#92;x00&#92;x10', byteorder='little')",
+        "int.from_bytes(b'&#92;xfc&#92;x00', byteorder='big', signed=True)",
+        "int.from_bytes(b'&#92;xfc&#92;x00', byteorder='big', signed=False)",
+        "int.from_bytes([255, 0, 0], byteorder='big')"
+    ],
+    "int.to_bytes": [
+        "(1024).to_bytes(2, byteorder='big')",
+        "(1024).to_bytes(4, byteorder='big')",
+        "(-1024).to_bytes(4, byteorder='big', signed=True)"
     ],
     "isinstance": [
         "isinstance(foo, 'Foo')",

@@ -95,7 +95,7 @@ function get_python_doc_link(funcname)
             funcname = 'func-' + funcname;
         }
         link += 'functions.html#' + funcname;
-    } else if (funcname.search('str[.]') == 0) {
+    } else if (funcname.search('(byte|bytearray|float|int|str)[.]') == 0) {
         link += 'stdtypes.html#' + funcname;
     }
 
