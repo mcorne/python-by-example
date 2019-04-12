@@ -1,4 +1,4 @@
-# set.copy()
-set = {1, 2, 3}
-set.copy()
-print(set)
+# s.copy()
+s = {1, 2, 3}
+s.copy()
+print(s)

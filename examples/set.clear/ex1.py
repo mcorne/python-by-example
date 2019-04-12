@@ -1,4 +1,4 @@
-# set.clear()
-set = {1, 2, 3}
-set.clear()
-print(set)
+# s.clear()
+s = {1, 2, 3}
+s.clear()
+print(s)

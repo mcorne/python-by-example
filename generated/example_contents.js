@@ -185,9 +185,9 @@ var example_contents = {
         "print([x for x in range(5)])\n"
     ],
     "list.sort": [
-        "list = [5, 2, 3, 1, 4]\nlist.sort()\nprint(list)\n",
-        "list = [5, 2, 3, 1, 4]\nlist.sort(reverse=True)\nprint(list)\n",
-        "list = ['Z', 'a', 'P', 'u', 'B']\nlist.sort(key=str.lower)\nprint(list)\n"
+        "l = [5, 2, 3, 1, 4]\nl.sort()\nprint(l)\n",
+        "l = [5, 2, 3, 1, 4]\nl.sort(reverse=True)\nprint(l)\n",
+        "l = ['Z', 'a', 'P', 'u', 'B']\nl.sort(key=str.lower)\nprint(l)\n"
     ],
     "locals": [
         "print(locals())\n"
@@ -269,13 +269,13 @@ var example_contents = {
         "print({123, 'foo', (1, 2, 3)})\n"
     ],
     "set.add": [
-        "set = {1, 2, 3}\nset.add(4)\nprint(set)\n"
+        "s = {1, 2, 3}\ns.add(4)\nprint(s)\n"
     ],
     "set.clear": [
-        "set = {1, 2, 3}\nset.clear()\nprint(set)\n"
+        "s = {1, 2, 3}\ns.clear()\nprint(s)\n"
     ],
     "set.copy": [
-        "set = {1, 2, 3}\nset.copy()\nprint(set)\n"
+        "s = {1, 2, 3}\ns.copy()\nprint(s)\n"
     ],
     "set.difference": [
         "print({1, 2, 3}.difference({1, 2, 3, 4, 5, 6}))\nprint({1, 2, 3} - {1, 2, 3, 4, 5, 6})\n",
@@ -283,13 +283,13 @@ var example_contents = {
         "print({1, 2, 3, 4, 5, 6}.difference({1, 2, 3}, {4, 10}))\nprint({1, 2, 3, 4, 5, 6} - {1, 2, 3} - {4, 10})\n"
     ],
     "set.difference_update": [
-        "set = {1, 2, 3}\nset.difference_update({1, 2, 3, 4, 5, 6})\nprint(set)\n",
-        "set = {1, 2, 3, 4, 5, 6}\nset.difference_update({1, 2, 3})\nprint(set)\n",
-        "set = {1, 2, 3, 4, 5, 6}\nset.difference_update({1, 2, 3}, {4, 10})\nprint(set)\n"
+        "s = {1, 2, 3}\ns.difference_update({1, 2, 3, 4, 5, 6})\nprint(s)\n",
+        "s = {1, 2, 3, 4, 5, 6}\ns.difference_update({1, 2, 3})\nprint(s)\n",
+        "s = {1, 2, 3, 4, 5, 6}\ns.difference_update({1, 2, 3}, {4, 10})\nprint(s)\n"
     ],
     "set.discard": [
-        "set = {1, 2, 3}\nset.discard(3)\nprint(set)\n",
-        "set = {1, 2, 3}\nset.discard(0)\nprint(set)\n"
+        "s = {1, 2, 3}\ns.discard(3)\nprint(s)\n",
+        "s = {1, 2, 3}\ns.discard(0)\nprint(s)\n"
     ],
     "set.intersection": [
         "print({1, 2, 3}.intersection({4, 5, 6}))\nprint({1, 2, 3} & {4, 5, 6})\n",
@@ -297,9 +297,9 @@ var example_contents = {
         "print({1, 2, 3, 4, 5, 6}.intersection({1, 2, 3, 7, 8, 9}, {1, 2, 3, 10}))\nprint({1, 2, 3, 4, 5, 6} & {1, 2, 3, 7, 8, 9} & {1, 2, 3, 10})\n"
     ],
     "set.intersection_update": [
-        "set = {1, 2, 3}\nset.intersection_update({4, 5, 6})\nprint(set)\n",
-        "set = {1, 2, 3, 4, 5, 6}\nset.intersection_update({1, 2, 3, 7, 8, 9})\nprint(set)\n",
-        "set = {1, 2, 3, 4, 5, 6}\nset.intersection_update({1, 2, 3, 7, 8, 9}, {1, 2, 3, 10})\nprint(set)\n"
+        "s = {1, 2, 3}\ns.intersection_update({4, 5, 6})\nprint(s)\n",
+        "s = {1, 2, 3, 4, 5, 6}\ns.intersection_update({1, 2, 3, 7, 8, 9})\nprint(s)\n",
+        "s = {1, 2, 3, 4, 5, 6}\ns.intersection_update({1, 2, 3, 7, 8, 9}, {1, 2, 3, 10})\nprint(s)\n"
     ],
     "set.isdisjoint": [
         "print({1, 2, 3}.isdisjoint({4, 5, 6}))\n",
@@ -314,33 +314,33 @@ var example_contents = {
         "print({1, 2, 3, 4, 5, 6}.issuperset({1, 2, 3}))\nprint({1, 2, 3, 4, 5, 6} >= {1, 2, 3})\n"
     ],
     "set.pop": [
-        "set = {1, 2, 3}\nprint(set.pop())\nprint(set)\n"
+        "s = {1, 2, 3}\nprint(s.pop())\nprint(s)\n"
     ],
     "set.remove": [
-        "set = {1, 2, 3}\nset.remove(3)\nprint(set)\n",
-        "set = {1, 2, 3}\nset.remove(0)\nprint(set)\n# bug as it should return a KeyError exception !!!\n"
+        "s = {1, 2, 3}\ns.remove(3)\nprint(s)\n",
+        "s = {1, 2, 3}\ns.remove(0)\nprint(s)\n# bug as it should return a KeyError exception !!!\n"
     ],
     "set.symmetric_difference": [
         "print({1, 2, 3, 4, 5, 6}.symmetric_difference({1, 2, 3, 7, 8, 9}))\nprint({1, 2, 3, 4, 5, 6} ^ {1, 2, 3, 7, 8, 9})\n",
         "print({1, 2, 3}.symmetric_difference({1, 2, 3}))\nprint({1, 2, 3} ^ {1, 2, 3})\n"
     ],
     "set.symmetric_difference_update": [
-        "set = {1, 2, 3, 4, 5, 6}\nset.symmetric_difference_update({1, 2, 3, 7, 8, 9})\nprint(set)\n",
-        "set = {1, 2, 3}\nset.symmetric_difference_update({1, 2, 3})\nprint(set)\n"
+        "s = {1, 2, 3, 4, 5, 6}\ns.symmetric_difference_update({1, 2, 3, 7, 8, 9})\nprint(s)\n",
+        "s = {1, 2, 3}\ns.symmetric_difference_update({1, 2, 3})\nprint(s)\n"
     ],
     "set.union": [
         "print({1, 2, 3}.union({4, 5, 6}))\nprint({1, 2, 3} | {4, 5, 6})\n",
         "print({1, 2, 3}.union({4, 5, 6}, {7, 8, 9}))\nprint({1, 2, 3} | {4, 5, 6} | {7, 8, 9})\n"
     ],
     "set.update": [
-        "set = {1, 2, 3}\nset.update({4, 5, 6}, {7, 8, 9})\nprint(set)\n"
+        "s = {1, 2, 3}\ns.update({4, 5, 6}, {7, 8, 9})\nprint(s)\n"
     ],
     "setattr": [
         "class Foo:\n    bar = 0\n\nfoo = Foo()\nsetattr(foo, 'bar', 123)\nprint(foo.bar)\nfoo.bar = 456\nprint(foo.bar)\n"
     ],
     "slice": [
         "s = slice(1, 5, 2)\nprint(s)\nstring = 'abcdef'\nprint(string[s])\nprint(string[1:5:2])\n",
-        "s = slice(2, -1)\nprint(s)\nlist = ['a', 'b', 'c', 'd', 'e', 'f']\nprint(list[s])\nprint(list[2:-1])\n"
+        "s = slice(2, -1)\nprint(s)\nl = ['a', 'b', 'c', 'd', 'e', 'f']\nprint(l[s])\nprint(l[2:-1])\n"
     ],
     "sorted": [
         "print(sorted([5, 2, 3, 1, 4]))\n",
