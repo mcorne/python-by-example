@@ -1,15 +1,16 @@
 function add_select_options()
 {
+    var count = 0;
     var example = document.getElementById('example');
     var options = '';
 
     for (var funcname in example_names) {
         options += '<option>' + funcname + '</option>';
+        count++;
     }
 
-    example.innerHTML += options;
+    example.innerHTML = '<option>Choose one of ' + count + ' functions</option>' + options;
 }
-
 
 /**
  * @see https://stackoverflow.com/questions/23451611/is-there-anyway-to-have-a-textarea-autofit-height-based-on-the-content-at-page
