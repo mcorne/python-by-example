@@ -184,6 +184,11 @@ var example_contents = {
         "print(list((1, 2, 3)))\n",
         "print([x for x in range(5)])\n"
     ],
+    "list.sort": [
+        "list = [5, 2, 3, 1, 4]\nlist.sort()\nprint(list)\n",
+        "list = [5, 2, 3, 1, 4]\nlist.sort(reverse=True)\nprint(list)\n",
+        "list = ['Z', 'a', 'P', 'u', 'B']\nlist.sort(key=str.lower)\nprint(list)\n"
+    ],
     "locals": [
         "print(locals())\n"
     ],
@@ -259,9 +264,71 @@ var example_contents = {
         "print(round(1.2355, 3))\n"
     ],
     "set": [
-        "print(set([1, 2, 3]))\n",
         "print({1, 2, 3})\n",
+        "print(set([1, 2, 3]))\n",
         "print({123, 'foo', (1, 2, 3)})\n"
+    ],
+    "set.add": [
+        "set = {1, 2, 3}\nset.add(4)\nprint(set)\n"
+    ],
+    "set.clear": [
+        "set = {1, 2, 3}\nset.clear()\nprint(set)\n"
+    ],
+    "set.copy": [
+        "set = {1, 2, 3}\nset.copy()\nprint(set)\n"
+    ],
+    "set.difference": [
+        "print({1, 2, 3}.difference({1, 2, 3, 4, 5, 6}))\n",
+        "print({1, 2, 3, 4, 5, 6}.difference({1, 2, 3}))\n",
+        "print({1, 2, 3, 4, 5, 6}.difference({1, 2, 3}, {4, 10}))\n"
+    ],
+    "set.difference_update": [
+        "set = {1, 2, 3}\nset.difference_update({1, 2, 3, 4, 5, 6})\nprint(set)\n",
+        "set = {1, 2, 3, 4, 5, 6}\nset.difference_update({1, 2, 3})\nprint(set)\n",
+        "set = {1, 2, 3, 4, 5, 6}\nset.difference_update({1, 2, 3}, {4, 10})\nprint(set)\n"
+    ],
+    "set.discard": [
+        "set = {1, 2, 3}\nset.discard(3)\nprint(set)\n",
+        "set = {1, 2, 3}\nset.discard(0)\nprint(set)\n"
+    ],
+    "set.intersection": [
+        "print({1, 2, 3}.intersection({4, 5, 6}))\n",
+        "print({1, 2, 3, 4, 5, 6}.intersection({1, 2, 3, 7, 8, 9}))\n",
+        "print({1, 2, 3, 4, 5, 6}.intersection({1, 2, 3, 7, 8, 9}, {1, 2, 3, 10}))\n"
+    ],
+    "set.intersection_update": [
+        "set = {1, 2, 3}\nset.intersection_update({4, 5, 6})\nprint(set)\n",
+        "set = {1, 2, 3, 4, 5, 6}\nset.intersection_update({1, 2, 3, 7, 8, 9})\nprint(set)\n",
+        "set = {1, 2, 3, 4, 5, 6}\nset.intersection_update({1, 2, 3, 7, 8, 9}, {1, 2, 3, 10})\nprint(set)\n"
+    ],
+    "set.isdisjoint": [
+        "print({1, 2, 3}.isdisjoint({4, 5, 6}))\n",
+        "print({1, 2, 3}.isdisjoint({1, 5, 6}))\n"
+    ],
+    "set.issubset": [
+        "print({1, 2, 3}.issubset({4, 5, 6}))\n",
+        "print({1, 2, 3}.issubset({1, 2, 3, 4, 5, 6}))\n"
+    ],
+    "set.issuperset": [
+        "print({1, 2, 3}.issuperset({4, 5, 6}))\n",
+        "print({1, 2, 3, 4, 5, 6}.issuperset({1, 2, 3}))\n"
+    ],
+    "set.pop": [
+        "set = {1, 2, 3}\nprint(set.pop())\nprint(set)\n"
+    ],
+    "set.remove": [
+        "set = {1, 2, 3}\nset.remove(3)\nprint(set)\n",
+        "set = {1, 2, 3}\nset.remove(0)\nprint(set)\n# bug as it should return a KeyError exception !!!\n"
+    ],
+    "set.symmetric_difference": [
+        "print({1, 2, 3, 4, 5, 6}.symmetric_difference({1, 2, 3, 7, 8, 9}))\n",
+        "print({1, 2, 3}.symmetric_difference({1, 2, 3}))\n"
+    ],
+    "set.union": [
+        "print({1, 2, 3}.union({4, 5, 6}))\n"
+    ],
+    "set.update": [
+        "set = {1, 2, 3}\nset.update({4, 5, 6}, {7, 8, 9})\nprint(set)\n"
     ],
     "setattr": [
         "class Foo:\n    bar = 0\n\nfoo = Foo()\nsetattr(foo, 'bar', 123)\nprint(foo.bar)\nfoo.bar = 456\nprint(foo.bar)\n"

@@ -184,6 +184,11 @@ var example_names = {
         "list((1, 2, 3))",
         "[x for x in range(5)]"
     ],
+    "list.sort": [
+        "list.sort()",
+        "list.sort(reverse=True)",
+        "list.sort(key=str.lower)"
+    ],
     "locals": [
         "locals()"
     ],
@@ -259,9 +264,71 @@ var example_names = {
         "round(1.2355, 3)"
     ],
     "set": [
-        "set([1, 2, 3])",
         "{1, 2, 3}",
+        "set([1, 2, 3])",
         "{123, 'foo', (1, 2, 3)}"
+    ],
+    "set.add": [
+        "set.add(4)"
+    ],
+    "set.clear": [
+        "set.clear()"
+    ],
+    "set.copy": [
+        "set.copy()"
+    ],
+    "set.difference": [
+        "{1, 2, 3}.difference({1, 2, 3, 4, 5, 6})",
+        "{1, 2, 3, 4, 5, 6}.difference({1, 2, 3})",
+        "{1, 2, 3, 4, 5, 6}.difference({1, 2, 3}, {4, 10})"
+    ],
+    "set.difference_update": [
+        "set.difference_update({1, 2, 3, 4, 5, 6})",
+        "set.difference_update({1, 2, 3})",
+        "set.difference_update({1, 2, 3}, {4, 10})"
+    ],
+    "set.discard": [
+        "set.discard(3)",
+        "set.discard(0)"
+    ],
+    "set.intersection": [
+        "{1, 2, 3}.intersection({4, 5, 6})",
+        "{1, 2, 3, 4, 5, 6}.intersection({1, 2, 3, 7, 8, 9})",
+        "{1, 2, 3, 4, 5, 6}.intersection({1, 2, 3, 7, 8, 9}, {1, 2, 3, 10})"
+    ],
+    "set.intersection_update": [
+        "set.intersection_update({4, 5, 6})",
+        "set.intersection_update({1, 2, 3, 7, 8, 9})",
+        "set.intersection_update({1, 2, 3, 7, 8, 9}, {1, 2, 3, 10})"
+    ],
+    "set.isdisjoint": [
+        "{1, 2, 3}.isdisjoint({4, 5, 6})",
+        "{1, 2, 3}.isdisjoint({1, 5, 6})"
+    ],
+    "set.issubset": [
+        "{1, 2, 3}.issubset({4, 5, 6})",
+        "{1, 2, 3}.issubset({1, 2, 3, 4, 5, 6})"
+    ],
+    "set.issuperset": [
+        "{1, 2, 3}.issuperset({4, 5, 6})",
+        "{1, 2, 3, 4, 5, 6}.issuperset({1, 2, 3})"
+    ],
+    "set.pop": [
+        "set.pop()"
+    ],
+    "set.remove": [
+        "set.remove(3)",
+        "set.remove(0)"
+    ],
+    "set.symmetric_difference": [
+        "{1, 2, 3, 4, 5, 6}.symmetric_difference({1, 2, 3, 7, 8, 9})",
+        "{1, 2, 3}.symmetric_difference({1, 2, 3})"
+    ],
+    "set.union": [
+        "{1, 2, 3}.union({4, 5, 6})"
+    ],
+    "set.update": [
+        "set.update({4, 5, 6}, {7, 8, 9})"
     ],
     "setattr": [
         "setattr(foo, 'bar', 123)"
