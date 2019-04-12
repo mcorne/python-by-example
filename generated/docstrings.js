@@ -72,6 +72,7 @@ var docstrings = {
     "set.pop": "Remove&nbsp;and&nbsp;return&nbsp;an&nbsp;arbitrary&nbsp;set&nbsp;element.<br>\nRaises&nbsp;KeyError&nbsp;if&nbsp;the&nbsp;set&nbsp;is&nbsp;empty.",
     "set.remove": "Remove&nbsp;an&nbsp;element&nbsp;from&nbsp;a&nbsp;set;&nbsp;it&nbsp;must&nbsp;be&nbsp;a&nbsp;member.<br>\n<br>\nIf&nbsp;the&nbsp;element&nbsp;is&nbsp;not&nbsp;a&nbsp;member,&nbsp;raise&nbsp;a&nbsp;KeyError.",
     "set.symmetric_difference": "Return&nbsp;the&nbsp;symmetric&nbsp;difference&nbsp;of&nbsp;two&nbsp;sets&nbsp;as&nbsp;a&nbsp;new&nbsp;set.<br>\n<br>\n(i.e.&nbsp;all&nbsp;elements&nbsp;that&nbsp;are&nbsp;in&nbsp;exactly&nbsp;one&nbsp;of&nbsp;the&nbsp;sets.)",
+    "set.symmetric_difference_update": "Update&nbsp;a&nbsp;set&nbsp;with&nbsp;the&nbsp;symmetric&nbsp;difference&nbsp;of&nbsp;itself&nbsp;and&nbsp;another.",
     "set.union": "Return&nbsp;the&nbsp;union&nbsp;of&nbsp;sets&nbsp;as&nbsp;a&nbsp;new&nbsp;set.<br>\n<br>\n(i.e.&nbsp;all&nbsp;elements&nbsp;that&nbsp;are&nbsp;in&nbsp;either&nbsp;set.)",
     "set.update": "Update&nbsp;a&nbsp;set&nbsp;with&nbsp;the&nbsp;union&nbsp;of&nbsp;itself&nbsp;and&nbsp;others.",
     "setattr": "setattr(obj,&nbsp;name,&nbsp;value)<br>\n<br>\nSets&nbsp;the&nbsp;named&nbsp;attribute&nbsp;on&nbsp;the&nbsp;given&nbsp;object&nbsp;to&nbsp;the&nbsp;specified&nbsp;value.<br>\n<br>\nsetattr(x,&nbsp;'y',&nbsp;v)&nbsp;is&nbsp;equivalent&nbsp;to&nbsp;``x.y&nbsp;=&nbsp;v''",

@@ -324,8 +324,13 @@ var example_names = {
         "{1, 2, 3, 4, 5, 6}.symmetric_difference({1, 2, 3, 7, 8, 9})",
         "{1, 2, 3}.symmetric_difference({1, 2, 3})"
     ],
+    "set.symmetric_difference_update": [
+        "set.symmetric_difference_update({1, 2, 3, 7, 8, 9})",
+        "set.symmetric_difference_update({1, 2, 3})"
+    ],
     "set.union": [
-        "{1, 2, 3}.union({4, 5, 6})"
+        "{1, 2, 3}.union({4, 5, 6})",
+        "{1, 2, 3}.union({4, 5, 6}, {7, 8, 9})"
     ],
     "set.update": [
         "set.update({4, 5, 6}, {7, 8, 9})"
