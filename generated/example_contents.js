@@ -72,6 +72,37 @@ var example_contents = {
         "print(dict([('two', 2), ('one', 1), ('three', 3)]))\n",
         "print(dict({'three': 3, 'one': 1, 'two': 2}))\n"
     ],
+    "dict.clear": [
+        "d = {'one': 1, 'two': 2, 'three': 3}\nprint(d.clear())\n"
+    ],
+    "dict.copy": [
+        "print({'one': 1, 'two': 2, 'three': 3}.copy())\n"
+    ],
+    "dict.fromkeys": [
+        "print(dict.fromkeys(['one', 'two', 'three'], 'x'))\n"
+    ],
+    "dict.get": [
+        "print({'one': 1, 'two': 2, 'three': 3}.get('two'))\n",
+        "print({'one': 1, 'two': 2, 'three': 3}.get('four', 4))\n"
+    ],
+    "dict.items": [
+        "print({'one': 1, 'two': 2, 'three': 3}.items())\n"
+    ],
+    "dict.keys": [
+        "print({'one': 1, 'two': 2, 'three': 3}.keys())\n"
+    ],
+    "dict.pop": [
+        "d = {'one': 1, 'two': 2, 'three': 3}\nprint(d.pop('two'))\nprint(d)\n",
+        "d = {'one': 1, 'two': 2, 'three': 3}\nprint(d.pop('four', 4))\nprint(d)\n"
+    ],
+    "dict.popitem": [
+        "d = {'one': 1, 'two': 2, 'three': 3}\nprint(d.popitem())\nprint(d)\nprint(d.popitem())\nprint(d)\n",
+        "d = {'one': 1, 'two': 2, 'three': 3}\nprint(d.pop('four', 4))\nprint(d)\n"
+    ],
+    "dict.setdefault": [
+        "d = {'one': 1, 'two': 2, 'three': 3}\nprint(d.setdefault('two'))\nprint(d)\n",
+        "d = {'one': 1, 'two': 2, 'three': 3}\nprint(d.setdefault('four', 4))\nprint(d)\n"
+    ],
     "dir": [
         "print(dir())\n",
         "import math\nprint(dir(math))\n",

@@ -72,6 +72,37 @@ var example_names = {
         "dict([('two', 2), ('one', 1), ('three', 3)])",
         "dict({'three': 3, 'one': 1, 'two': 2})"
     ],
+    "dict.clear": [
+        "d.clear()"
+    ],
+    "dict.copy": [
+        "{'one': 1, 'two': 2, 'three': 3}.copy()"
+    ],
+    "dict.fromkeys": [
+        "dict.fromkeys(['one', 'two', 'three'], 'x')"
+    ],
+    "dict.get": [
+        "{'one': 1, 'two': 2, 'three': 3}.get('two')",
+        "{'one': 1, 'two': 2, 'three': 3}.get('four', 4)"
+    ],
+    "dict.items": [
+        "{'one': 1, 'two': 2, 'three': 3}.items()"
+    ],
+    "dict.keys": [
+        "{'one': 1, 'two': 2, 'three': 3}.keys()"
+    ],
+    "dict.pop": [
+        "d.pop('two')",
+        "d.pop('four', 4)"
+    ],
+    "dict.popitem": [
+        "d.pop('two')",
+        "d.pop('four', 4)"
+    ],
+    "dict.setdefault": [
+        "d.setdefault('two')",
+        "d.setdefault('four', 4)"
+    ],
     "dir": [
         "dir()",
         "dir(math)",
