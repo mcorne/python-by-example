@@ -244,6 +244,23 @@ var example_contents = {
     "math.fabs": [
         "import math\nprint(math.fabs(-2.0))\n"
     ],
+    "math.factorial": [
+        "import math\nprint(math.factorial(5))\n"
+    ],
+    "math.floor": [
+        "import math\nprint(math.floor(1.2))\n"
+    ],
+    "math.fmod": [
+        "import math\nprint(math.fmod(11, 3))\n",
+        "import math\nprint(math.fmod(11, 3.5))\n"
+    ],
+    "math.frexp": [
+        "import math\nprint(math.frexp(40))\n"
+    ],
+    "math.fsum": [
+        "import math\nprint(math.fsum((1, 2, 3, 4, 5)))\n",
+        "import math\nprint(math.fsum([.1, .1, .1, .1, .1, .1, .1, .1, .1, .1]))\n"
+    ],
     "max": [
         "print(max(1, 3, 2, 0))\n",
         "print(max([1, 3, 2, 0]))\n",

@@ -244,6 +244,23 @@ var example_names = {
     "math.fabs": [
         "math.fabs(-2.0))"
     ],
+    "math.factorial": [
+        "math.factorial(5))"
+    ],
+    "math.floor": [
+        "math.floor(1.2))"
+    ],
+    "math.fmod": [
+        "math.fmod(11, 3))",
+        "math.fmod(11, 3.5))"
+    ],
+    "math.frexp": [
+        "math.frexp(40))"
+    ],
+    "math.fsum": [
+        "math.fsum((1, 2, 3, 4, 5)))",
+        "math.fsum([.1, .1, .1, .1, .1, .1, .1, .1, .1, .1]))"
+    ],
     "max": [
         "max(1, 3, 2, 0)",
         "max([1, 3, 2, 0])",
