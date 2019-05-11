@@ -103,6 +103,14 @@ var example_contents = {
         "d = {'one': 1, 'two': 2, 'three': 3}\nprint(d.setdefault('two'))\nprint(d)\n",
         "d = {'one': 1, 'two': 2, 'three': 3}\nprint(d.setdefault('four', 4))\nprint(d)\n"
     ],
+    "dict.update": [
+        "d = {'one': 1, 'two': 2, 'three': 3}\nprint(d.update({'two': 'II', 'four': 4}))\nprint(d)\n",
+        "d = {'one': 1, 'two': 2, 'three': 3}\nprint(d.update(two='II', four=4))\nprint(d)\n",
+        "d = {'one': 1, 'two': 2, 'three': 3}\nprint(d.update((['two', 'II'], ['four', 4])))\nprint(d)\n"
+    ],
+    "dict.values": [
+        "print({'one': 1, 'two': 2, 'three': 3}.values())\n"
+    ],
     "dir": [
         "print(dir())\n",
         "import math\nprint(dir(math))\n",

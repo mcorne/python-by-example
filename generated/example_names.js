@@ -103,6 +103,14 @@ var example_names = {
         "d.setdefault('two')",
         "d.setdefault('four', 4)"
     ],
+    "dict.update": [
+        "d.update({'two': 'II', 'four': 4})",
+        "d.update(two='II', four=4)",
+        "d.update((['two', 'II'], ['four', 4]))"
+    ],
+    "dict.values": [
+        "{'one': 1, 'two': 2, 'three': 3}.values()"
+    ],
     "dir": [
         "dir()",
         "dir(math)",
