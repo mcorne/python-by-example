@@ -47,6 +47,10 @@ class Examples():
             # This is the first line containing the example name as a comment, ex # abs(123).
             # Extract the example name.
             name = lines[0].strip('# ')
+        elif lines[0].startswith('import') and lines[1].startswith('print'):
+            # This is a two line example with an import... line and a print... line.
+            # Extract the example name inside the print function.
+            name = lines[1][6:-1]
         else:
             # This is a one line example, always beiginning with print, ex print(abs(123)).
             # Extract the example name inside the print function.

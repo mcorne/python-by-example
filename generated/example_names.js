@@ -113,7 +113,7 @@ var example_names = {
     ],
     "dir": [
         "dir()",
-        "dir(math)",
+        "dir(math))",
         "dir(str)",
         "dir(object)"
     ],
@@ -236,7 +236,13 @@ var example_names = {
         "list(map((lambda x,y: x * y), [1, 2, 3, 4, 5], [1, 2, 3, 4, 5]))"
     ],
     "math.ceil": [
-        "math.ceil(1.2)"
+        "math.ceil(1.2))"
+    ],
+    "math.copysign": [
+        "math.copysign(1.0, -0.0))"
+    ],
+    "math.fabs": [
+        "math.fabs(-2.0))"
     ],
     "max": [
         "max(1, 3, 2, 0)",
@@ -288,7 +294,7 @@ var example_names = {
     ],
     "repr": [
         "repr('foo')",
-        "repr(datetime.datetime.now())",
+        "repr(datetime.datetime.now()))",
         "repr(Class())",
         "repr(Color())"
     ],
@@ -570,7 +576,7 @@ var example_names = {
         "'-42'.zfill(5)"
     ],
     "string.capwords": [
-        "string.capwords('hello world!')"
+        "string.capwords('hello world!'))"
     ],
     "sum": [
         "sum([1.5, 2, 3, -4])",

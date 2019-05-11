@@ -238,6 +238,12 @@ var example_contents = {
     "math.ceil": [
         "import math\nprint(math.ceil(1.2))\n"
     ],
+    "math.copysign": [
+        "import math\nprint(math.copysign(1.0, -0.0))\n"
+    ],
+    "math.fabs": [
+        "import math\nprint(math.fabs(-2.0))\n"
+    ],
     "max": [
         "print(max(1, 3, 2, 0))\n",
         "print(max([1, 3, 2, 0]))\n",
