@@ -89,6 +89,7 @@ function get_example_links(funcname, number)
 function get_python_doc_link(funcname)
 {
     var link = 'https://docs.python.org/3/library/';
+    var module;
     var nofuncnames = {bytearray: true, bytes: true, dict: true, frozenset: true, list: true, range: true, set: true, str: true, tuple: true};
 
     if (funcname.search('[.]') == -1) {
@@ -99,6 +100,8 @@ function get_python_doc_link(funcname)
     } else if (funcname.search('(byte|bytearray|dict|float|int|list|set|str)[.]') == 0) {
         funcname = funcname.replace('set.', 'frozenset.')
         link += 'stdtypes.html#' + funcname;
+    } else if (module = funcname.match('(math|string)[.]')) {
+        link += module[1] + '.html#' + funcname;
     }
 
     return link;

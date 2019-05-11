@@ -235,6 +235,9 @@ var example_names = {
         "map(sqr, [1, 2, 3, 4, 5])",
         "list(map((lambda x,y: x * y), [1, 2, 3, 4, 5], [1, 2, 3, 4, 5]))"
     ],
+    "math.ceil": [
+        "math.ceil(1.2)"
+    ],
     "max": [
         "max(1, 3, 2, 0)",
         "max([1, 3, 2, 0])",
@@ -565,6 +568,9 @@ var example_names = {
     "str.zfill": [
         "'42'.zfill(5)",
         "'-42'.zfill(5)"
+    ],
+    "string.capwords": [
+        "string.capwords('hello world!')"
     ],
     "sum": [
         "sum([1.5, 2, 3, -4])",

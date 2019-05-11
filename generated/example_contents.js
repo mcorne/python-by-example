@@ -235,6 +235,9 @@ var example_contents = {
         "def sqr(x):\n    return x ** 2\n\nprint(list(map(sqr, [1, 2, 3, 4, 5])))\n",
         "print(list(map((lambda x,y: x * y), [1, 2, 3, 4, 5], [1, 2, 3, 4, 5])))\n"
     ],
+    "math.ceil": [
+        "import math\nprint(math.ceil(1.2))\n"
+    ],
     "max": [
         "print(max(1, 3, 2, 0))\n",
         "print(max([1, 3, 2, 0]))\n",
@@ -565,6 +568,9 @@ var example_contents = {
     "str.zfill": [
         "print('42'.zfill(5))\n",
         "print('-42'.zfill(5))\n"
+    ],
+    "string.capwords": [
+        "import string\nprint(string.capwords('hello world!'))\n"
     ],
     "sum": [
         "print(sum([1.5, 2, 3, -4]))\n",

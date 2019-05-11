@@ -1,4 +1,4 @@
-import json, os, re
+import json, math, os, re, string
 
 class Examples():
     def __init__(self):
@@ -88,12 +88,17 @@ class Examples():
         return sorted(functions)
 
     def get_signature(self, function):
-        signature = eval(function + '.__text_signature__')
+        try:
+            signature = eval(function + '.__text_signature__')
+        except:
+            return
+
         if signature != None:
             signature = signature[1:-1]
             signature = signature.replace('$self', '')
             signature = signature.replace('$module', '')
             signature = signature.strip(',/ ')
+
         return signature
 
     def htlm_escape(self, string):
