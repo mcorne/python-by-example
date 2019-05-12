@@ -42,7 +42,7 @@ class Examples():
         return example
 
     def extract_example_name(self, example):
-        lines = example.split('\n', 1)
+        lines = example.split('\n')
         if example[0] == '#':
             # This is the first line containing the example name as a comment, ex # abs(123).
             # Extract the example name.

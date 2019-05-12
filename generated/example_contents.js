@@ -241,6 +241,12 @@ var example_contents = {
     "math.copysign": [
         "import math\nprint(math.copysign(1.0, -0.0))\n"
     ],
+    "math.exp": [
+        "import math\nprint(math.exp(2))\nprint(math.e ** 2)\nprint(pow(math.e, 2))\n"
+    ],
+    "math.expm1": [
+        "import math\nprint(math.expm1(1e-5))\nprint(math.exp(1e-5) - 1)\n# see issue https://github.com/brython-dev/brython/issues/1109\n"
+    ],
     "math.fabs": [
         "import math\nprint(math.fabs(-2.0))\n"
     ],
@@ -277,16 +283,39 @@ var example_contents = {
         "import math\nprint(math.isinf(float('inf')))\n"
     ],
     "math.isnan": [
-        "import math\nprint(math.isnan(10))\n"
+        "import math\nprint(math.isnan(10))\n",
+        "import math\nprint(math.isnan(float('nan')))\n"
     ],
     "math.ldexp": [
         "import math\nprint(math.ldexp(0.625, 6))\n"
     ],
+    "math.log": [
+        "import math\nprint(math.log(10))\n",
+        "import math\nprint(math.log(10, 10))\n"
+    ],
+    "math.log10": [
+        "import math\nprint(math.log10(1000))\nprint(math.log(1000, 10))\n# see issue https://github.com/brython-dev/brython/issues/1110\n"
+    ],
+    "math.log1p": [
+        "import math\nprint(math.log1p(1e-5))\nprint(math.log(1 + 1e-5))\n# see issue https://github.com/brython-dev/brython/issues/1111\n"
+    ],
+    "math.log2": [
+        "import math\nprint(math.log2(65536))\nprint(math.log(65536, 2))\n"
+    ],
     "math.modf": [
         "import math\nprint(math.modf(1.25))\n"
     ],
+    "math.pow": [
+        "import math\nprint(math.pow(10, 5))\n"
+    ],
     "math.remainder": [
         "import math\nprint(math.remainder(5, 2))\n"
+    ],
+    "math.sqrt": [
+        "import math\nprint(math.sqrt(2))\n"
+    ],
+    "math.trunc": [
+        "import math\nprint(math.trunc(10.5))\n"
     ],
     "max": [
         "print(max(1, 3, 2, 0))\n",

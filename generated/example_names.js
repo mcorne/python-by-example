@@ -113,7 +113,7 @@ var example_names = {
     ],
     "dir": [
         "dir()",
-        "dir(math))",
+        "dir(math)",
         "dir(str)",
         "dir(object)"
     ],
@@ -236,57 +236,86 @@ var example_names = {
         "list(map((lambda x,y: x * y), [1, 2, 3, 4, 5], [1, 2, 3, 4, 5]))"
     ],
     "math.ceil": [
-        "math.ceil(1.2))"
+        "math.ceil(1.2)"
     ],
     "math.copysign": [
-        "math.copysign(1.0, -0.0))"
+        "math.copysign(1.0, -0.0)"
+    ],
+    "math.exp": [
+        "math.exp(2)"
+    ],
+    "math.expm1": [
+        "math.expm1(1e-5)"
     ],
     "math.fabs": [
-        "math.fabs(-2.0))"
+        "math.fabs(-2.0)"
     ],
     "math.factorial": [
-        "math.factorial(5))"
+        "math.factorial(5)"
     ],
     "math.floor": [
-        "math.floor(1.2))"
+        "math.floor(1.2)"
     ],
     "math.fmod": [
-        "math.fmod(11, 3))",
-        "math.fmod(11, 3.5))"
+        "math.fmod(11, 3)",
+        "math.fmod(11, 3.5)"
     ],
     "math.frexp": [
-        "math.frexp(40))"
+        "math.frexp(40)"
     ],
     "math.fsum": [
-        "math.fsum((1, 2, 3, 4, 5)))",
-        "math.fsum([.1, .1, .1, .1, .1, .1, .1, .1, .1, .1]))"
+        "math.fsum((1, 2, 3, 4, 5))",
+        "math.fsum([.1, .1, .1, .1, .1, .1, .1, .1, .1, .1])"
     ],
     "math.gcd": [
-        "math.gcd(6, 9))"
+        "math.gcd(6, 9)"
     ],
     "math.isclose": [
-        "math.isclose(1.15, 1.20, rel_tol=0.05))",
-        "math.isclose(0.0015, 0.0020, abs_tol=0.0005))"
+        "math.isclose(1.15, 1.20, rel_tol=0.05)",
+        "math.isclose(0.0015, 0.0020, abs_tol=0.0005)"
     ],
     "math.isfinite": [
-        "math.isfinite(10))",
-        "math.isfinite(float('inf')))"
+        "math.isfinite(10)",
+        "math.isfinite(float('inf'))"
     ],
     "math.isinf": [
-        "math.isinf(10))",
-        "math.isinf(float('inf')))"
+        "math.isinf(10)",
+        "math.isinf(float('inf'))"
     ],
     "math.isnan": [
-        "math.isnan(10))"
+        "math.isnan(10)",
+        "math.isnan(float('nan'))"
     ],
     "math.ldexp": [
-        "math.ldexp(0.625, 6))"
+        "math.ldexp(0.625, 6)"
+    ],
+    "math.log": [
+        "math.log(10)",
+        "math.log(10, 10)"
+    ],
+    "math.log10": [
+        "math.log10(1000)"
+    ],
+    "math.log1p": [
+        "math.log1p(1e-5)"
+    ],
+    "math.log2": [
+        "math.log2(65536)"
     ],
     "math.modf": [
-        "math.modf(1.25))"
+        "math.modf(1.25)"
+    ],
+    "math.pow": [
+        "math.pow(10, 5)"
     ],
     "math.remainder": [
-        "math.remainder(5, 2))"
+        "math.remainder(5, 2)"
+    ],
+    "math.sqrt": [
+        "math.sqrt(2)"
+    ],
+    "math.trunc": [
+        "math.trunc(10.5)"
     ],
     "max": [
         "max(1, 3, 2, 0)",
@@ -338,7 +367,7 @@ var example_names = {
     ],
     "repr": [
         "repr('foo')",
-        "repr(datetime.datetime.now()))",
+        "repr(datetime.datetime.now())",
         "repr(Class())",
         "repr(Color())"
     ],
@@ -620,7 +649,7 @@ var example_names = {
         "'-42'.zfill(5)"
     ],
     "string.capwords": [
-        "string.capwords('hello world!'))"
+        "string.capwords('hello world!')"
     ],
     "sum": [
         "sum([1.5, 2, 3, -4])",
