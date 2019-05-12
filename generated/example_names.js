@@ -235,11 +235,47 @@ var example_names = {
         "map(sqr, [1, 2, 3, 4, 5])",
         "list(map((lambda x,y: x * y), [1, 2, 3, 4, 5], [1, 2, 3, 4, 5]))"
     ],
+    "math.acos": [
+        "math.acos(-1)"
+    ],
+    "math.acosh": [
+        "math.acosh(1)"
+    ],
+    "math.asin": [
+        "math.asin(1)"
+    ],
+    "math.asinh": [
+        "math.asinh(1)"
+    ],
+    "math.atan": [
+        "math.atan(1)"
+    ],
+    "math.atan2": [
+        "math.atan2(0, -1)"
+    ],
+    "math.atanh": [
+        "math.atanh(0.5)"
+    ],
     "math.ceil": [
         "math.ceil(1.2)"
     ],
     "math.copysign": [
         "math.copysign(1.0, -0.0)"
+    ],
+    "math.cos": [
+        "math.cos(math.pi)"
+    ],
+    "math.cosh": [
+        "math.cosh(0)"
+    ],
+    "math.degrees": [
+        "math.degrees(math.pi)"
+    ],
+    "math.erf": [
+        "math.erf(0.5)"
+    ],
+    "math.erfc": [
+        "math.erfc(2)"
     ],
     "math.exp": [
         "math.exp(2)"
@@ -267,8 +303,14 @@ var example_names = {
         "math.fsum((1, 2, 3, 4, 5))",
         "math.fsum([.1, .1, .1, .1, .1, .1, .1, .1, .1, .1])"
     ],
+    "math.gamma": [
+        "math.gamma(2)"
+    ],
     "math.gcd": [
         "math.gcd(6, 9)"
+    ],
+    "math.hypot": [
+        "math.hypot(3, 4)"
     ],
     "math.isclose": [
         "math.isclose(1.15, 1.20, rel_tol=0.05)",
@@ -289,6 +331,9 @@ var example_names = {
     "math.ldexp": [
         "math.ldexp(0.625, 6)"
     ],
+    "math.lgamma": [
+        "math.lgamma(2)"
+    ],
     "math.log": [
         "math.log(10)",
         "math.log(10, 10)"
@@ -308,11 +353,26 @@ var example_names = {
     "math.pow": [
         "math.pow(10, 5)"
     ],
+    "math.radians": [
+        "math.radians(180)"
+    ],
     "math.remainder": [
         "math.remainder(5, 2)"
     ],
+    "math.sin": [
+        "math.sin(math.pi/2)"
+    ],
+    "math.sinh": [
+        "math.sinh(1)"
+    ],
     "math.sqrt": [
         "math.sqrt(2)"
+    ],
+    "math.tan": [
+        "math.tan(math.pi/4)"
+    ],
+    "math.tanh": [
+        "math.tanh(0.5)"
     ],
     "math.trunc": [
         "math.trunc(10.5)"

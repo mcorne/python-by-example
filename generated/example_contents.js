@@ -235,11 +235,47 @@ var example_contents = {
         "def sqr(x):\n    return x ** 2\n\nprint(list(map(sqr, [1, 2, 3, 4, 5])))\n",
         "print(list(map((lambda x,y: x * y), [1, 2, 3, 4, 5], [1, 2, 3, 4, 5])))\n"
     ],
+    "math.acos": [
+        "import math\nprint(math.acos(-1))\n"
+    ],
+    "math.acosh": [
+        "import math\nprint(math.acosh(1))\n"
+    ],
+    "math.asin": [
+        "import math\nprint(math.asin(1))\n"
+    ],
+    "math.asinh": [
+        "import math\nprint(math.asinh(1))\n"
+    ],
+    "math.atan": [
+        "import math\nprint(math.atan(1))\n"
+    ],
+    "math.atan2": [
+        "import math\nprint(math.atan2(0, -1))\n"
+    ],
+    "math.atanh": [
+        "import math\nprint(math.atanh(0.5))\n"
+    ],
     "math.ceil": [
         "import math\nprint(math.ceil(1.2))\n"
     ],
     "math.copysign": [
         "import math\nprint(math.copysign(1.0, -0.0))\n"
+    ],
+    "math.cos": [
+        "import math\nprint(math.cos(math.pi))\n"
+    ],
+    "math.cosh": [
+        "import math\nprint(math.cosh(0))\n"
+    ],
+    "math.degrees": [
+        "import math\nprint(math.degrees(math.pi))\n"
+    ],
+    "math.erf": [
+        "import math\nprint(math.erf(0.5))\n"
+    ],
+    "math.erfc": [
+        "import math\nprint(math.erfc(2))\nprint(1 - math.erf(2))\n"
     ],
     "math.exp": [
         "import math\nprint(math.exp(2))\nprint(math.e ** 2)\nprint(pow(math.e, 2))\n"
@@ -267,8 +303,14 @@ var example_contents = {
         "import math\nprint(math.fsum((1, 2, 3, 4, 5)))\n",
         "import math\nprint(math.fsum([.1, .1, .1, .1, .1, .1, .1, .1, .1, .1]))\n"
     ],
+    "math.gamma": [
+        "import math\nprint(math.gamma(2))\n# see issue https://github.com/brython-dev/brython/issues/1112\n"
+    ],
     "math.gcd": [
         "import math\nprint(math.gcd(6, 9))\n"
+    ],
+    "math.hypot": [
+        "import math\nprint(math.hypot(3, 4))\n"
     ],
     "math.isclose": [
         "import math\nprint(math.isclose(1.15, 1.20, rel_tol=0.05))\n",
@@ -289,6 +331,9 @@ var example_contents = {
     "math.ldexp": [
         "import math\nprint(math.ldexp(0.625, 6))\n"
     ],
+    "math.lgamma": [
+        "import math\nprint(math.lgamma(2))\n# see issue https://github.com/brython-dev/brython/issues/1113\n"
+    ],
     "math.log": [
         "import math\nprint(math.log(10))\n",
         "import math\nprint(math.log(10, 10))\n"
@@ -308,11 +353,26 @@ var example_contents = {
     "math.pow": [
         "import math\nprint(math.pow(10, 5))\n"
     ],
+    "math.radians": [
+        "import math\nprint(math.radians(180))\n"
+    ],
     "math.remainder": [
         "import math\nprint(math.remainder(5, 2))\n"
     ],
+    "math.sin": [
+        "import math\nprint(math.sin(math.pi/2))\n"
+    ],
+    "math.sinh": [
+        "import math\nprint(math.sinh(1))\n"
+    ],
     "math.sqrt": [
         "import math\nprint(math.sqrt(2))\n"
+    ],
+    "math.tan": [
+        "import math\nprint(math.tan(math.pi/4))\n"
+    ],
+    "math.tanh": [
+        "import math\nprint(math.tanh(0.5))\n"
     ],
     "math.trunc": [
         "import math\nprint(math.trunc(10.5))\n"
