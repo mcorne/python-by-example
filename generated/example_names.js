@@ -261,6 +261,33 @@ var example_names = {
         "math.fsum((1, 2, 3, 4, 5)))",
         "math.fsum([.1, .1, .1, .1, .1, .1, .1, .1, .1, .1]))"
     ],
+    "math.gcd": [
+        "math.gcd(6, 9))"
+    ],
+    "math.isclose": [
+        "math.isclose(1.15, 1.20, rel_tol=0.05))",
+        "math.isclose(0.0015, 0.0020, abs_tol=0.0005))"
+    ],
+    "math.isfinite": [
+        "math.isfinite(10))",
+        "math.isfinite(float('inf')))"
+    ],
+    "math.isinf": [
+        "math.isinf(10))",
+        "math.isinf(float('inf')))"
+    ],
+    "math.isnan": [
+        "math.isnan(10))"
+    ],
+    "math.ldexp": [
+        "math.ldexp(0.625, 6))"
+    ],
+    "math.modf": [
+        "math.modf(1.25))"
+    ],
+    "math.remainder": [
+        "math.remainder(5, 2))"
+    ],
     "max": [
         "max(1, 3, 2, 0)",
         "max([1, 3, 2, 0])",

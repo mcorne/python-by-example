@@ -261,6 +261,33 @@ var example_contents = {
         "import math\nprint(math.fsum((1, 2, 3, 4, 5)))\n",
         "import math\nprint(math.fsum([.1, .1, .1, .1, .1, .1, .1, .1, .1, .1]))\n"
     ],
+    "math.gcd": [
+        "import math\nprint(math.gcd(6, 9))\n"
+    ],
+    "math.isclose": [
+        "import math\nprint(math.isclose(1.15, 1.20, rel_tol=0.05))\n",
+        "import math\nprint(math.isclose(0.0015, 0.0020, abs_tol=0.0005))\n"
+    ],
+    "math.isfinite": [
+        "import math\nprint(math.isfinite(10))\n",
+        "import math\nprint(math.isfinite(float('inf')))\n"
+    ],
+    "math.isinf": [
+        "import math\nprint(math.isinf(10))\n",
+        "import math\nprint(math.isinf(float('inf')))\n"
+    ],
+    "math.isnan": [
+        "import math\nprint(math.isnan(10))\n"
+    ],
+    "math.ldexp": [
+        "import math\nprint(math.ldexp(0.625, 6))\n"
+    ],
+    "math.modf": [
+        "import math\nprint(math.modf(1.25))\n"
+    ],
+    "math.remainder": [
+        "import math\nprint(math.remainder(5, 2))\n"
+    ],
     "max": [
         "print(max(1, 3, 2, 0))\n",
         "print(max([1, 3, 2, 0]))\n",
