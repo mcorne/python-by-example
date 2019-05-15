@@ -42,6 +42,9 @@ var example_contents = {
         "print(bytes(range(20)))\n",
         "print(bytes(b'Hi!'))\n"
     ],
+    "calendar.Calendar.monthdatescalendar": [
+        "import calendar\nprint(calendar.Calendar().monthdatescalendar(2019, 4))\n"
+    ],
     "callable": [
         "print(callable(abs))\n",
         "print(callable(123))\n",
@@ -61,6 +64,48 @@ var example_contents = {
         "print(complex('1 + 2j'))\n",
         "print(complex(1))\n",
         "print(complex(1, 2))\n"
+    ],
+    "datetime.date": [
+        "import datetime\nprint(datetime.date(2000, 6, 30))\n"
+    ],
+    "datetime.date.ctime": [
+        "import datetime\nprint(datetime.date(2000, 6, 30).ctime())\n"
+    ],
+    "datetime.date.fromisoformat": [
+        "import datetime\nprint(datetime.date.fromisoformat('2000-06-30'))\n"
+    ],
+    "datetime.date.fromordinal": [
+        "import datetime\nprint(datetime.date.fromordinal(730301))\n"
+    ],
+    "datetime.date.fromtimestamp": [
+        "import datetime\nprint(datetime.date.fromtimestamp(962316000))\n"
+    ],
+    "datetime.date.isocalendar": [
+        "import datetime\nprint(datetime.date(2000, 6, 30).isocalendar())\n"
+    ],
+    "datetime.date.isoformat": [
+        "import datetime\nprint(datetime.date(2000, 6, 30).isoformat())\n"
+    ],
+    "datetime.date.isoweekday": [
+        "import datetime\nprint(datetime.date(2000, 6, 30).isoweekday())\n"
+    ],
+    "datetime.date.replace": [
+        "import datetime\nprint(datetime.date(2000, 6, 30).replace(day=10))\n"
+    ],
+    "datetime.date.strftime": [
+        "import datetime\nprint(datetime.date(2000, 6, 30).strftime('%c'))\n"
+    ],
+    "datetime.date.timetuple": [
+        "import datetime\nprint(datetime.date(2000, 6, 30).timetuple())\n"
+    ],
+    "datetime.date.today": [
+        "import datetime\nprint(datetime.date.today())\n"
+    ],
+    "datetime.date.toordinal": [
+        "import datetime\nprint(datetime.date(2000, 6, 30).toordinal())\n"
+    ],
+    "datetime.date.weekday": [
+        "import datetime\nprint(datetime.date(2000, 6, 30).weekday())\n"
     ],
     "delattr": [
         "class Foo:\n    bar = 123\n\nfoo = Foo()\ndelattr(foo, 'bar')\nprint(foo.bar)\n# see issue https://github.com/brython-dev/brython/issues/1048\n"
@@ -411,7 +456,7 @@ var example_contents = {
     ],
     "print": [
         "print('Hello!')\n",
-        "print('2000', '1', '1', sep='-')\n",
+        "print('2000', '6', '30', sep='-')\n",
         "print(1, end='-')\nprint(2, end='-')\nprint(3)\n"
     ],
     "property": [

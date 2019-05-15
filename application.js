@@ -100,7 +100,7 @@ function get_python_doc_link(funcname)
     } else if (funcname.search('(byte|bytearray|dict|float|int|list|set|str)[.]') == 0) {
         funcname = funcname.replace('set.', 'frozenset.')
         link += 'stdtypes.html#' + funcname;
-    } else if (module = funcname.match('(math|string)[.]')) {
+    } else if (module = funcname.match('(calendar|datetime|math|string)[.]')) {
         link += module[1] + '.html#' + funcname;
     }
 

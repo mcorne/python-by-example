@@ -42,6 +42,9 @@ var example_names = {
         "bytes(range(20))",
         "bytes(b'Hi!')"
     ],
+    "calendar.Calendar.monthdatescalendar": [
+        "calendar.Calendar().monthdatescalendar(2019, 4)"
+    ],
     "callable": [
         "callable(abs)",
         "callable(123)",
@@ -61,6 +64,48 @@ var example_names = {
         "complex('1 + 2j')",
         "complex(1)",
         "complex(1, 2)"
+    ],
+    "datetime.date": [
+        "datetime.date(2000, 6, 30)"
+    ],
+    "datetime.date.ctime": [
+        "datetime.date(2000, 6, 30).ctime()"
+    ],
+    "datetime.date.fromisoformat": [
+        "datetime.date.fromisoformat('2000-06-30')"
+    ],
+    "datetime.date.fromordinal": [
+        "datetime.date.fromordinal(730301)"
+    ],
+    "datetime.date.fromtimestamp": [
+        "datetime.date.fromtimestamp(962316000)"
+    ],
+    "datetime.date.isocalendar": [
+        "datetime.date(2000, 6, 30).isocalendar()"
+    ],
+    "datetime.date.isoformat": [
+        "datetime.date(2000, 6, 30).isoformat()"
+    ],
+    "datetime.date.isoweekday": [
+        "datetime.date(2000, 6, 30).isoweekday()"
+    ],
+    "datetime.date.replace": [
+        "datetime.date(2000, 6, 30).replace(day=10)"
+    ],
+    "datetime.date.strftime": [
+        "datetime.date(2000, 6, 30).strftime('%c')"
+    ],
+    "datetime.date.timetuple": [
+        "datetime.date(2000, 6, 30).timetuple()"
+    ],
+    "datetime.date.today": [
+        "datetime.date.today()"
+    ],
+    "datetime.date.toordinal": [
+        "datetime.date(2000, 6, 30).toordinal()"
+    ],
+    "datetime.date.weekday": [
+        "datetime.date(2000, 6, 30).weekday()"
     ],
     "delattr": [
         "delattr(foo, 'bar')"
@@ -411,7 +456,7 @@ var example_names = {
     ],
     "print": [
         "print('Hello!')",
-        "print('2000', '1', '1', sep='-')",
+        "print('2000', '6', '30', sep='-')",
         "print(1, end='-')..."
     ],
     "property": [
