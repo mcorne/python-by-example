@@ -1,2 +1,2 @@
-import datetime
-print(datetime.datetime.utcfromtimestamp(962361296))
+from datetime import datetime
+print(datetime.utcfromtimestamp(962361296))

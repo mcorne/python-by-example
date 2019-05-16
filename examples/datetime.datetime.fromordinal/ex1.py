@@ -1,2 +1,2 @@
-import datetime
-print(datetime.datetime.fromordinal(730301))
+from datetime import datetime
+print(datetime.fromordinal(730301))

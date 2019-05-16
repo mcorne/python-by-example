@@ -1,2 +1,2 @@
-import datetime
-print(repr(datetime.datetime.now()))
+from datetime import datetime
+print(repr(datetime.now()))

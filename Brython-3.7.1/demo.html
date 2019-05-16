@@ -901,7 +901,7 @@ the second argument.
 
     def complete(request):
         import json
-        import datetime
+        from datetime import date
         data = json.loads(request.responseText)
         position = data["iss_position"]
         ts = data["timestamp"]

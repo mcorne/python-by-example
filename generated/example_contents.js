@@ -66,124 +66,124 @@ var example_contents = {
         "print(complex(1, 2))\n"
     ],
     "datetime.date": [
-        "import datetime\nprint(datetime.date(2000, 6, 30))\n"
+        "from datetime import date\nprint(date(2000, 6, 30))\n"
     ],
     "datetime.date.ctime": [
-        "import datetime\nprint(datetime.date(2000, 6, 30).ctime())\n"
+        "from datetime import date\nprint(date(2000, 6, 30).ctime())\n"
     ],
     "datetime.date.fromisoformat": [
-        "import datetime\nprint(datetime.date.fromisoformat('2000-06-30'))\n"
+        "from datetime import date\nprint(date.fromisoformat('2000-06-30'))\n"
     ],
     "datetime.date.fromordinal": [
-        "import datetime\nprint(datetime.date.fromordinal(730301))\n"
+        "from datetime import date\nprint(date.fromordinal(730301))\n"
     ],
     "datetime.date.fromtimestamp": [
-        "import datetime\nprint(datetime.date.fromtimestamp(962316000))\n"
+        "from datetime import date\nprint(date.fromtimestamp(962316000))\n"
     ],
     "datetime.date.isocalendar": [
-        "import datetime\nprint(datetime.date(2000, 6, 30).isocalendar())\n"
+        "from datetime import date\nprint(date(2000, 6, 30).isocalendar())\n"
     ],
     "datetime.date.isoformat": [
-        "import datetime\nprint(datetime.date(2000, 6, 30).isoformat())\n"
+        "from datetime import date\nprint(date(2000, 6, 30).isoformat())\n"
     ],
     "datetime.date.isoweekday": [
-        "import datetime\nprint(datetime.date(2000, 6, 30).isoweekday())\n"
+        "from datetime import date\nprint(date(2000, 6, 30).isoweekday())\n"
     ],
     "datetime.date.replace": [
-        "import datetime\nprint(datetime.date(2000, 6, 30).replace(day=10))\n"
+        "from datetime import date\nprint(date(2000, 6, 30).replace(day=10))\n"
     ],
     "datetime.date.strftime": [
-        "import datetime\nprint(datetime.date(2000, 6, 30).strftime('%c'))\n"
+        "from datetime import date\nprint(date(2000, 6, 30).strftime('%c'))\n"
     ],
     "datetime.date.timetuple": [
-        "import datetime\nprint(datetime.date(2000, 6, 30).timetuple())\n"
+        "from datetime import date\nprint(date(2000, 6, 30).timetuple())\n"
     ],
     "datetime.date.today": [
-        "import datetime\nprint(datetime.date.today())\n"
+        "from datetime import date\nprint(date.today())\n"
     ],
     "datetime.date.toordinal": [
-        "import datetime\nprint(datetime.date(2000, 6, 30).toordinal())\n"
+        "from datetime import date\nprint(date(2000, 6, 30).toordinal())\n"
     ],
     "datetime.date.weekday": [
-        "import datetime\nprint(datetime.date(2000, 6, 30).weekday())\n"
+        "from datetime import date\nprint(date(2000, 6, 30).weekday())\n"
     ],
     "datetime.datetime": [
-        "import datetime\nprint(datetime.datetime(2000, 6, 30, 12, 34, 56))\n"
+        "from datetime import datetime\nprint(datetime(2000, 6, 30, 12, 34, 56))\n"
     ],
     "datetime.datetime.astimezone": [
-        "import datetime\nprint(datetime.datetime(2000, 6, 30, 12, 34, 56).astimezone())\n"
+        "from datetime import datetime\nprint(datetime(2000, 6, 30, 12, 34, 56).astimezone())\n"
     ],
     "datetime.datetime.combine": [
-        "import datetime\nprint(datetime.datetime.combine(datetime.date(2000, 6, 30), datetime.time(12, 34, 56)))\n"
+        "from datetime import date, datetime, time\nprint(datetime.combine(date(2000, 6, 30), time(12, 34, 56)))\n"
     ],
     "datetime.datetime.ctime": [
-        "import datetime\nprint(datetime.datetime(2000, 6, 30, 12, 34, 56).ctime())\n"
+        "from datetime import datetime\nprint(datetime(2000, 6, 30, 12, 34, 56).ctime())\n"
     ],
     "datetime.datetime.dst": [
-        "import datetime\nprint(datetime.datetime(2000, 6, 30, 12, 34, 56).dst())\n"
+        "from datetime import datetime\nprint(datetime(2000, 6, 30, 12, 34, 56).dst())\n"
     ],
     "datetime.datetime.fromisoformat": [
-        "import datetime\nprint(datetime.datetime.fromisoformat('2000-06-30 12:34:56'))\n"
+        "from datetime import datetime\nprint(datetime.fromisoformat('2000-06-30 12:34:56'))\n"
     ],
     "datetime.datetime.fromordinal": [
-        "import datetime\nprint(datetime.datetime.fromordinal(730301))\n"
+        "from datetime import datetime\nprint(datetime.fromordinal(730301))\n"
     ],
     "datetime.datetime.fromtimestamp": [
-        "import datetime\nprint(datetime.datetime.fromtimestamp(962361296))\n"
+        "from datetime import datetime\nprint(datetime.fromtimestamp(962361296))\n"
     ],
     "datetime.datetime.isocalendar": [
-        "import datetime\nprint(datetime.datetime(2000, 6, 30, 12, 34, 56).isocalendar())\n"
+        "from datetime import datetime\nprint(datetime(2000, 6, 30, 12, 34, 56).isocalendar())\n"
     ],
     "datetime.datetime.isoformat": [
-        "import datetime\nprint(datetime.datetime(2000, 6, 30, 12, 34, 56).isoformat())\n"
+        "from datetime import datetime\nprint(datetime(2000, 6, 30, 12, 34, 56).isoformat())\n"
     ],
     "datetime.datetime.isoweekday": [
-        "import datetime\nprint(datetime.datetime(2000, 6, 30, 12, 34, 56).isoweekday())\n"
+        "from datetime import datetime\nprint(datetime(2000, 6, 30, 12, 34, 56).isoweekday())\n"
     ],
     "datetime.datetime.now": [
-        "import datetime\nprint(datetime.datetime.now())\n"
+        "from datetime import datetime\nprint(datetime.now())\n"
     ],
     "datetime.datetime.replace": [
-        "import datetime\nprint(datetime.datetime(2000, 6, 30, 12, 34, 56).replace(hour=10))\n"
+        "from datetime import datetime\nprint(datetime(2000, 6, 30, 12, 34, 56).replace(hour=10))\n"
     ],
     "datetime.datetime.strftime": [
-        "import datetime\nprint(datetime.datetime(2000, 6, 30, 12, 34, 56).strftime('%c'))\n"
+        "from datetime import datetime\nprint(datetime(2000, 6, 30, 12, 34, 56).strftime('%c'))\n"
     ],
     "datetime.datetime.strptime": [
-        "import datetime\nprint(datetime.datetime(2000, 6, 30).strptime('2000-06-30 12:34:56', '%Y-%m-%d %H:%M:%S'))\n"
+        "from datetime import datetime\nprint(datetime(2000, 6, 30).strptime('2000-06-30 12:34:56', '%Y-%m-%d %H:%M:%S'))\n"
     ],
     "datetime.datetime.timestamp": [
-        "import datetime\nprint(datetime.datetime(2000, 6, 30, 12, 34, 56, tzinfo=datetime.timezone.utc).timestamp())\n"
+        "from datetime import datetime, timezone\nprint(datetime(2000, 6, 30, 12, 34, 56, tzinfo=timezone.utc).timestamp())\n"
     ],
     "datetime.datetime.timetuple": [
-        "import datetime\nprint(datetime.datetime(2000, 6, 30, 12, 34, 56).timetuple())\n"
+        "from datetime import datetime\nprint(datetime(2000, 6, 30, 12, 34, 56).timetuple())\n"
     ],
     "datetime.datetime.timetz": [
-        "import datetime\nprint(datetime.datetime(2019, 6, 30, 12, 34, 56, tzinfo=datetime.timezone.utc).timetz())\n"
+        "from datetime import datetime, timezone\nprint(datetime(2019, 6, 30, 12, 34, 56, tzinfo=timezone.utc).timetz())\n"
     ],
     "datetime.datetime.today": [
-        "import datetime\nprint(datetime.datetime.today())\n"
+        "from datetime import datetime\nprint(datetime.today())\n"
     ],
     "datetime.datetime.toordinal": [
-        "import datetime\nprint(datetime.datetime(2000, 6, 30, 12, 34, 56).toordinal())\n"
+        "from datetime import datetime\nprint(datetime(2000, 6, 30, 12, 34, 56).toordinal())\n"
     ],
     "datetime.datetime.tzname": [
-        "import datetime\nprint(datetime.datetime(2000, 6, 30, 12, 34, 56, tzinfo=datetime.timezone.utc).tzname())\n"
+        "from datetime import datetime, timezone\nprint(datetime(2000, 6, 30, 12, 34, 56, tzinfo=timezone.utc).tzname())\n"
     ],
     "datetime.datetime.utcfromtimestamp": [
-        "import datetime\nprint(datetime.datetime.utcfromtimestamp(962361296))\n"
+        "from datetime import datetime\nprint(datetime.utcfromtimestamp(962361296))\n"
     ],
     "datetime.datetime.utcoffset": [
-        "import datetime\nprint(datetime.datetime(2000, 6, 30, 12, 34, 56, tzinfo=datetime.timezone.utc).utcoffset())\n"
+        "from datetime import datetime, timezone\nprint(datetime(2000, 6, 30, 12, 34, 56, tzinfo=timezone.utc).utcoffset())\n"
     ],
     "datetime.datetime.utctimetuple": [
-        "import datetime\nprint(datetime.datetime(2000, 6, 30, 12, 34, 56).utctimetuple())\n"
+        "from datetime import datetime\nprint(datetime(2000, 6, 30, 12, 34, 56).utctimetuple())\n"
     ],
     "datetime.datetime.weekday": [
-        "import datetime\nprint(datetime.datetime(2000, 6, 30, 12, 34, 56).weekday())\n"
+        "from datetime import datetime\nprint(datetime(2000, 6, 30, 12, 34, 56).weekday())\n"
     ],
     "datetime.time": [
-        "import datetime\nprint(datetime.datetime(2019, 6, 30, 12, 34, 56).time())\n"
+        "from datetime import datetime\nprint(datetime(2019, 6, 30, 12, 34, 56).time())\n"
     ],
     "delattr": [
         "class Foo:\n    bar = 123\n\nfoo = Foo()\ndelattr(foo, 'bar')\nprint(foo.bar)\n# see issue https://github.com/brython-dev/brython/issues/1048\n"
@@ -550,7 +550,7 @@ var example_contents = {
     ],
     "repr": [
         "print(repr('foo'))\n",
-        "import datetime\nprint(repr(datetime.datetime.now()))\n",
+        "from datetime import datetime\nprint(repr(datetime.now()))\n",
         "class Class:\n    pass\n\nprint(repr(Class()))\n",
         "class Color:\n    color = 'orange'\n    def __repr__(self):\n        return repr(Color.color)\n\nprint(repr(Color()))\n"
     ],
@@ -690,7 +690,7 @@ var example_contents = {
     "str.format": [
         "print('{0}, {1}, {2}'.format('a', 'b', 'c'))\nprint('{}, {}, {}'.format('a', 'b', 'c'))\nprint('{2}, {1}, {0}'.format('a', 'b', 'c'))\nprint('{2}, {1}, {0}'.format(*'abc'))\nprint('{0}{1}{0}'.format('abra', 'cad'))\n",
         "points = 19\ntotal = 22\nprint('Correct answers: {:.2%}'.format(points/total))\n",
-        "import datetime\nd = datetime.datetime(2010, 7, 4, 12, 15, 58)\nprint('{:%Y-%m-%d %H:%M:%S}'.format(d))\n",
+        "from datetime import datetime\nd = datetime(2010, 7, 4, 12, 15, 58)\nprint('{:%Y-%m-%d %H:%M:%S}'.format(d))\n",
         "for align, text in zip('<^>', ['left', 'center', 'right']):\n    print('{0:{fill}{align}16}'.format(text, fill=align, align=align))\n\noctets = [192, 168, 0, 1]\nprint('{:02X}{:02X}{:02X}{:02X}'.format(*octets))\n\nwidth = 5\nfor num in range(5,12):\n    for base in 'dXob':\n        print('{0:{width}{base}}'.format(num, base=base, width=width), end=' ')\n    print()\n",
         "print('Coordinates: {latitude}, {longitude}'.format(latitude='37.24N', longitude='-115.81W'))\n\ncoord = {'latitude': '37.24N', 'longitude': '-115.81W'}\nprint('Coordinates: {latitude}, {longitude}'.format(**coord))\n",
         "c = 3-5j\nprint(('The complex number {0} is formed from the real part {0.real} and the imaginary part {0.imag}.').format(c))\n\nclass Point:\n    def __init__(self, x, y):\n        self.x, self.y = x, y\n    def __str__(self):\n        return 'Point({self.x}, {self.y})'.format(self=self)\n\nprint(Point(4, 2))\n",

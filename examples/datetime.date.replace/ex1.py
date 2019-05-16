@@ -1,2 +1,2 @@
-import datetime
-print(datetime.date(2000, 6, 30).replace(day=10))
+from datetime import date
+print(date(2000, 6, 30).replace(day=10))

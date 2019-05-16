@@ -1,2 +1,2 @@
-import datetime
-print(datetime.date.fromisoformat('2000-06-30'))
+from datetime import date
+print(date.fromisoformat('2000-06-30'))

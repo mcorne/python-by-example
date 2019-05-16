@@ -1,2 +1,2 @@
-import datetime
-print(datetime.datetime.today())
+from datetime import datetime
+print(datetime.today())

@@ -66,124 +66,124 @@ var example_names = {
         "complex(1, 2)"
     ],
     "datetime.date": [
-        "datetime.date(2000, 6, 30)"
+        "date(2000, 6, 30)"
     ],
     "datetime.date.ctime": [
-        "datetime.date(2000, 6, 30).ctime()"
+        "date(2000, 6, 30).ctime()"
     ],
     "datetime.date.fromisoformat": [
-        "datetime.date.fromisoformat('2000-06-30')"
+        "date.fromisoformat('2000-06-30')"
     ],
     "datetime.date.fromordinal": [
-        "datetime.date.fromordinal(730301)"
+        "date.fromordinal(730301)"
     ],
     "datetime.date.fromtimestamp": [
-        "datetime.date.fromtimestamp(962316000)"
+        "date.fromtimestamp(962316000)"
     ],
     "datetime.date.isocalendar": [
-        "datetime.date(2000, 6, 30).isocalendar()"
+        "date(2000, 6, 30).isocalendar()"
     ],
     "datetime.date.isoformat": [
-        "datetime.date(2000, 6, 30).isoformat()"
+        "date(2000, 6, 30).isoformat()"
     ],
     "datetime.date.isoweekday": [
-        "datetime.date(2000, 6, 30).isoweekday()"
+        "date(2000, 6, 30).isoweekday()"
     ],
     "datetime.date.replace": [
-        "datetime.date(2000, 6, 30).replace(day=10)"
+        "date(2000, 6, 30).replace(day=10)"
     ],
     "datetime.date.strftime": [
-        "datetime.date(2000, 6, 30).strftime('%c')"
+        "date(2000, 6, 30).strftime('%c')"
     ],
     "datetime.date.timetuple": [
-        "datetime.date(2000, 6, 30).timetuple()"
+        "date(2000, 6, 30).timetuple()"
     ],
     "datetime.date.today": [
-        "datetime.date.today()"
+        "date.today()"
     ],
     "datetime.date.toordinal": [
-        "datetime.date(2000, 6, 30).toordinal()"
+        "date(2000, 6, 30).toordinal()"
     ],
     "datetime.date.weekday": [
-        "datetime.date(2000, 6, 30).weekday()"
+        "date(2000, 6, 30).weekday()"
     ],
     "datetime.datetime": [
-        "datetime.datetime(2000, 6, 30, 12, 34, 56)"
+        "datetime(2000, 6, 30, 12, 34, 56)"
     ],
     "datetime.datetime.astimezone": [
-        "datetime.datetime(2000, 6, 30, 12, 34, 56).astimezone()"
+        "datetime(2000, 6, 30, 12, 34, 56).astimezone()"
     ],
     "datetime.datetime.combine": [
-        "datetime.datetime.combine(datetime.date(2000, 6, 30), datetime.time(12, 34, 56))"
+        "datetime.combine(date(2000, 6, 30), time(12, 34, 56))"
     ],
     "datetime.datetime.ctime": [
-        "datetime.datetime(2000, 6, 30, 12, 34, 56).ctime()"
+        "datetime(2000, 6, 30, 12, 34, 56).ctime()"
     ],
     "datetime.datetime.dst": [
-        "datetime.datetime(2000, 6, 30, 12, 34, 56).dst()"
+        "datetime(2000, 6, 30, 12, 34, 56).dst()"
     ],
     "datetime.datetime.fromisoformat": [
-        "datetime.datetime.fromisoformat('2000-06-30 12:34:56')"
+        "datetime.fromisoformat('2000-06-30 12:34:56')"
     ],
     "datetime.datetime.fromordinal": [
-        "datetime.datetime.fromordinal(730301)"
+        "datetime.fromordinal(730301)"
     ],
     "datetime.datetime.fromtimestamp": [
-        "datetime.datetime.fromtimestamp(962361296)"
+        "datetime.fromtimestamp(962361296)"
     ],
     "datetime.datetime.isocalendar": [
-        "datetime.datetime(2000, 6, 30, 12, 34, 56).isocalendar()"
+        "datetime(2000, 6, 30, 12, 34, 56).isocalendar()"
     ],
     "datetime.datetime.isoformat": [
-        "datetime.datetime(2000, 6, 30, 12, 34, 56).isoformat()"
+        "datetime(2000, 6, 30, 12, 34, 56).isoformat()"
     ],
     "datetime.datetime.isoweekday": [
-        "datetime.datetime(2000, 6, 30, 12, 34, 56).isoweekday()"
+        "datetime(2000, 6, 30, 12, 34, 56).isoweekday()"
     ],
     "datetime.datetime.now": [
-        "datetime.datetime.now()"
+        "datetime.now()"
     ],
     "datetime.datetime.replace": [
-        "datetime.datetime(2000, 6, 30, 12, 34, 56).replace(hour=10)"
+        "datetime(2000, 6, 30, 12, 34, 56).replace(hour=10)"
     ],
     "datetime.datetime.strftime": [
-        "datetime.datetime(2000, 6, 30, 12, 34, 56).strftime('%c')"
+        "datetime(2000, 6, 30, 12, 34, 56).strftime('%c')"
     ],
     "datetime.datetime.strptime": [
-        "datetime.datetime(2000, 6, 30).strptime('2000-06-30 12:34:56', '%Y-%m-%d %H:%M:%S')"
+        "datetime(2000, 6, 30).strptime('2000-06-30 12:34:56', '%Y-%m-%d %H:%M:%S')"
     ],
     "datetime.datetime.timestamp": [
-        "datetime.datetime(2000, 6, 30, 12, 34, 56, tzinfo=datetime.timezone.utc).timestamp()"
+        "datetime(2000, 6, 30, 12, 34, 56, tzinfo=timezone.utc).timestamp()"
     ],
     "datetime.datetime.timetuple": [
-        "datetime.datetime(2000, 6, 30, 12, 34, 56).timetuple()"
+        "datetime(2000, 6, 30, 12, 34, 56).timetuple()"
     ],
     "datetime.datetime.timetz": [
-        "datetime.datetime(2019, 6, 30, 12, 34, 56, tzinfo=datetime.timezone.utc).timetz()"
+        "datetime(2019, 6, 30, 12, 34, 56, tzinfo=timezone.utc).timetz()"
     ],
     "datetime.datetime.today": [
-        "datetime.datetime.today()"
+        "datetime.today()"
     ],
     "datetime.datetime.toordinal": [
-        "datetime.datetime(2000, 6, 30, 12, 34, 56).toordinal()"
+        "datetime(2000, 6, 30, 12, 34, 56).toordinal()"
     ],
     "datetime.datetime.tzname": [
-        "datetime.datetime(2000, 6, 30, 12, 34, 56, tzinfo=datetime.timezone.utc).tzname()"
+        "datetime(2000, 6, 30, 12, 34, 56, tzinfo=timezone.utc).tzname()"
     ],
     "datetime.datetime.utcfromtimestamp": [
-        "datetime.datetime.utcfromtimestamp(962361296)"
+        "datetime.utcfromtimestamp(962361296)"
     ],
     "datetime.datetime.utcoffset": [
-        "datetime.datetime(2000, 6, 30, 12, 34, 56, tzinfo=datetime.timezone.utc).utcoffset()"
+        "datetime(2000, 6, 30, 12, 34, 56, tzinfo=timezone.utc).utcoffset()"
     ],
     "datetime.datetime.utctimetuple": [
-        "datetime.datetime(2000, 6, 30, 12, 34, 56).utctimetuple()"
+        "datetime(2000, 6, 30, 12, 34, 56).utctimetuple()"
     ],
     "datetime.datetime.weekday": [
-        "datetime.datetime(2000, 6, 30, 12, 34, 56).weekday()"
+        "datetime(2000, 6, 30, 12, 34, 56).weekday()"
     ],
     "datetime.time": [
-        "datetime.datetime(2019, 6, 30, 12, 34, 56).time()"
+        "datetime(2019, 6, 30, 12, 34, 56).time()"
     ],
     "delattr": [
         "delattr(foo, 'bar')"
@@ -550,7 +550,7 @@ var example_names = {
     ],
     "repr": [
         "repr('foo')",
-        "repr(datetime.datetime.now())",
+        "repr(datetime.now())",
         "repr(Class())",
         "repr(Color())"
     ],

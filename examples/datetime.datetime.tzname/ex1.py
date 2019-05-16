@@ -1,2 +1,2 @@
-import datetime
-print(datetime.datetime(2000, 6, 30, 12, 34, 56, tzinfo=datetime.timezone.utc).tzname())
+from datetime import datetime, timezone
+print(datetime(2000, 6, 30, 12, 34, 56, tzinfo=timezone.utc).tzname())
