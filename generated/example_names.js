@@ -102,10 +102,40 @@ var example_names = {
         "datetime.date.today()"
     ],
     "datetime.date.toordinal": [
-        "datetime.date(2000, 6, 30).toordinal()"
+        "datetime.datetime.utcfromtimestamp(962361296)"
     ],
     "datetime.date.weekday": [
         "datetime.date(2000, 6, 30).weekday()"
+    ],
+    "datetime.datetime": [
+        "datetime.datetime(2000, 6, 30, 12, 34, 56)"
+    ],
+    "datetime.datetime.combine": [
+        "datetime.datetime.combine(datetime.date(2000, 6, 30), datetime.time(12, 34, 56))"
+    ],
+    "datetime.datetime.fromisoformat": [
+        "datetime.datetime.fromisoformat('2000-06-30 12:34:56')"
+    ],
+    "datetime.datetime.fromordinal": [
+        "datetime.datetime.fromordinal(730301)"
+    ],
+    "datetime.datetime.fromtimestamp": [
+        "datetime.datetime.fromtimestamp(962361296)"
+    ],
+    "datetime.datetime.now": [
+        "datetime.datetime.now()"
+    ],
+    "datetime.datetime.strptime": [
+        "datetime.datetime(2000, 6, 30).strptime('2000-06-30 12:34:56', '%Y-%m-%d %H:%M:%S')"
+    ],
+    "datetime.datetime.today": [
+        "datetime.datetime.today()"
+    ],
+    "datetime.datetime.toordinal": [
+        "datetime.date(2000, 6, 30).toordinal()"
+    ],
+    "datetime.datetime.utcfromtimestamp": [
+        "datetime.datetime.utcfromtimestamp(962361296)"
     ],
     "delattr": [
         "delattr(foo, 'bar')"

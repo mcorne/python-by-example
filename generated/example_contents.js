@@ -102,10 +102,40 @@ var example_contents = {
         "import datetime\nprint(datetime.date.today())\n"
     ],
     "datetime.date.toordinal": [
-        "import datetime\nprint(datetime.date(2000, 6, 30).toordinal())\n"
+        "import datetime\nprint(datetime.datetime.utcfromtimestamp(962361296))\n"
     ],
     "datetime.date.weekday": [
         "import datetime\nprint(datetime.date(2000, 6, 30).weekday())\n"
+    ],
+    "datetime.datetime": [
+        "import datetime\nprint(datetime.datetime(2000, 6, 30, 12, 34, 56))\n"
+    ],
+    "datetime.datetime.combine": [
+        "import datetime\nprint(datetime.datetime.combine(datetime.date(2000, 6, 30), datetime.time(12, 34, 56)))\n"
+    ],
+    "datetime.datetime.fromisoformat": [
+        "import datetime\nprint(datetime.datetime.fromisoformat('2000-06-30 12:34:56'))\n"
+    ],
+    "datetime.datetime.fromordinal": [
+        "import datetime\nprint(datetime.datetime.fromordinal(730301))\n"
+    ],
+    "datetime.datetime.fromtimestamp": [
+        "import datetime\nprint(datetime.datetime.fromtimestamp(962361296))\n"
+    ],
+    "datetime.datetime.now": [
+        "import datetime\nprint(datetime.datetime.now())\n"
+    ],
+    "datetime.datetime.strptime": [
+        "import datetime\nprint(datetime.datetime(2000, 6, 30).strptime('2000-06-30 12:34:56', '%Y-%m-%d %H:%M:%S'))\n"
+    ],
+    "datetime.datetime.today": [
+        "import datetime\nprint(datetime.datetime.today())\n"
+    ],
+    "datetime.datetime.toordinal": [
+        "import datetime\nprint(datetime.date(2000, 6, 30).toordinal())\n"
+    ],
+    "datetime.datetime.utcfromtimestamp": [
+        "import datetime\nprint(datetime.datetime.utcfromtimestamp(962361296))\n"
     ],
     "delattr": [
         "class Foo:\n    bar = 123\n\nfoo = Foo()\ndelattr(foo, 'bar')\nprint(foo.bar)\n# see issue https://github.com/brython-dev/brython/issues/1048\n"
