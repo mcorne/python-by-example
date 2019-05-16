@@ -102,7 +102,7 @@ var example_contents = {
         "import datetime\nprint(datetime.date.today())\n"
     ],
     "datetime.date.toordinal": [
-        "import datetime\nprint(datetime.datetime.utcfromtimestamp(962361296))\n"
+        "import datetime\nprint(datetime.date(2000, 6, 30).toordinal())\n"
     ],
     "datetime.date.weekday": [
         "import datetime\nprint(datetime.date(2000, 6, 30).weekday())\n"
@@ -110,8 +110,14 @@ var example_contents = {
     "datetime.datetime": [
         "import datetime\nprint(datetime.datetime(2000, 6, 30, 12, 34, 56))\n"
     ],
+    "datetime.datetime.astimezone": [
+        "import datetime\nprint(datetime.datetime(2000, 6, 30, 12, 34, 56).astimezone())\n"
+    ],
     "datetime.datetime.combine": [
         "import datetime\nprint(datetime.datetime.combine(datetime.date(2000, 6, 30), datetime.time(12, 34, 56)))\n"
+    ],
+    "datetime.datetime.dst": [
+        "import datetime\nprint(datetime.datetime(2000, 6, 30, 12, 34, 56).dst())\n"
     ],
     "datetime.datetime.fromisoformat": [
         "import datetime\nprint(datetime.datetime.fromisoformat('2000-06-30 12:34:56'))\n"
@@ -125,17 +131,41 @@ var example_contents = {
     "datetime.datetime.now": [
         "import datetime\nprint(datetime.datetime.now())\n"
     ],
+    "datetime.datetime.replace": [
+        "import datetime\nprint(datetime.datetime(2000, 6, 30, 12, 34, 56).replace(hour=10))\n"
+    ],
     "datetime.datetime.strptime": [
         "import datetime\nprint(datetime.datetime(2000, 6, 30).strptime('2000-06-30 12:34:56', '%Y-%m-%d %H:%M:%S'))\n"
+    ],
+    "datetime.datetime.timestamp": [
+        "import datetime\nprint(datetime.datetime(2000, 6, 30, 12, 34, 56, tzinfo=datetime.timezone.utc).timestamp())\n"
+    ],
+    "datetime.datetime.timetuple": [
+        "import datetime\nprint(datetime.datetime(2000, 6, 30, 12, 34, 56).timetuple())\n"
+    ],
+    "datetime.datetime.timetz": [
+        "import datetime\nprint(datetime.datetime(2019, 6, 30, 12, 34, 56, tzinfo=datetime.timezone.utc).timetz())\n"
     ],
     "datetime.datetime.today": [
         "import datetime\nprint(datetime.datetime.today())\n"
     ],
     "datetime.datetime.toordinal": [
-        "import datetime\nprint(datetime.date(2000, 6, 30).toordinal())\n"
+        "import datetime\nprint(datetime.datetime(2000, 6, 30, 12, 34, 56).toordinal())\n"
+    ],
+    "datetime.datetime.tzname": [
+        "import datetime\nprint(datetime.datetime(2000, 6, 30, 12, 34, 56, tzinfo=datetime.timezone.utc).tzname())\n"
     ],
     "datetime.datetime.utcfromtimestamp": [
         "import datetime\nprint(datetime.datetime.utcfromtimestamp(962361296))\n"
+    ],
+    "datetime.datetime.utcoffset": [
+        "import datetime\nprint(datetime.datetime(2000, 6, 30, 12, 34, 56, tzinfo=datetime.timezone.utc).utcoffset())\n"
+    ],
+    "datetime.datetime.utctimetuple": [
+        "import datetime\nprint(datetime.datetime(2000, 6, 30, 12, 34, 56).utctimetuple())\n"
+    ],
+    "datetime.time": [
+        "import datetime\nprint(datetime.datetime(2019, 6, 30, 12, 34, 56).time())\n"
     ],
     "delattr": [
         "class Foo:\n    bar = 123\n\nfoo = Foo()\ndelattr(foo, 'bar')\nprint(foo.bar)\n# see issue https://github.com/brython-dev/brython/issues/1048\n"

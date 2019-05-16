@@ -1,2 +1,2 @@
 import datetime
-print(datetime.date(2000, 6, 30).toordinal())
+print(datetime.datetime(2000, 6, 30, 12, 34, 56).toordinal())

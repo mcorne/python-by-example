@@ -102,7 +102,7 @@ var example_names = {
         "datetime.date.today()"
     ],
     "datetime.date.toordinal": [
-        "datetime.datetime.utcfromtimestamp(962361296)"
+        "datetime.date(2000, 6, 30).toordinal()"
     ],
     "datetime.date.weekday": [
         "datetime.date(2000, 6, 30).weekday()"
@@ -110,8 +110,14 @@ var example_names = {
     "datetime.datetime": [
         "datetime.datetime(2000, 6, 30, 12, 34, 56)"
     ],
+    "datetime.datetime.astimezone": [
+        "datetime.datetime(2000, 6, 30, 12, 34, 56).astimezone()"
+    ],
     "datetime.datetime.combine": [
         "datetime.datetime.combine(datetime.date(2000, 6, 30), datetime.time(12, 34, 56))"
+    ],
+    "datetime.datetime.dst": [
+        "datetime.datetime(2000, 6, 30, 12, 34, 56).dst()"
     ],
     "datetime.datetime.fromisoformat": [
         "datetime.datetime.fromisoformat('2000-06-30 12:34:56')"
@@ -125,17 +131,41 @@ var example_names = {
     "datetime.datetime.now": [
         "datetime.datetime.now()"
     ],
+    "datetime.datetime.replace": [
+        "datetime.datetime(2000, 6, 30, 12, 34, 56).replace(hour=10)"
+    ],
     "datetime.datetime.strptime": [
         "datetime.datetime(2000, 6, 30).strptime('2000-06-30 12:34:56', '%Y-%m-%d %H:%M:%S')"
+    ],
+    "datetime.datetime.timestamp": [
+        "datetime.datetime(2000, 6, 30, 12, 34, 56, tzinfo=datetime.timezone.utc).timestamp()"
+    ],
+    "datetime.datetime.timetuple": [
+        "datetime.datetime(2000, 6, 30, 12, 34, 56).timetuple()"
+    ],
+    "datetime.datetime.timetz": [
+        "datetime.datetime(2019, 6, 30, 12, 34, 56, tzinfo=datetime.timezone.utc).timetz()"
     ],
     "datetime.datetime.today": [
         "datetime.datetime.today()"
     ],
     "datetime.datetime.toordinal": [
-        "datetime.date(2000, 6, 30).toordinal()"
+        "datetime.datetime(2000, 6, 30, 12, 34, 56).toordinal()"
+    ],
+    "datetime.datetime.tzname": [
+        "datetime.datetime(2000, 6, 30, 12, 34, 56, tzinfo=datetime.timezone.utc).tzname()"
     ],
     "datetime.datetime.utcfromtimestamp": [
         "datetime.datetime.utcfromtimestamp(962361296)"
+    ],
+    "datetime.datetime.utcoffset": [
+        "datetime.datetime(2000, 6, 30, 12, 34, 56, tzinfo=datetime.timezone.utc).utcoffset()"
+    ],
+    "datetime.datetime.utctimetuple": [
+        "datetime.datetime(2000, 6, 30, 12, 34, 56).utctimetuple()"
+    ],
+    "datetime.time": [
+        "datetime.datetime(2019, 6, 30, 12, 34, 56).time()"
     ],
     "delattr": [
         "delattr(foo, 'bar')"
