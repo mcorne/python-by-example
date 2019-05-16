@@ -5,7 +5,7 @@ function add_select_options()
     var options = '';
 
     for (var funcname in example_names) {
-        options += '<option>' + funcname + '</option>';
+        options += '<option value="' + funcname + '">' + remove_module_name(funcname) + '</option>';
         count++;
     }
 
@@ -69,7 +69,7 @@ function get_example_links(funcname, number)
             links += '<br>';
         }
 
-        link = '<a href="javascript:display_example(\'' + funcname + '\', ' + i + ')">' + example_names[funcname][i] + '</a>';
+        link = '<a href="javascript:display_example(\'' + funcname + '\', ' + i + ')">' + remove_module_name(example_names[funcname][i]) + '</a>';
 
         if (i == number) {
             link = '<b>' + link + '</b>';
@@ -128,4 +128,13 @@ function on_load()
     autofit_textarea_height();
     add_select_options();
     brython({debug: 0, indexedDB: false});
+}
+
+/**
+ *
+ * @param {string} funcname
+ */
+function remove_module_name(funcname)
+{
+    return funcname.replace(/(calendar|datetime)[.]/, '')
 }

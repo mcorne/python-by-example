@@ -1,2 +1,2 @@
-import calendar
-print(calendar.Calendar().monthdatescalendar(2019, 4))
+from calendar import Calendar
+print(Calendar().monthdatescalendar(2019, 4))

@@ -43,7 +43,7 @@ var example_names = {
         "bytes(b'Hi!')"
     ],
     "calendar.Calendar.monthdatescalendar": [
-        "calendar.Calendar().monthdatescalendar(2019, 4)"
+        "Calendar().monthdatescalendar(2019, 4)"
     ],
     "callable": [
         "callable(abs)",

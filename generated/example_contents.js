@@ -43,7 +43,7 @@ var example_contents = {
         "print(bytes(b'Hi!'))\n"
     ],
     "calendar.Calendar.monthdatescalendar": [
-        "import calendar\nprint(calendar.Calendar().monthdatescalendar(2019, 4))\n"
+        "from calendar import Calendar\nprint(Calendar().monthdatescalendar(2019, 4))\n"
     ],
     "callable": [
         "print(callable(abs))\n",
