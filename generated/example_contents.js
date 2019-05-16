@@ -116,6 +116,9 @@ var example_contents = {
     "datetime.datetime.combine": [
         "import datetime\nprint(datetime.datetime.combine(datetime.date(2000, 6, 30), datetime.time(12, 34, 56)))\n"
     ],
+    "datetime.datetime.ctime": [
+        "import datetime\nprint(datetime.datetime(2000, 6, 30, 12, 34, 56).ctime())\n"
+    ],
     "datetime.datetime.dst": [
         "import datetime\nprint(datetime.datetime(2000, 6, 30, 12, 34, 56).dst())\n"
     ],
@@ -128,11 +131,23 @@ var example_contents = {
     "datetime.datetime.fromtimestamp": [
         "import datetime\nprint(datetime.datetime.fromtimestamp(962361296))\n"
     ],
+    "datetime.datetime.isocalendar": [
+        "import datetime\nprint(datetime.datetime(2000, 6, 30, 12, 34, 56).isocalendar())\n"
+    ],
+    "datetime.datetime.isoformat": [
+        "import datetime\nprint(datetime.datetime(2000, 6, 30, 12, 34, 56).isoformat())\n"
+    ],
+    "datetime.datetime.isoweekday": [
+        "import datetime\nprint(datetime.datetime(2000, 6, 30, 12, 34, 56).isoweekday())\n"
+    ],
     "datetime.datetime.now": [
         "import datetime\nprint(datetime.datetime.now())\n"
     ],
     "datetime.datetime.replace": [
         "import datetime\nprint(datetime.datetime(2000, 6, 30, 12, 34, 56).replace(hour=10))\n"
+    ],
+    "datetime.datetime.strftime": [
+        "import datetime\nprint(datetime.datetime(2000, 6, 30, 12, 34, 56).strftime('%c'))\n"
     ],
     "datetime.datetime.strptime": [
         "import datetime\nprint(datetime.datetime(2000, 6, 30).strptime('2000-06-30 12:34:56', '%Y-%m-%d %H:%M:%S'))\n"
@@ -163,6 +178,9 @@ var example_contents = {
     ],
     "datetime.datetime.utctimetuple": [
         "import datetime\nprint(datetime.datetime(2000, 6, 30, 12, 34, 56).utctimetuple())\n"
+    ],
+    "datetime.datetime.weekday": [
+        "import datetime\nprint(datetime.datetime(2000, 6, 30, 12, 34, 56).weekday())\n"
     ],
     "datetime.time": [
         "import datetime\nprint(datetime.datetime(2019, 6, 30, 12, 34, 56).time())\n"

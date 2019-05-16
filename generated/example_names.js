@@ -116,6 +116,9 @@ var example_names = {
     "datetime.datetime.combine": [
         "datetime.datetime.combine(datetime.date(2000, 6, 30), datetime.time(12, 34, 56))"
     ],
+    "datetime.datetime.ctime": [
+        "datetime.datetime(2000, 6, 30, 12, 34, 56).ctime()"
+    ],
     "datetime.datetime.dst": [
         "datetime.datetime(2000, 6, 30, 12, 34, 56).dst()"
     ],
@@ -128,11 +131,23 @@ var example_names = {
     "datetime.datetime.fromtimestamp": [
         "datetime.datetime.fromtimestamp(962361296)"
     ],
+    "datetime.datetime.isocalendar": [
+        "datetime.datetime(2000, 6, 30, 12, 34, 56).isocalendar()"
+    ],
+    "datetime.datetime.isoformat": [
+        "datetime.datetime(2000, 6, 30, 12, 34, 56).isoformat()"
+    ],
+    "datetime.datetime.isoweekday": [
+        "datetime.datetime(2000, 6, 30, 12, 34, 56).isoweekday()"
+    ],
     "datetime.datetime.now": [
         "datetime.datetime.now()"
     ],
     "datetime.datetime.replace": [
         "datetime.datetime(2000, 6, 30, 12, 34, 56).replace(hour=10)"
+    ],
+    "datetime.datetime.strftime": [
+        "datetime.datetime(2000, 6, 30, 12, 34, 56).strftime('%c')"
     ],
     "datetime.datetime.strptime": [
         "datetime.datetime(2000, 6, 30).strptime('2000-06-30 12:34:56', '%Y-%m-%d %H:%M:%S')"
@@ -163,6 +178,9 @@ var example_names = {
     ],
     "datetime.datetime.utctimetuple": [
         "datetime.datetime(2000, 6, 30, 12, 34, 56).utctimetuple()"
+    ],
+    "datetime.datetime.weekday": [
+        "datetime.datetime(2000, 6, 30, 12, 34, 56).weekday()"
     ],
     "datetime.time": [
         "datetime.datetime(2019, 6, 30, 12, 34, 56).time()"
