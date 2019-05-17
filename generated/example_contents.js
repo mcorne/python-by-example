@@ -43,10 +43,22 @@ var example_contents = {
         "print(bytes(b'Hi!'))\n"
     ],
     "calendar.Calendar.monthdatescalendar": [
-        "from calendar import Calendar\nprint(Calendar().monthdatescalendar(2019, 4))\n"
+        "from calendar import Calendar\nprint(Calendar().monthdatescalendar(2000, 4))\n"
     ],
     "calendar.Calendar.monthdays2calendar": [
-        "from calendar import Calendar\nprint(Calendar().monthdays2calendar(2019, 4))\n"
+        "from calendar import Calendar\nprint(Calendar().monthdays2calendar(2000, 4))\n"
+    ],
+    "calendar.Calendar.monthdayscalendar": [
+        "from calendar import Calendar\nprint(Calendar().monthdayscalendar(2000, 4))\n"
+    ],
+    "calendar.Calendar.yeardatescalendar": [
+        "from calendar import Calendar\nprint(Calendar().yeardatescalendar(2000))\n"
+    ],
+    "calendar.Calendar.yeardays2calendar": [
+        "from calendar import Calendar\nprint(Calendar().yeardays2calendar(2000))\n"
+    ],
+    "calendar.Calendar.yeardayscalendar": [
+        "from calendar import Calendar\nprint(Calendar().yeardayscalendar(2000))\n"
     ],
     "callable": [
         "print(callable(abs))\n",
@@ -164,7 +176,7 @@ var example_contents = {
         "from datetime import datetime\nprint(datetime(2000, 6, 30, 12, 34, 56).timetuple())\n"
     ],
     "datetime.datetime.timetz": [
-        "from datetime import datetime, timezone\nprint(datetime(2019, 6, 30, 12, 34, 56, tzinfo=timezone.utc).timetz())\n",
+        "from datetime import datetime, timezone\nprint(datetime(2000, 6, 30, 12, 34, 56, tzinfo=timezone.utc).timetz())\n",
         "from datetime import datetime, timedelta, tzinfo\n\nclass GMT1(tzinfo):\n    def utcoffset(self, dt):\n        return timedelta(hours=1)\n\nprint(datetime(2000, 6, 30, 12, 34, 56, tzinfo=GMT1()).timetz())\n"
     ],
     "datetime.datetime.today": [
@@ -191,7 +203,7 @@ var example_contents = {
         "from datetime import datetime\nprint(datetime(2000, 6, 30, 12, 34, 56).weekday())\n"
     ],
     "datetime.time": [
-        "from datetime import datetime\nprint(datetime(2019, 6, 30, 12, 34, 56).time())\n"
+        "from datetime import datetime\nprint(datetime(2000, 6, 30, 12, 34, 56).time())\n"
     ],
     "datetime.time.dst": [
         "from datetime import time\nprint(time(12, 34, 56).dst())\n",
@@ -793,7 +805,7 @@ var example_contents = {
         "print('BIENTÔT'.isupper())\n"
     ],
     "str.join": [
-        "print('-'.join(['2019', '03', '29']))\n"
+        "print('-'.join(['2000', '06', '30']))\n"
     ],
     "str.ljust": [
         "print('foo'.ljust(10, '*'))\n"

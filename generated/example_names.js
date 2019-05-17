@@ -43,10 +43,22 @@ var example_names = {
         "bytes(b'Hi!')"
     ],
     "calendar.Calendar.monthdatescalendar": [
-        "Calendar().monthdatescalendar(2019, 4)"
+        "Calendar().monthdatescalendar(2000, 4)"
     ],
     "calendar.Calendar.monthdays2calendar": [
-        "Calendar().monthdays2calendar(2019, 4)"
+        "Calendar().monthdays2calendar(2000, 4)"
+    ],
+    "calendar.Calendar.monthdayscalendar": [
+        "Calendar().monthdayscalendar(2000, 4)"
+    ],
+    "calendar.Calendar.yeardatescalendar": [
+        "Calendar().yeardatescalendar(2000)"
+    ],
+    "calendar.Calendar.yeardays2calendar": [
+        "Calendar().yeardays2calendar(2000)"
+    ],
+    "calendar.Calendar.yeardayscalendar": [
+        "Calendar().yeardayscalendar(2000)"
     ],
     "callable": [
         "callable(abs)",
@@ -164,7 +176,7 @@ var example_names = {
         "datetime(2000, 6, 30, 12, 34, 56).timetuple()"
     ],
     "datetime.datetime.timetz": [
-        "datetime(2019, 6, 30, 12, 34, 56, tzinfo=timezone.utc).timetz()",
+        "datetime(2000, 6, 30, 12, 34, 56, tzinfo=timezone.utc).timetz()",
         "datetime(2000, 6, 30, 12, 34, 56, tzinfo=GMT1()).timetz()"
     ],
     "datetime.datetime.today": [
@@ -191,7 +203,7 @@ var example_names = {
         "datetime(2000, 6, 30, 12, 34, 56).weekday()"
     ],
     "datetime.time": [
-        "datetime(2019, 6, 30, 12, 34, 56).time()"
+        "datetime(2000, 6, 30, 12, 34, 56).time()"
     ],
     "datetime.time.dst": [
         "time(12, 34, 56).dst()",
@@ -793,7 +805,7 @@ var example_names = {
         "'BIENTÔT'.isupper()"
     ],
     "str.join": [
-        "'-'.join(['2019', '03', '29'])"
+        "'-'.join(['2000', '06', '30'])"
     ],
     "str.ljust": [
         "'foo'.ljust(10, '*')"
