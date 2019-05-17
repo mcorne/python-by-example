@@ -1,15 +1,15 @@
 function add_select_options()
 {
-    var count = 0;
-    var example = document.getElementById('example');
-    var options = '';
+    var example   = document.getElementById('example');
+    var funcnames = fix_funcnames();
+    var options   = '';
 
-    for (var funcname in example_names) {
-        options += '<option value="' + funcname + '">' + remove_module_name(funcname) + '</option>';
-        count++;
+    for (var i = 0; i < funcnames.length; i++) {
+        funcname = funcnames[i];
+        options += '<option value="' + funcname.fullname + '">' + funcname.shortname + '</option>';
     }
 
-    example.innerHTML = '<option>Choose one of ' + count + ' functions</option>' + options;
+    example.innerHTML = '<option>Choose one of ' + funcnames.length + ' functions</option>' + options;
 }
 
 /**
@@ -52,6 +52,29 @@ function display_example(funcname, number = 0)
 
     doclink.href = get_python_doc_link(funcname);
 }
+
+/**
+ * @returns {Array}
+ */
+function fix_funcnames()
+{
+    var fixed = [];
+
+    for (var funcname in example_names) {
+        fixed.push({fullname: funcname, shortname: remove_module_name(funcname)});
+    }
+
+    fixed.sort(function(a, b){
+        a = a.shortname.toLowerCase();
+        b = b.shortname.toLowerCase();
+        if (a < b) {return -1;}
+        if (a > b) {return 1;}
+        return 0;
+      });
+
+    return fixed;
+}
+
 
 /**
  *
@@ -132,7 +155,7 @@ function on_load()
 
 /**
  *
- * @param {string} funcname
+ * @param {String} funcname
  */
 function remove_module_name(funcname)
 {
