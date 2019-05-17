@@ -45,6 +45,9 @@ var example_names = {
     "calendar.Calendar.monthdatescalendar": [
         "Calendar().monthdatescalendar(2019, 4)"
     ],
+    "calendar.Calendar.monthdays2calendar": [
+        "Calendar().monthdays2calendar(2019, 4)"
+    ],
     "callable": [
         "callable(abs)",
         "callable(123)",

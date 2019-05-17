@@ -32,10 +32,10 @@ var example_contents = {
         "print(bytearray(b'Hi!'))\n"
     ],
     "bytearray.fromhex": [
-        "print(bytearray.fromhex('2Ef0 F1f2  '))\n# see issue https://github.com/brython-dev/brython/issues/1090\n"
+        "print(bytearray.fromhex('2Ef0 F1f2  '))\n"
     ],
     "bytearray.hex": [
-        "print(bytearray(b'\\xf0\\xf1\\xf2').hex())\n# see issue https://github.com/brython-dev/brython/issues/1091\n"
+        "print(bytearray(b'\\xf0\\xf1\\xf2').hex())\n"
     ],
     "bytes": [
         "print(bytes(10))\n",
@@ -43,7 +43,10 @@ var example_contents = {
         "print(bytes(b'Hi!'))\n"
     ],
     "calendar.Calendar.monthdatescalendar": [
-        "from calendar import Calendar\nprint(Calendar().monthdatescalendar(2019, 4))\n# bug: working in brython but not here!\n"
+        "from calendar import Calendar\nprint(Calendar().monthdatescalendar(2019, 4))\n"
+    ],
+    "calendar.Calendar.monthdays2calendar": [
+        "from calendar import Calendar\nprint(Calendar().monthdays2calendar(2019, 4))\n"
     ],
     "callable": [
         "print(callable(abs))\n",
@@ -53,7 +56,7 @@ var example_contents = {
     ],
     "chr": [
         "print(chr(97))\n",
-        "print(chr(8364))\n# see issue https://github.com/brython-dev/brython/issues/1047\n"
+        "print(chr(8364))\n"
     ],
     "classmethod": [
         "class Foo:\n    @classmethod\n    def say_hello(cls, name):\n        print('Hello', name)\n\nFoo.say_hello('John')\n"
@@ -320,7 +323,7 @@ var example_contents = {
         "print(format(123.456, \"f\"))\n",
         "print(format(16, \"b\"))\n",
         "print(format(123456789, \"*>+15,d\"))\n",
-        "print(format(123.456, \"^-09.3f\"))\n# see issue https://github.com/brython-dev/brython/issues/1075\n"
+        "print(format(123.456, \"^-09.3f\"))\n"
     ],
     "frozenset": [
         "print(list(frozenset([1, 2, 3])))\n"
@@ -362,7 +365,7 @@ var example_contents = {
     ],
     "int.to_bytes": [
         "print((1024).to_bytes(2, byteorder='big'))\n",
-        "print((1024).to_bytes(4, byteorder='big'))\n# see issue https://github.com/brython-dev/brython/issues/1092\n",
+        "print((1024).to_bytes(4, byteorder='big'))\n",
         "print((-1024).to_bytes(4, byteorder='big', signed=True))\n"
     ],
     "isinstance": [
@@ -371,7 +374,7 @@ var example_contents = {
     ],
     "issubclass": [
         "class Foo:\n    pass\n\nclass Bar(Foo):\n    pass\n\nprint(issubclass(Bar, Foo))\nprint(issubclass(Foo, Bar))\n",
-        "class Mystring(str):\n    pass\n\nprint(issubclass(Mystring, (str, int)))\n# see issue https://github.com/brython-dev/brython/issues/1049\n"
+        "class Mystring(str):\n    pass\n\nprint(issubclass(Mystring, (str, int)))\n"
     ],
     "len": [
         "print(len('python'))\n",
@@ -443,7 +446,7 @@ var example_contents = {
         "import math\nprint(math.exp(2))\nprint(math.e ** 2)\nprint(pow(math.e, 2))\n"
     ],
     "math.expm1": [
-        "import math\nprint(math.expm1(1e-5))\nprint(math.exp(1e-5) - 1)\n# see issue https://github.com/brython-dev/brython/issues/1109\n"
+        "import math\nprint(math.expm1(1e-5))\nprint(math.exp(1e-5) - 1)\n"
     ],
     "math.fabs": [
         "import math\nprint(math.fabs(-2.0))\n"
@@ -466,7 +469,7 @@ var example_contents = {
         "import math\nprint(math.fsum([.1, .1, .1, .1, .1, .1, .1, .1, .1, .1]))\n"
     ],
     "math.gamma": [
-        "import math\nprint(math.gamma(2))\n# see issue https://github.com/brython-dev/brython/issues/1112\n"
+        "import math\nprint(math.gamma(2))\n"
     ],
     "math.gcd": [
         "import math\nprint(math.gcd(6, 9))\n"
@@ -494,17 +497,17 @@ var example_contents = {
         "import math\nprint(math.ldexp(0.625, 6))\n"
     ],
     "math.lgamma": [
-        "import math\nprint(math.lgamma(2))\n# see issue https://github.com/brython-dev/brython/issues/1113\n"
+        "import math\nprint(math.lgamma(2))\n"
     ],
     "math.log": [
         "import math\nprint(math.log(10))\n",
         "import math\nprint(math.log(10, 10))\n"
     ],
     "math.log10": [
-        "import math\nprint(math.log10(1000))\nprint(math.log(1000, 10))\n# see issue https://github.com/brython-dev/brython/issues/1110\n"
+        "import math\nprint(math.log10(1000))\nprint(math.log(1000, 10))\n"
     ],
     "math.log1p": [
-        "import math\nprint(math.log1p(1e-5))\nprint(math.log(1 + 1e-5))\n# see issue https://github.com/brython-dev/brython/issues/1111\n"
+        "import math\nprint(math.log1p(1e-5))\nprint(math.log(1 + 1e-5))\n"
     ],
     "math.log2": [
         "import math\nprint(math.log2(65536))\nprint(math.log(65536, 2))\n"
@@ -552,7 +555,7 @@ var example_contents = {
         "print(min([], default='Empty!'))\n"
     ],
     "next": [
-        "letters = iter(['a', 'b', 'c'])\nprint(next(letters))\nprint(next(letters))\nprint(next(letters))\nprint(next(letters, 'The End!'))\n# see issue https://github.com/brython-dev/brython/issues/1051\n"
+        "letters = iter(['a', 'b', 'c'])\nprint(next(letters))\nprint(next(letters))\nprint(next(letters))\nprint(next(letters, 'The End!'))\n"
     ],
     "oct": [
         "print(oct(8))\n",
@@ -712,7 +715,7 @@ var example_contents = {
     ],
     "str.encode": [
         "print('À Bientôt Meßingenieur'.encode())\n",
-        "print('ß'.encode('ascii', 'ignore'))\n# see issue https://github.com/brython-dev/brython/issues/1071\n"
+        "print('ß'.encode('ascii', 'ignore'))\n"
     ],
     "str.endswith": [
         "print('domain.com'.endswith('com'))\n",
@@ -756,8 +759,8 @@ var example_contents = {
         "print('123'.isalpha())\n"
     ],
     "str.isascii": [
-        "print('abc'.isascii())\n# see issue https://github.com/brython-dev/brython/issues/1076\n",
-        "print('Bientôt'.isascii())\n# see issue https://github.com/brython-dev/brython/issues/1076\n"
+        "print('abc'.isascii())\n",
+        "print('Bientôt'.isascii())\n"
     ],
     "str.isdecimal": [
         "print('123'.isdecimal())\n",
@@ -803,9 +806,9 @@ var example_contents = {
         "print('www.example.com'.lstrip('cmowz.'))\n"
     ],
     "str.maketrans": [
-        "print(str.maketrans({'a': 'A', 'b': 'B', 'c': 'C'}))\n# see issue https://github.com/brython-dev/brython/issues/1077\n",
+        "print(str.maketrans({'a': 'A', 'b': 'B', 'c': 'C'}))\n",
         "print(str.maketrans('abc', 'ABC'))\n",
-        "print(str.maketrans('abc', 'ABC', 'abd'))\n# see issue https://github.com/brython-dev/brython/issues/1078\n"
+        "print(str.maketrans('abc', 'ABC', 'abd'))\n"
     ],
     "str.partition": [
         "print('The world is small'.partition(' '))\n"
