@@ -43,7 +43,7 @@ var example_contents = {
         "print(bytes(b'Hi!'))\n"
     ],
     "calendar.Calendar.monthdatescalendar": [
-        "from calendar import Calendar\nprint(Calendar().monthdatescalendar(2019, 4))\n"
+        "from calendar import Calendar\nprint(Calendar().monthdatescalendar(2019, 4))\n# bug: working in brython but not here!\n"
     ],
     "callable": [
         "print(callable(abs))\n",
@@ -120,7 +120,8 @@ var example_contents = {
         "from datetime import datetime\nprint(datetime(2000, 6, 30, 12, 34, 56).ctime())\n"
     ],
     "datetime.datetime.dst": [
-        "from datetime import datetime\nprint(datetime(2000, 6, 30, 12, 34, 56).dst())\n"
+        "from datetime import datetime\nprint(datetime(2000, 6, 30, 12, 34, 56).dst())\n",
+        "from datetime import datetime, timedelta, tzinfo\n\nclass GMT1(tzinfo):\n    def dst(self, dt):\n        return timedelta(hours=1)\n\nprint(datetime(2000, 6, 30, 12, 34, 56, tzinfo=GMT1()).dst())\n"
     ],
     "datetime.datetime.fromisoformat": [
         "from datetime import datetime\nprint(datetime.fromisoformat('2000-06-30 12:34:56'))\n"
@@ -135,7 +136,8 @@ var example_contents = {
         "from datetime import datetime\nprint(datetime(2000, 6, 30, 12, 34, 56).isocalendar())\n"
     ],
     "datetime.datetime.isoformat": [
-        "from datetime import datetime\nprint(datetime(2000, 6, 30, 12, 34, 56).isoformat())\n"
+        "from datetime import datetime\nprint(datetime(2000, 6, 30, 12, 34, 56).isoformat())\n",
+        "from datetime import datetime\nprint(datetime(2000, 6, 30, 12, 34, 56).isoformat(timespec='microseconds'))\n"
     ],
     "datetime.datetime.isoweekday": [
         "from datetime import datetime\nprint(datetime(2000, 6, 30, 12, 34, 56).isoweekday())\n"
@@ -168,13 +170,15 @@ var example_contents = {
         "from datetime import datetime\nprint(datetime(2000, 6, 30, 12, 34, 56).toordinal())\n"
     ],
     "datetime.datetime.tzname": [
-        "from datetime import datetime, timezone\nprint(datetime(2000, 6, 30, 12, 34, 56, tzinfo=timezone.utc).tzname())\n"
+        "from datetime import datetime, timezone\nprint(datetime(2000, 6, 30, 12, 34, 56, tzinfo=timezone.utc).tzname())\n",
+        "from datetime import datetime, timedelta, tzinfo\n\nclass GMT1(tzinfo):\n    def tzname(self,dt):\n        return \"Europe/Prague\"\n\nprint(datetime(2000, 6, 30, 12, 34, 56, tzinfo=GMT1()).tzname())\n"
     ],
     "datetime.datetime.utcfromtimestamp": [
         "from datetime import datetime\nprint(datetime.utcfromtimestamp(962361296))\n"
     ],
     "datetime.datetime.utcoffset": [
-        "from datetime import datetime, timezone\nprint(datetime(2000, 6, 30, 12, 34, 56, tzinfo=timezone.utc).utcoffset())\n"
+        "from datetime import datetime, timezone\nprint(datetime(2000, 6, 30, 12, 34, 56, tzinfo=timezone.utc).utcoffset())\n",
+        "from datetime import datetime, timedelta, tzinfo\n\nclass GMT1(tzinfo):\n    def utcoffset(self, dt):\n        return timedelta(hours=1)\n\nprint(datetime(2000, 6, 30, 12, 34, 56, tzinfo=GMT1()).utcoffset())\n"
     ],
     "datetime.datetime.utctimetuple": [
         "from datetime import datetime\nprint(datetime(2000, 6, 30, 12, 34, 56).utctimetuple())\n"
@@ -184,6 +188,31 @@ var example_contents = {
     ],
     "datetime.time": [
         "from datetime import datetime\nprint(datetime(2019, 6, 30, 12, 34, 56).time())\n"
+    ],
+    "datetime.time.dst": [
+        "from datetime import time\nprint(time(12, 34, 56).dst())\n",
+        "from datetime import time, timedelta, tzinfo\n\nclass GMT1(tzinfo):\n    def dst(self, dt):\n        return timedelta(hours=1)\n\nprint(time(12, 34, 56, tzinfo=GMT1()).dst())\n"
+    ],
+    "datetime.time.fromisoformat": [
+        "from datetime import time\nprint(time.fromisoformat('12:34:56'))\n"
+    ],
+    "datetime.time.isoformat": [
+        "from datetime import time\nprint(time(12, 34, 56).isoformat())\n",
+        "from datetime import time\nprint(time(12, 34, 56).isoformat(timespec='microseconds'))\n"
+    ],
+    "datetime.time.replace": [
+        "from datetime import time\nprint(time(12, 34, 56).replace(hour=10))\n"
+    ],
+    "datetime.time.strftime": [
+        "from datetime import time\nprint(time(12, 34, 56).strftime('%X'))\n"
+    ],
+    "datetime.time.tzname": [
+        "from datetime import time, timezone\nprint(time(12, 34, 56, tzinfo=timezone.utc).tzname())\n",
+        "from datetime import time, timedelta, tzinfo\n\nclass GMT1(tzinfo):\n    def tzname(self,dt):\n        return \"Europe/Prague\"\n\nprint(time(12, 34, 56, tzinfo=GMT1()).tzname())\n"
+    ],
+    "datetime.time.utcoffset": [
+        "from datetime import time, timezone\nprint(time(12, 34, 56, tzinfo=timezone.utc).utcoffset())\n",
+        "from datetime import time, timedelta, tzinfo\n\nclass GMT1(tzinfo):\n    def utcoffset(self, dt):\n        return timedelta(hours=1)\n\nprint(time(12, 34, 56, tzinfo=GMT1()).utcoffset())\n"
     ],
     "delattr": [
         "class Foo:\n    bar = 123\n\nfoo = Foo()\ndelattr(foo, 'bar')\nprint(foo.bar)\n# see issue https://github.com/brython-dev/brython/issues/1048\n"

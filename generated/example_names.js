@@ -120,7 +120,8 @@ var example_names = {
         "datetime(2000, 6, 30, 12, 34, 56).ctime()"
     ],
     "datetime.datetime.dst": [
-        "datetime(2000, 6, 30, 12, 34, 56).dst()"
+        "datetime(2000, 6, 30, 12, 34, 56).dst()",
+        "datetime(2000, 6, 30, 12, 34, 56, tzinfo=GMT1()).dst()"
     ],
     "datetime.datetime.fromisoformat": [
         "datetime.fromisoformat('2000-06-30 12:34:56')"
@@ -135,7 +136,8 @@ var example_names = {
         "datetime(2000, 6, 30, 12, 34, 56).isocalendar()"
     ],
     "datetime.datetime.isoformat": [
-        "datetime(2000, 6, 30, 12, 34, 56).isoformat()"
+        "datetime(2000, 6, 30, 12, 34, 56).isoformat()",
+        "datetime(2000, 6, 30, 12, 34, 56).isoformat(timespec='microseconds')"
     ],
     "datetime.datetime.isoweekday": [
         "datetime(2000, 6, 30, 12, 34, 56).isoweekday()"
@@ -168,13 +170,15 @@ var example_names = {
         "datetime(2000, 6, 30, 12, 34, 56).toordinal()"
     ],
     "datetime.datetime.tzname": [
-        "datetime(2000, 6, 30, 12, 34, 56, tzinfo=timezone.utc).tzname()"
+        "datetime(2000, 6, 30, 12, 34, 56, tzinfo=timezone.utc).tzname()",
+        "datetime(2000, 6, 30, 12, 34, 56, tzinfo=GMT1()).tzname()"
     ],
     "datetime.datetime.utcfromtimestamp": [
         "datetime.utcfromtimestamp(962361296)"
     ],
     "datetime.datetime.utcoffset": [
-        "datetime(2000, 6, 30, 12, 34, 56, tzinfo=timezone.utc).utcoffset()"
+        "datetime(2000, 6, 30, 12, 34, 56, tzinfo=timezone.utc).utcoffset()",
+        "datetime(2000, 6, 30, 12, 34, 56, tzinfo=GMT1()).utcoffset()"
     ],
     "datetime.datetime.utctimetuple": [
         "datetime(2000, 6, 30, 12, 34, 56).utctimetuple()"
@@ -184,6 +188,31 @@ var example_names = {
     ],
     "datetime.time": [
         "datetime(2019, 6, 30, 12, 34, 56).time()"
+    ],
+    "datetime.time.dst": [
+        "time(12, 34, 56).dst()",
+        "time(12, 34, 56, tzinfo=GMT1()).dst()"
+    ],
+    "datetime.time.fromisoformat": [
+        "time.fromisoformat('12:34:56')"
+    ],
+    "datetime.time.isoformat": [
+        "time(12, 34, 56).isoformat()",
+        "time(12, 34, 56).isoformat(timespec='microseconds')"
+    ],
+    "datetime.time.replace": [
+        "time(12, 34, 56).replace(hour=10)"
+    ],
+    "datetime.time.strftime": [
+        "time(12, 34, 56).strftime('%X')"
+    ],
+    "datetime.time.tzname": [
+        "time(12, 34, 56, tzinfo=timezone.utc).tzname()",
+        "time(12, 34, 56, tzinfo=GMT1()).tzname()"
+    ],
+    "datetime.time.utcoffset": [
+        "time(12, 34, 56, tzinfo=timezone.utc).utcoffset()",
+        "time(12, 34, 56, tzinfo=GMT1()).utcoffset()"
     ],
     "delattr": [
         "delattr(foo, 'bar')"
