@@ -388,6 +388,16 @@ var example_names = {
         "issubclass(Bar, Foo)",
         "issubclass(Mystring, (str, int))"
     ],
+    "json.dumps": [
+        "json.dumps(['foo', {'bar': ('baz', None, 1.0, 2)}])",
+        "json.dumps({&quot;c&quot;: 0, &quot;b&quot;: 0, &quot;a&quot;: 0}, sort_keys=True)",
+        "json.dumps([1, 2, 3, {'4': 5, '6': 7}], separators=(',', ':'))) # compact encodin",
+        "json.dumps({'4': 5, '6': 7}, sort_keys=True, indent=4)) # pretty prin"
+    ],
+    "json.loads": [
+        "json.loads('[&quot;foo&quot;, {&quot;bar&quot;:[&quot;baz&quot;, null, 1.0, 2]}]')",
+        " jso"
+    ],
     "len": [
         "len('python')",
         "len([1, 2, 3])",
