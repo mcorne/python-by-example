@@ -391,8 +391,8 @@ var example_contents = {
     "json.dumps": [
         "import json\nprint(json.dumps(['foo', {'bar': ('baz', None, 1.0, 2)}]))\n",
         "import json\nprint(json.dumps({\"c\": 0, \"b\": 0, \"a\": 0}, sort_keys=True))\n",
-        "import json\nprint(json.dumps([1, 2, 3, {'4': 5, '6': 7}], separators=(',', ':'))) # compact encoding\n",
-        "import json\nprint(json.dumps({'4': 5, '6': 7}, sort_keys=True, indent=4)) # pretty print\n"
+        "import json\nprint(json.dumps([1, 2, 3, {'4': 5, '6': 7}], separators=(',', ':'))) # compact encoding\n# see issue https://github.com/brython-dev/brython/issues/1117\n",
+        "import json\nprint(json.dumps({'4': 5, '6': 7}, sort_keys=True, indent=4)) # pretty print\n# see issue https://github.com/brython-dev/brython/issues/1117\n"
     ],
     "json.loads": [
         "import json\nprint(json.loads('[\"foo\", {\"bar\":[\"baz\", null, 1.0, 2]}]'))\n",

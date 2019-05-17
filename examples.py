@@ -49,12 +49,16 @@ class Examples():
             name = lines[0].strip('# ')
         elif re.search('^(from |import )', lines[0]) and lines[1].startswith('print'):
             # This is a two line example with an import... line and a print... line.
-            # Extract the example name inside the print function.
-            name = lines[1][6:-1]
+            # Extract the example name inside the print function after removing a possible comment.
+            pieces = lines[1].rsplit('#', 1)
+            line   = pieces[0].strip()
+            name   = line[6:-1]
         else:
             # This is a one line example, always beiginning with print, ex print(abs(123)).
-            # Extract the example name inside the print function.
-            name = lines[0][6:-1]
+            # Extract the example name inside the print function after removing a possible comment.
+            pieces = lines[1].rsplit('#', 1)
+            line   = pieces[0].strip()
+            name   = line[6:-1]
         name = self.htlm_escape(name)
         return name
 
