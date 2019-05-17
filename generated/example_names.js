@@ -161,7 +161,8 @@ var example_names = {
         "datetime(2000, 6, 30, 12, 34, 56).timetuple()"
     ],
     "datetime.datetime.timetz": [
-        "datetime(2019, 6, 30, 12, 34, 56, tzinfo=timezone.utc).timetz()"
+        "datetime(2019, 6, 30, 12, 34, 56, tzinfo=timezone.utc).timetz()",
+        "datetime(2000, 6, 30, 12, 34, 56, tzinfo=GMT1()).timetz()"
     ],
     "datetime.datetime.today": [
         "datetime.today()"
@@ -213,6 +214,15 @@ var example_names = {
     "datetime.time.utcoffset": [
         "time(12, 34, 56, tzinfo=timezone.utc).utcoffset()",
         "time(12, 34, 56, tzinfo=GMT1()).utcoffset()"
+    ],
+    "datetime.tzinfo.dst": [
+        "GMT1().dst(None)"
+    ],
+    "datetime.tzinfo.tzname": [
+        "GMT1().tzname(None)"
+    ],
+    "datetime.tzinfo.utcoffset": [
+        "GMT1().utcoffset(None)"
     ],
     "delattr": [
         "delattr(foo, 'bar')"

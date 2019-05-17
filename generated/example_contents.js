@@ -161,7 +161,8 @@ var example_contents = {
         "from datetime import datetime\nprint(datetime(2000, 6, 30, 12, 34, 56).timetuple())\n"
     ],
     "datetime.datetime.timetz": [
-        "from datetime import datetime, timezone\nprint(datetime(2019, 6, 30, 12, 34, 56, tzinfo=timezone.utc).timetz())\n"
+        "from datetime import datetime, timezone\nprint(datetime(2019, 6, 30, 12, 34, 56, tzinfo=timezone.utc).timetz())\n",
+        "from datetime import datetime, timedelta, tzinfo\n\nclass GMT1(tzinfo):\n    def utcoffset(self, dt):\n        return timedelta(hours=1)\n\nprint(datetime(2000, 6, 30, 12, 34, 56, tzinfo=GMT1()).timetz())\n"
     ],
     "datetime.datetime.today": [
         "from datetime import datetime\nprint(datetime.today())\n"
@@ -213,6 +214,15 @@ var example_contents = {
     "datetime.time.utcoffset": [
         "from datetime import time, timezone\nprint(time(12, 34, 56, tzinfo=timezone.utc).utcoffset())\n",
         "from datetime import time, timedelta, tzinfo\n\nclass GMT1(tzinfo):\n    def utcoffset(self, dt):\n        return timedelta(hours=1)\n\nprint(time(12, 34, 56, tzinfo=GMT1()).utcoffset())\n"
+    ],
+    "datetime.tzinfo.dst": [
+        "from datetime import timedelta, tzinfo\n\nclass GMT1(tzinfo):\n    def dst(self, dt):\n        return timedelta(hours=1)\n\nprint(GMT1().dst(None))\n"
+    ],
+    "datetime.tzinfo.tzname": [
+        "from datetime import tzinfo\n\nclass GMT1(tzinfo):\n    def tzname(self,dt):\n        return \"Europe/Prague\"\n\nprint(GMT1().tzname(None))\n"
+    ],
+    "datetime.tzinfo.utcoffset": [
+        "from datetime import timedelta, tzinfo\n\nclass GMT1(tzinfo):\n    def utcoffset(self, dt):\n        return timedelta(hours=1)\n\nprint(GMT1().utcoffset(None))\n"
     ],
     "delattr": [
         "class Foo:\n    bar = 123\n\nfoo = Foo()\ndelattr(foo, 'bar')\nprint(foo.bar)\n# see issue https://github.com/brython-dev/brython/issues/1048\n"
