@@ -1,3 +1,4 @@
+# json.loads('{"__complex__": true, "real": 1, "imag": 2}', object_hook=as_complex)
 import json
 
 def as_complex(dct):
@@ -6,4 +7,3 @@ def as_complex(dct):
     return dct
 
 print(json.loads('{"__complex__": true, "real": 1, "imag": 2}', object_hook=as_complex))
-# see issue https://github.com/brython-dev/brython/issues/1116

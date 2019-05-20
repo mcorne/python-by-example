@@ -391,12 +391,12 @@ var example_contents = {
     "json.dumps": [
         "import json\nprint(json.dumps(['foo', {'bar': ('baz', None, 1.0, 2)}]))\n",
         "import json\nprint(json.dumps({\"c\": 0, \"b\": 0, \"a\": 0}, sort_keys=True))\n",
-        "import json\nprint(json.dumps([1, 2, 3, {'4': 5, '6': 7}], separators=(',', ':'))) # compact encoding\n# see issue https://github.com/brython-dev/brython/issues/1117\n",
-        "import json\nprint(json.dumps({'4': 5, '6': 7}, sort_keys=True, indent=4)) # pretty print\n# see issue https://github.com/brython-dev/brython/issues/1117\n"
+        "import json\nprint(json.dumps([1, 2, 3, {'4': 5, '6': 7}], separators=(',', ':'))) # compact encoding\n",
+        "import json\nprint(json.dumps({'4': 5, '6': 7}, sort_keys=True, indent=4)) # pretty print\n"
     ],
     "json.loads": [
         "import json\nprint(json.loads('[\"foo\", {\"bar\":[\"baz\", null, 1.0, 2]}]'))\n",
-        "import json\n\ndef as_complex(dct):\n    if '__complex__' in dct:\n        return complex(dct['real'], dct['imag'])\n    return dct\n\nprint(json.loads('{\"__complex__\": true, \"real\": 1, \"imag\": 2}', object_hook=as_complex))\n# see issue https://github.com/brython-dev/brython/issues/1116\n"
+        "import json\n\ndef as_complex(dct):\n    if '__complex__' in dct:\n        return complex(dct['real'], dct['imag'])\n    return dct\n\nprint(json.loads('{\"__complex__\": true, \"real\": 1, \"imag\": 2}', object_hook=as_complex))\n"
     ],
     "len": [
         "print(len('python'))\n",

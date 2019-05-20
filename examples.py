@@ -56,7 +56,7 @@ class Examples():
         else:
             # This is a one line example, always beiginning with print, ex print(abs(123)).
             # Extract the example name inside the print function after removing a possible comment.
-            pieces = lines[1].rsplit('#', 1)
+            pieces = lines[0].rsplit('#', 1)
             line   = pieces[0].strip()
             name   = line[6:-1]
         name = self.htlm_escape(name)
