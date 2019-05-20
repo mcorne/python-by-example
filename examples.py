@@ -114,14 +114,14 @@ class Examples():
 
     def read_example(self, function, example_filename):
         path = os.path.join(self.examples_dirname, function + '/' + example_filename)
-        with open(path, 'r') as file:
+        with open(path, 'rb') as file:
             example = file.read()
         return example
 
     def write_file(self, basename, data):
         filename = 'generated/' + basename + '.js'
         path     = os.path.join(self.current_dirname, filename)
-        with open(path, 'w') as file:
+        with open(path, 'wb') as file:
             content  = 'var ' + basename + ' = ' + json.dumps(data, ensure_ascii=False, indent=4, sort_keys=True) + ';'
             file.write(content)
         print(filename, 'updated')
