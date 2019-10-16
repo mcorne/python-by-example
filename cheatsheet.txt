@@ -1,0 +1,21 @@
+git clone https://github.com/mcorne/python-by-example.git
+
+cd python-by-example
+
+# macOS/Linux
+sudo apt-get install python3-venv
+python3 -m venv envwsl
+source envwsl/bin/activate
+# Windows
+python -m venv envwin
+source source envwin/Scripts/activate
+
+# select interpreter Python 3. ... envwsl:venv
+
+# save app dependencies
+pip freeze > requirements.txt
+
+# reinstall packages in other folder
+python3 -m venv envwsl
+source envwsl/bin/activate
+pip install -r requirements.txt

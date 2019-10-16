@@ -2,4 +2,5 @@
     "files.eol": "\n",
     "files.trimTrailingWhitespace": true,
     "files.insertFinalNewline": true,
+    "python.pythonPath": "envwin\\Scripts\\python.exe",
 }

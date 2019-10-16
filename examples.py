@@ -1,10 +1,11 @@
 import calendar, datetime, json, math, os, re, string
 
+
 class Examples():
     def __init__(self):
-        self.current_dirname    = os.path.dirname(__file__)
-        self.examples_dirname   = os.path.join(self.current_dirname, 'examples')
-        self.functions          = self.get_functions()
+        self.current_dirname = os.path.dirname(__file__)
+        self.examples_dirname = os.path.join(self.current_dirname, 'examples')
+        self.functions = self.get_functions()
         self.examples_filenames = self.get_examples_filenames()
 
     def create_docstrings(self):
@@ -29,7 +30,7 @@ class Examples():
             names[function] = []
             for filename in filenames:
                 example = self.read_example(function, filename)
-                name    = self.extract_example_name(example)
+                name = self.extract_example_name(example)
                 names[function].append(name)
         return names
 
@@ -37,7 +38,7 @@ class Examples():
         if example[0] == '#':
             # This is the first line containing the example name as a comment, ex # abs(123).
             # Skip the line.
-            lines  = example.split('\n', 1)
+            lines = example.split('\n', 1)
             example = lines[1]
         return example
 
@@ -47,18 +48,19 @@ class Examples():
             # This is the first line containing the example name as a comment, ex # abs(123).
             # Extract the example name.
             name = lines[0].strip('# ')
-        elif re.search('^(from |import )', lines[0]) and lines[1].startswith('print'):
+        elif re.search('^(from |import )',
+                       lines[0]) and lines[1].startswith('print'):
             # This is a two line example with an import... line and a print... line.
             # Extract the example name inside the print function after removing a possible comment.
             pieces = lines[1].rsplit('#', 1)
-            line   = pieces[0].strip()
-            name   = line[6:-1]
+            line = pieces[0].strip()
+            name = line[6:-1]
         else:
             # This is a one line example, always beiginning with print, ex print(abs(123)).
             # Extract the example name inside the print function after removing a possible comment.
             pieces = lines[0].rsplit('#', 1)
-            line   = pieces[0].strip()
-            name   = line[6:-1]
+            line = pieces[0].strip()
+            name = line[6:-1]
         name = self.htlm_escape(name)
         return name
 
@@ -71,7 +73,7 @@ class Examples():
         self.write_file('example_names', names)
 
     def get_docstring(self, function):
-        docstring  = eval(function + '.__doc__')
+        docstring = eval(function + '.__doc__')
         signature = self.get_signature(function)
         if signature != None:
             docstring = function + '(' + signature + ')' + '\n\n' + docstring
@@ -81,7 +83,7 @@ class Examples():
         return docstring
 
     def get_example_filenames(self, function):
-        dirname   = os.path.join(self.examples_dirname, function)
+        dirname = os.path.join(self.examples_dirname, function)
         filenames = os.listdir(dirname)
         return sorted(filenames)
 
@@ -110,21 +112,25 @@ class Examples():
         return signature
 
     def htlm_escape(self, string):
-        return string.replace('&','&amp;').replace('<','&lt;').replace('>','&gt;').replace('"','&quot;').replace('\\', '&#92;')
+        return string.replace('&', '&amp;').replace('<', '&lt;').replace(
+            '>', '&gt;').replace('"', '&quot;').replace('\\', '&#92;')
 
     def read_example(self, function, example_filename):
-        path = os.path.join(self.examples_dirname, function + '/' + example_filename)
-        with open(path, 'rb') as file:
+        path = os.path.join(self.examples_dirname,
+                            function + '/' + example_filename)
+        with open(path, 'r') as file:
             example = file.read()
         return example
 
     def write_file(self, basename, data):
         filename = 'generated/' + basename + '.js'
-        path     = os.path.join(self.current_dirname, filename)
-        with open(path, 'wb') as file:
-            content  = 'var ' + basename + ' = ' + json.dumps(data, ensure_ascii=False, indent=4, sort_keys=True) + ';'
+        path = os.path.join(self.current_dirname, filename)
+        with open(path, 'w', newline='\n') as file:
+            content = 'var ' + basename + ' = ' + json.dumps(
+                data, ensure_ascii=False, indent=4, sort_keys=True) + ';'
             file.write(content)
         print(filename, 'updated')
+
 
 examples = Examples()
 examples.generate()
